@@ -52,10 +52,7 @@ function plotOperatingBox(stlFile, plc, varargin)
         V = (Rz * Ry * Rx * V')';
         V = V + opts.translate;
         haveMesh = true;
-        fprintf('  Mesh bounds: X[%.0f, %.0f] Y[%.0f, %.0f] Z[%.0f, %.0f] mm\n', ...
-                min(V(:,1)), max(V(:,1)), ...
-                min(V(:,2)), max(V(:,2)), ...
-                min(V(:,3)), max(V(:,3)));
+        fprintf('  Mesh bounds: X[%.0f, %.0f] Y[%.0f, %.0f] Z[%.0f, %.0f] mm\n', min(V(:,1)), max(V(:,1)), min(V(:,2)), max(V(:,2)), min(V(:,3)), max(V(:,3)));
     end
 
     fprintf('  Operating box: X[%.0f, %.0f] Y[%.0f, %.0f] Z[%.0f, %.0f] mm\n', opts.box(1,:), opts.box(2,:), opts.box(3,:));
@@ -66,9 +63,7 @@ function plotOperatingBox(stlFile, plc, varargin)
     ax1 = axes('Parent', fig);
     drawScene(ax1, opts.box, [], haveMesh, F, V, opts);   % pass [] to skip TCP star
     view(ax1, 45, 25);
-    title(ax1, sprintf('IGUS RL-DP-5 Operating Envelope  (%d \\times %d \\times %d mm)', ...
-                       diff(opts.box(1,:)), diff(opts.box(2,:)), diff(opts.box(3,:))), ...
-                       'FontWeight', 'bold');
+    title(ax1, sprintf('IGUS RL-DP-5 Operating Envelope  (%d \\times %d \\times %d mm)', diff(opts.box(1,:)), diff(opts.box(2,:)), diff(opts.box(3,:))), 'FontWeight', 'bold');
     
         dcm = datacursormode(fig);
         set(dcm, 'Enable', 'on', 'UpdateFcn', @customDataTip);
@@ -100,9 +95,7 @@ function drawScene(ax, box, tcp, haveMesh, F, V, opts)
                 2 3 7 6;     % right (X=Xmax)
                 3 4 8 7;     % back  (Y=Ymax)
                 4 1 5 8];    % left  (X=Xmin)
-        h = patch(ax, 'Faces', Fbox, 'Vertices', Vbox, ...
-                  'FaceColor', opts.boxColor, 'EdgeColor', 'none', ...
-                  'FaceAlpha', 0.10, 'PickableParts', 'none');
+        h = patch(ax, 'Faces', Fbox, 'Vertices', Vbox, 'FaceColor', opts.boxColor, 'EdgeColor', 'none', 'FaceAlpha', 0.10, 'PickableParts', 'none');
         legendEntries(end+1) = h; %#ok<NASGU>
         % don't add to legend — the wireframe entry below covers it
     end
@@ -114,26 +107,19 @@ function drawScene(ax, box, tcp, haveMesh, F, V, opts)
 
     % ── Live TCP — magenta star ──────────────────────────────────────────────
     if ~isempty(tcp)
-        h = plot3(ax, tcp(1), tcp(2), tcp(3), 'p', ...
-                  'MarkerSize', 14, 'MarkerFaceColor', [0.85 0.20 0.85], ...
-                  'MarkerEdgeColor', 'k', 'LineWidth', 1.4, 'Tag', 'tcpPoint');
+        h = plot3(ax, tcp(1), tcp(2), tcp(3), 'p', 'MarkerSize', 14, 'MarkerFaceColor', [0.85 0.20 0.85], 'MarkerEdgeColor', 'k', 'LineWidth', 1.4, 'Tag', 'tcpPoint');
         legendEntries(end+1) = h;
         legendNames{end+1}   = 'Live TCP';
     end
 
     % ── Base origin ──────────────────────────────────────────────────────────
-    h = plot3(ax, 0, 0, 0, 'k+', 'MarkerSize', 16, 'LineWidth', 2, ...
-              'Tag', 'baseOrigin');
+    h = plot3(ax, 0, 0, 0, 'k+', 'MarkerSize', 16, 'LineWidth', 2, 'Tag', 'baseOrigin');
     legendEntries(end+1) = h;
     legendNames{end+1}   = 'Base origin';
 
     % ── Robot mesh ───────────────────────────────────────────────────────────
     if haveMesh
-        h = patch(ax, 'Faces', F, 'Vertices', V, ...
-                  'FaceColor', opts.meshColor, 'EdgeColor', 'none', ...
-                  'FaceAlpha', opts.meshAlpha, 'FaceLighting', 'gouraud', ...
-                  'AmbientStrength', 0.3, 'Tag', 'robotMesh', ...
-                  'PickableParts', 'none');
+        h = patch(ax, 'Faces', F, 'Vertices', V, 'FaceColor', opts.meshColor, 'EdgeColor', 'none', 'FaceAlpha', opts.meshAlpha, 'FaceLighting', 'gouraud', 'AmbientStrength', 0.3, 'Tag', 'robotMesh', 'PickableParts', 'none');
         camlight(ax, 'headlight'); material(ax, 'dull');
         legendEntries(end+1) = h;
         legendNames{end+1}   = 'Robot + stand';
@@ -147,18 +133,11 @@ end
 
 function h = drawBoxWireframe(ax, box, color)
     xL = box(1, :);  yL = box(2, :);  zL = box(3, :);
-    h = plot3(ax, [xL(1) xL(2) xL(2) xL(1) xL(1)], ...
-                   [yL(1) yL(1) yL(2) yL(2) yL(1)], ...
-                   [zL(1) zL(1) zL(1) zL(1) zL(1)], '-', ...
-                   'Color', color, 'LineWidth', 1.5);
-    plot3(ax, [xL(1) xL(2) xL(2) xL(1) xL(1)], ...
-              [yL(1) yL(1) yL(2) yL(2) yL(1)], ...
-              [zL(2) zL(2) zL(2) zL(2) zL(2)], '-', ...
-              'Color', color, 'LineWidth', 1.5);
+    h = plot3(ax, [xL(1) xL(2) xL(2) xL(1) xL(1)], [yL(1) yL(1) yL(2) yL(2) yL(1)], [zL(1) zL(1) zL(1) zL(1) zL(1)], '-', 'Color', color, 'LineWidth', 1.5);
+    plot3(ax, [xL(1) xL(2) xL(2) xL(1) xL(1)], [yL(1) yL(1) yL(2) yL(2) yL(1)], [zL(2) zL(2) zL(2) zL(2) zL(2)], '-', 'Color', color, 'LineWidth', 1.5);
     for ix = 1:2
         for iy = 1:2
-            plot3(ax, [xL(ix) xL(ix)], [yL(iy) yL(iy)], [zL(1) zL(2)], ...
-                  '-', 'Color', color, 'LineWidth', 1.5);
+            plot3(ax, [xL(ix) xL(ix)], [yL(iy) yL(iy)], [zL(1) zL(2)], '-', 'Color', color, 'LineWidth', 1.5);
         end
     end
 end
@@ -175,13 +154,8 @@ function txt = customDataTip(~, info)
         case 'baseOrigin', label = 'Base origin';
     end
     if isempty(label)
-        txt = {sprintf('X = %.2f mm', pos(1)), ...
-               sprintf('Y = %.2f mm', pos(2)), ...
-               sprintf('Z = %.2f mm', pos(3))};
+        txt = {sprintf('X = %.2f mm', pos(1)), sprintf('Y = %.2f mm', pos(2)), sprintf('Z = %.2f mm', pos(3))};
     else
-        txt = {label, ...
-               sprintf('X = %.2f mm', pos(1)), ...
-               sprintf('Y = %.2f mm', pos(2)), ...
-               sprintf('Z = %.2f mm', pos(3))};
+        txt = {label, sprintf('X = %.2f mm', pos(1)), sprintf('Y = %.2f mm', pos(2)), sprintf('Z = %.2f mm', pos(3))};
     end
 end

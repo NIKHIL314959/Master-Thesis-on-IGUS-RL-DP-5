@@ -52,8 +52,7 @@ function stats = latencyTest(plc, varargin)
     currentTgt = plc.getTargetTCP();
     for k = 1:opts.samples
         tic;
-        plc.setTargetTCP(currentTgt(1), currentTgt(2), currentTgt(3), ...
-                          currentTgt(4), currentTgt(5));
+        plc.setTargetTCP(currentTgt(1), currentTgt(2), currentTgt(3), currentTgt(4), currentTgt(5));
         t_write(k) = toc * 1000;
     end
     stats.write_ms = summarize(t_write, 'Write');
@@ -206,20 +205,17 @@ function s = summarize(values, label)
     s.max    = max(values);
     s.std    = std(values);
     s.p95    = prctile(values, 95);
-    fprintf('    %s latency: mean=%.2f ms  median=%.2f ms  min=%.2f  max=%.2f  p95=%.2f  std=%.2f\n', ...
-            label, s.mean, s.median, s.min, s.max, s.p95, s.std);
+    fprintf('    %s latency: mean=%.2f ms  median=%.2f ms  min=%.2f  max=%.2f  p95=%.2f  std=%.2f\n', label, s.mean, s.median, s.min, s.max, s.p95, s.std);
 end
 
 
 function printSummary(stats)
     fprintf('\n══════════════ Latency Summary ══════════════\n');
     if isfield(stats, 'read_ms') && isstruct(stats.read_ms)
-        fprintf('  OPC UA read    : mean %.2f ms,  p95 %.2f ms\n', ...
-                stats.read_ms.mean, stats.read_ms.p95);
+        fprintf('  OPC UA read    : mean %.2f ms,  p95 %.2f ms\n', stats.read_ms.mean, stats.read_ms.p95);
     end
     if isfield(stats, 'write_ms') && isstruct(stats.write_ms)
-        fprintf('  OPC UA write   : mean %.2f ms,  p95 %.2f ms\n', ...
-                stats.write_ms.mean, stats.write_ms.p95);
+        fprintf('  OPC UA write   : mean %.2f ms,  p95 %.2f ms\n', stats.write_ms.mean, stats.write_ms.p95);
     end
     if isfield(stats, 'poll_rate_Hz') && ~isnan(stats.poll_rate_Hz)
         fprintf('  Poll rate      : %.0f Hz\n', stats.poll_rate_Hz);
@@ -228,9 +224,7 @@ function printSummary(stats)
         fprintf('  Sensor refresh : %.0f Hz (during motion)\n', stats.sensor_refresh_Hz);
     end
     if isfield(stats, 'cmd_to_motion_ms') && isstruct(stats.cmd_to_motion_ms)
-        fprintf('  Cmd -> motion  : mean %.1f ms,  max %.1f ms,  min %.1f ms\n', ...
-                stats.cmd_to_motion_ms.mean, stats.cmd_to_motion_ms.max, ...
-                stats.cmd_to_motion_ms.min);
+        fprintf('  Cmd -> motion  : mean %.1f ms,  max %.1f ms,  min %.1f ms\n', stats.cmd_to_motion_ms.mean, stats.cmd_to_motion_ms.max, stats.cmd_to_motion_ms.min);
     end
     fprintf('═════════════════════════════════════════════\n\n');
 end

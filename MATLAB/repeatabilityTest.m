@@ -28,9 +28,7 @@ function stats = repeatabilityTest(plc, posA, posB, varargin)
 
     % ── Validate inputs ──────────────────────────────────────────────────────
     if nargin < 3
-        error(['repeatabilityTest needs both posA and posB.\n' ...
-               'Usage: repeatabilityTest(plc, posA, posB)\n' ...
-               'Where posA and posB are 1x5 vectors [X Y Z B C].']);
+        error(['repeatabilityTest needs both posA and posB.\n' 'Usage: repeatabilityTest(plc, posA, posB)\n' 'Where posA and posB are 1x5 vectors [X Y Z B C].']);
     end
     if numel(posA) ~= 5 || numel(posB) ~= 5
         error('posA and posB must each be 1x5 [X Y Z B C]');
@@ -112,8 +110,7 @@ function stats = repeatabilityTest(plc, posA, posB, varargin)
         measured(k, :) = plc.getActualTCP();
         successful(k) = true;
 
-        fprintf('-> X=%.3f  Y=%.3f  Z=%.3f\n', ...
-                measured(k,1), measured(k,2), measured(k,3));
+        fprintf('-> X=%.3f  Y=%.3f  Z=%.3f\n', measured(k,1), measured(k,2), measured(k,3));
     end
 
     % ── Drop failed trials ───────────────────────────────────────────────────
@@ -164,10 +161,7 @@ function stats = repeatabilityTest(plc, posA, posB, varargin)
     ts       = datestr(now, 'yyyy-mm-dd_HH-MM-SS');
     baseName = sprintf('repeatability_%s', ts);
 
-    T = table((1:nGood)', ...
-              measuredOK(:,1), measuredOK(:,2), measuredOK(:,3), measuredOK(:,4), measuredOK(:,5), ...
-              deviations(:,1), deviations(:,2), deviations(:,3), radial, ...
-              'VariableNames', {'trial','X_mm','Y_mm','Z_mm','B_deg','C_deg', 'devX_mm','devY_mm','devZ_mm','radial_mm'});
+    T = table((1:nGood)', measuredOK(:,1), measuredOK(:,2), measuredOK(:,3), measuredOK(:,4), measuredOK(:,5), deviations(:,1), deviations(:,2), deviations(:,3), radial, 'VariableNames', {'trial','X_mm','Y_mm','Z_mm','B_deg','C_deg', 'devX_mm','devY_mm','devZ_mm','radial_mm'});
     writetable(T, [baseName '.csv']);
     save([baseName '.mat'], 'stats');
 
