@@ -79,8 +79,7 @@ function success = tcp_move(plc, mode, x, y, z, b, c, options)
         return
     end
     if ~status.ready
-        fprintf('[tcp_move] Robot is not ready (powered=%d, homed=%d, error=%d)\n', ...
-                status.powerOn, status.homed, status.error);
+        fprintf('[tcp_move] Robot is not ready (powered=%d, homed=%d, error=%d)\n', status.powerOn, status.homed, status.error);
         return
     end
 
@@ -108,8 +107,7 @@ function success = tcp_move(plc, mode, x, y, z, b, c, options)
         fprintf('  TCP MOVE  [%s]\n', upper(mode));
         fprintf('════════════════════════════════════════════════\n');
         fprintf('  Current  TCP : X=%7.2f  Y=%7.2f  Z=%7.2f  B=%6.2f  C=%6.2f\n', current_tcp);
-        fprintf('  Target   TCP : X=%7.2f  Y=%7.2f  Z=%7.2f  B=%6.2f  C=%6.2f\n', ...
-                target_x, target_y, target_z, target_b, target_c);
+        fprintf('  Target   TCP : X=%7.2f  Y=%7.2f  Z=%7.2f  B=%6.2f  C=%6.2f\n', target_x, target_y, target_z, target_b, target_c);
         fprintf('  Distance     : %.2f mm\n', move_dist);
         fprintf('════════════════════════════════════════════════\n\n');
     end
@@ -167,8 +165,7 @@ function success = tcp_move(plc, mode, x, y, z, b, c, options)
         end
         success = true;
     else
-        fprintf('\n[tcp_move] TCP error %.2f mm exceeds tolerance (%.1f mm)\n', ...
-                tcp_error, TOLERANCE_MM);
+        fprintf('\n[tcp_move] TCP error %.2f mm exceeds tolerance (%.1f mm)\n', tcp_error, TOLERANCE_MM);
         fprintf('[tcp_move] Check mechanical system config or re-home.\n\n');
         success = false;
     end
