@@ -10,11 +10,11 @@ Supervisors: Prof. Dr.-Ing. Frank Schrödel, Mr. Venkata Prashanth Uppalapati.
 
 ## Overview
 
-A 5-axis IGUS RL-DP-5 robot arm is controlled by a B&R X20 PLC running mapp Motion.
-The PLC exposes the robot over OPC UA to
+This project connects an IGUS RL-DP-5 five-axis robot arm to a B&R X20 PLC and makes it controllable and observable from outside the controller. Motion is handled on the PLC with mapp Motion, including Cartesian TCP control, homing, encoder feedback and a hardware emergency stop. The PLC's OPC UA server is the single interface for everything else:
 
-- a **MATLAB control panel** (App Designer) for jogging, Cartesian TCP moves, teach-and-execute pick-and-place, logging and tests, and
-- a **digital twin in B&R Scene Viewer**, synchronized live with the physical joint angles.
+- **MATLAB control panel:** jogging, Cartesian moves, teach-and-execute pick-and-place, logging and test scripts
+- **Digital twin:** a B&R Scene Viewer model that mirrors the real robot's joint angles live
+- **PLC-side pick-and-place:** a state machine that runs the same task without MATLAB
 
 ## Hardware
 
