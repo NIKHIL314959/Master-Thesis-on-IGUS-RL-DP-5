@@ -34,27 +34,32 @@ The PLC exposes the robot over OPC UA to
 
 ## Repository structure
 
-```
-AutomationStudio/
-  Nikhil_5_Axes.apj            Automation Studio project file
-  Logical/
-    Motion_Control/Main.st     Main PLC program (motion, homing, E-Stop, pick-and-place state machine)
-    CNC_PrgDir/                Robot and gripper programs
-    SceneViewer/               Digital twin scene (.scn) and STL meshes
-    mappView/                  HMI pages
-    Global.var, Global.typ     Global variables and types (incl. OPC UA tags)
-  Physical/                    Hardware, axes, mechanical system, OPC UA configuration
-MATLAB/
-  RobotControlPanel.m          GUI (App Designer)
-  PLCController.m              OPC UA connection and PLC commands
-  PickAndPlace.m               MATLAB-side pick-and-place
-  TCP_move.m, Robot_session.m  Cartesian moves and session handling
-  logMove.m, analyzeLog.m, plotMoveLog.m   Move logging and tracking plots
-  latencyTest.m, plotLatency.m            OPC UA latency characterization
-  repeatabilityTest.m                     Command-level repeatability test
-  plotOperatingBox.m                      Workspace plot with robot mesh
-  Test_files/                  Raw measurement data and figures used in Chapter 4
-```
+### AutomationStudio
+
+| Path | Contents |
+|---|---|
+| `Nikhil_5_Axes.apj` | Automation Studio project file |
+| `Logical/Motion_Control/Main.st` | Main PLC program: motion, homing, E-Stop, pick-and-place state machine |
+| `Logical/CNC_PrgDir/` | Robot and gripper programs |
+| `Logical/SceneViewer/` | Digital twin scene and STL meshes |
+| `Logical/mappView/` | HMI pages |
+| `Logical/Global.var`, `Global.typ` | Global variables and types, including OPC UA tags |
+| `Physical/` | Hardware, axes, mechanical system and OPC UA configuration |
+
+### MATLAB
+
+| File | Purpose |
+|---|---|
+| `RobotControlPanel.m` | GUI (App Designer) |
+| `PLCController.m` | OPC UA connection and PLC commands |
+| `PickAndPlace.m` | MATLAB-side pick-and-place |
+| `TCP_move.m` | Cartesian TCP moves |
+| `Robot_session.m` | Session handling |
+| `logMove.m`, `analyzeLog.m`, `plotMoveLog.m` | Move logging and tracking plots |
+| `latencyTest.m`, `plotLatency.m` | OPC UA latency characterization |
+| `repeatabilityTest.m` | Command-level repeatability test |
+| `plotOperatingBox.m` | Workspace plot with robot mesh |
+| `Test_files/` | Raw measurement data and figures used in Chapter 4 |
 
 ## Getting started
 
