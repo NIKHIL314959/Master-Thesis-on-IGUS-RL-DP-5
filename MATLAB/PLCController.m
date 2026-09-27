@@ -401,8 +401,7 @@ end
                 writeValue(obj.client, obj.nodes.paramVel, {single(velocity_mm_s)});
                 writeValue(obj.client, obj.nodes.paramAcc, {single(acceleration_mm_s2)});
                 writeValue(obj.client, obj.nodes.paramOverride, {single(override_pct)});
-                fprintf('[PLCController] Motion params: vel=%.1f mm/s, acc=%.1f mm/s2, override=%.0f%%\n', ...
-                        velocity_mm_s, acceleration_mm_s2, override_pct);
+                fprintf('[PLCController] Motion params: vel=%.1f mm/s, acc=%.1f mm/s2, override=%.0f%%\n', velocity_mm_s, acceleration_mm_s2, override_pct);
             catch ME
                 warning('[PLCController] setMotionParams failed: %s', ME.message);
             end
