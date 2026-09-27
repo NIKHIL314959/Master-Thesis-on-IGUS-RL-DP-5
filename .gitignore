@@ -1,0 +1,11 @@
+# Automation Studio (generated, not source)
+Temp/
+Binaries/
+Diagnosis/
+*.isopen
+
+# MATLAB
+*.asv
+*.autosave
+slprj/
+codegen/
