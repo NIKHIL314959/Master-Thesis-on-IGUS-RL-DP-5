@@ -6,7 +6,7 @@ Source code for the Master's thesis
 
 Nikhil Badri Nargund, M.Eng. Mechatronics and Robotics, Hochschule Schmalkalden, 2026
 
-Supervisors: Prof. Dr.-Ing. Frank Schrödel, Venkata Prashanth Uppalapati.
+Supervisors: Prof. Dr.-Ing. Frank Schrödel, Mr. Venkata Prashanth Uppalapati.
 
 ## Overview
 
