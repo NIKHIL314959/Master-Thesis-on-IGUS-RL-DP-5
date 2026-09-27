@@ -5,7 +5,8 @@ Source code for the Master's thesis
 **"Implementation of a Synchronized Digital Twin and External Control for an Industrial Robotic Arm within an Industry 4.0 Production Plant"**
 
 Nikhil Badri Nargund, M.Eng. Mechatronics and Robotics, Hochschule Schmalkalden, 2026
-Supervisors: Prof. Dr.-Ing. Frank Schrödel, Venkata Prashanth Uppalapati, M.Eng.
+
+Supervisors: Prof. Dr.-Ing. Frank Schrödel, Venkata Prashanth Uppalapati.
 
 ## Overview
 
