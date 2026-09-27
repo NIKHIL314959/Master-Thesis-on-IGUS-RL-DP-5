@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File">Basis.stl</Object>
+    <Object Type="File">MotorGeberAnschluss.stl</Object>
+    <Object Type="File">Q1ini.stl</Object>
+    <Object Type="File">Q1joint.stl</Object>
+    <Object Type="File">Q1mot.stl</Object>
+    <Object Type="File">Q2ini.stl</Object>
+    <Object Type="File">Q2joint.stl</Object>
+    <Object Type="File">Q2mot.stl</Object>
+    <Object Type="File">Q2zuQ3.stl</Object>
+    <Object Type="File">Q3ini.stl</Object>
+    <Object Type="File">Q3joint.stl</Object>
+    <Object Type="File">Q3mot.stl</Object>
+    <Object Type="File">Q3zuQ4.stl</Object>
+    <Object Type="File">Q4ini.stl</Object>
+    <Object Type="File">Q4joint.stl</Object>
+    <Object Type="File">Q4mot.stl</Object>
+    <Object Type="File">Q4zuQ5.stl</Object>
+    <Object Type="File">Q5joint.stl</Object>
+    <Object Type="File">BasisBig.stl</Object>
+    <Object Type="File">MotorGeberAnschlussBig.stl</Object>
+    <Object Type="File">Part1.stl</Object>
+    <Object Type="File">Part2.stl</Object>
+    <Object Type="File">Part3.stl</Object>
+    <Object Type="File">Part4.stl</Object>
+    <Object Type="File">Part5.stl</Object>
+    <Object Type="File">Part6.stl</Object>
+  </Objects>
+</Package>

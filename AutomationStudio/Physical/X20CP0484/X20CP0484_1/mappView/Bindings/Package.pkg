@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File">TippingBinding.binding</Object>
+    <Object Type="File">OutputBarBinding.binding</Object>
+    <Object Type="File">ButtonBarBinding.binding</Object>
+    <Object Type="File">StatusBarBinding.binding</Object>
+    <Object Type="File">InfoBarBinding.binding</Object>
+    <Object Type="File">AutomaticBinding.binding</Object>
+    <Object Type="File">MoveMCSBinding.binding</Object>
+    <Object Type="File">SnippetBinding.binding</Object>
+    <Object Type="File">ClientInfoBinding.binding</Object>
+  </Objects>
+</Package>

@@ -1,11 +1,19 @@
-# Automation Studio (generated, not source)
+# Automation Studio - generated on build, not source
 Temp/
 Binaries/
 Diagnosis/
+AS/
+*.br
+*.a
 *.isopen
+*.set
+
+# Windows
+Thumbs.db
 
 # MATLAB
 *.asv
 *.autosave
 slprj/
 codegen/
+MATLAB/igus_asm.stp.STL

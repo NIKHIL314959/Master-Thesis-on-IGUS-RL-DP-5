@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EventBindingSet id="WorkingTable_eventbinding" xmlns="http://www.br-automation.com/iat2014/eventbinding/v2" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Bindings>
+		<EventBinding id="WorkingTable.Button1.Click">
+			<Source contentRefId="WorkingTable" widgetRefId="Button1" xsi:type="widgets.brease.Button.Event" event="Click" />
+			<EventHandler>
+				<Action>
+					<Target xsi:type="widgets.brease.MotionPad.Action" contentRefId="WorkingTable" widgetRefId="MotionPad1" >                                                            
+						<Method xsi:type="widgets.brease.MotionPad.Action.OpenFileExplorer" />                                    
+					</Target>
+				</Action>
+			</EventHandler>
+		</EventBinding>
+		<EventBinding id="WorkingTable.Button2.Click">
+			<Source contentRefId="WorkingTable" widgetRefId="Button2" xsi:type="widgets.brease.Button.Event" event="Click" />
+			<EventHandler>
+				<Action>
+					<Target xsi:type="widgets.brease.MotionPad.Action" contentRefId="WorkingTable" widgetRefId="MotionPad1" >                                                    
+						<Method xsi:type="widgets.brease.MotionPad.Action.SaveAs" />                                            
+					</Target>  
+				</Action>
+			</EventHandler>
+		</EventBinding>
+	</Bindings>
+</EventBindingSet>

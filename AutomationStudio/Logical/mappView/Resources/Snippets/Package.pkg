@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package SubType="SnippetsPackage" PackageType="SnippetsPackage" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File" Description="Snippet for status change">StatusChange.snippet</Object>
+    <Object Type="File" Description="Snippet for changes of the X movement">OutputChangeX.snippet</Object>
+    <Object Type="File" Description="Snippet for changes of the Y movement">OutputChangeY.snippet</Object>
+    <Object Type="File" Description="Snippet for changes of the Z movement">OutputChangeZ.snippet</Object>
+    <Object Type="File" Description="Snippet for changes of the B movement">OutputChangeB.snippet</Object>
+    <Object Type="File" Description="Snippet for changes of the C movement">OutputChangeC.snippet</Object>
+  </Objects>
+</Package>

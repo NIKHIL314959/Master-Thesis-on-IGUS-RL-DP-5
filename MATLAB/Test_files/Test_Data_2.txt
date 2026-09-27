@@ -1,0 +1,800 @@
+>> % Open Robot_session.m and run sections 1, 2, 3 only:
+plc = PLCController('169.254.137.11', 48400);
+plc.connect();
+plc.printStatus();
+[PLCController] Initialized for 169.254.137.11:48400
+[PLCController] Connecting to opc.tcp://169.254.137.11:48400...
+Warning: Both message security mode and channel security policy are set to None. This configuration is not secure and should only
+be used in trusted environments. Use the setSecurityModel function to set a secure message security mode and channel security
+policy. 
+[PLCController] Connected
+[PLCController] Caching OPC UA nodes...
+[PLCController] All nodes cached successfully
+
+[PLCController] ══ Status Snapshot ══
+  Ready      : 0
+  Homed      : 0
+  PowerOn    : 0
+  Moving     : 0
+  InPosition : 0
+  Error      : 0  (ID=0)
+  Actual TCP : X=0.00  Y=0.00  Z=0.00  B=0.00  C=0.00
+  Actual Q   : [0.000  0.000  0.000  0.000  0.000]
+[PLCController] ══════════════════════
+
+>> % Open Robot_session.m and run sections 1, 2, 3 only:
+plc = PLCController('169.254.137.11', 48400);
+plc.connect();
+plc.printStatus();
+
+% Now test the new method:
+target = plc.getTargetTCP()
+[PLCController] Initialized for 169.254.137.11:48400
+[PLCController] Disconnected
+[PLCController] Connecting to opc.tcp://169.254.137.11:48400...
+Warning: Both message security mode and channel security policy are set to None. This configuration is not secure and should
+only be used in trusted environments. Use the setSecurityModel function to set a secure message security mode and channel
+security policy. 
+[PLCController] Connected
+[PLCController] Caching OPC UA nodes...
+[PLCController] All nodes cached successfully
+
+[PLCController] ══ Status Snapshot ══
+  Ready      : 0
+  Homed      : 0
+  PowerOn    : 0
+  Moving     : 0
+  InPosition : 0
+  Error      : 0  (ID=0)
+  Actual TCP : X=0.00  Y=0.00  Z=0.00  B=0.00  C=0.00
+  Actual Q   : [0.000  0.000  0.000  0.000  0.000]
+[PLCController] ══════════════════════
+
+
+target =
+
+     0     0     0     0     0
+
+>> % Get current TCP first to plan a safe small move
+tcp = plc.getActualTCP();
+fprintf('Current TCP: X=%.1f Y=%.1f Z=%.1f\n', tcp(1), tcp(2), tcp(3));
+
+% Plan a small, safe relative move — 30 mm in +Z (lift) or whatever is safe
+% Adjust target as needed for your current robot pose
+[ok, log] = logMove(plc, 'abs', tcp(1), tcp(2), tcp(3) + 30, tcp(4), tcp(5));
+Current TCP: X=416.0 Y=-0.4 Z=581.2
+[PLCController] Target TCP: X=416.04 Y=-0.41 Z=611.18 B=-49.88 C=0.02
+[PLCController] MoveLinear triggered
+[logMove] Logging at 50 Hz...
+[logMove] Saved move_log_2026-05-06_16-49-48.csv and move_log_2026-05-06_16-49-48.mat
+[logMove] Move complete: 37 samples, max error 30.00 mm, final error 0.00 mm
+>> analyzeLog(log)
+
+══════════════ Log Analysis ══════════════
+  Samples           : 37
+  Duration          : 3.83 s
+  Tracking error    :
+     max            : 30.000 mm
+     mean           : 11.972 mm
+     RMS            : 15.598 mm
+     final          : 0.000 mm
+  Settling time     : 3.07 s (to ±2.0 mm)
+  Peak  TCP speed   : 12.05 mm/s
+  Mean  TCP speed   : 9.44 mm/s
+  Joint travel [deg]: Q1=0.00 Q2=0.26 Q3=6.63 Q4=6.37 Q5=0.00
+═════════════════════════════════════════
+
+
+ans = 
+
+  struct with fields:
+
+           numSamples: 37
+           duration_s: 3.8291
+          maxError_mm: 30
+         meanError_mm: 11.9715
+          rmsError_mm: 15.5984
+        finalError_mm: 6.4635e-10
+       settlingTime_s: 3.0748
+    peakVelocity_mm_s: 12.0526
+    meanVelocity_mm_s: 9.4440
+      jointTravel_deg: [0 0.2579 6.6308 6.3716 0]
+
+>> RobotControlPanel
+[PLCController] Initialized for 169.254.137.11:48400
+[PLCController] Connecting to opc.tcp://169.254.137.11:48400...
+Warning: Both message security mode and channel security policy are set to None. This configuration is not secure and should
+only be used in trusted environments. Use the setSecurityModel function to set a secure message security mode and channel
+security policy. 
+[PLCController] Connected
+[PLCController] Caching OPC UA nodes...
+[PLCController] All nodes cached successfully
+[PLCController] Motion params: vel=50.0 mm/s, acc=250.0 mm/s2, override=100%
+[PLCController] Target TCP: X=500.00 Y=-140.00 Z=300.00 B=0.50 C=-8.00
+[PLCController] MoveLinear triggered
+[PLCController] Waiting for move completion...
+[PLCController] In position
+[PLCController] Motion params: vel=50.0 mm/s, acc=250.0 mm/s2, override=100%
+[PLCController] Target TCP: X=427.00 Y=-300.00 Z=300.00 B=0.50 C=-28.00
+[PLCController] MoveLinear triggered
+[PLCController] Waiting for move completion...
+[PLCController] In position
+>> log = logMonitor(plc, 'duration', 60);
+[logMonitor] Logging at 50 Hz for 60.0 s...
+[logMonitor] Stopped after 0 samples
+[logMonitor] Saved monitor_log_2026-05-06_17-01-04.csv and monitor_log_2026-05-06_17-01-04.mat (576 samples)
+
+=== PICK AND PLACE START ===
+  Pick  : X=500.00  Y=-140.00  Z=300.00  B=0.50  C=-8.00
+  Place : X=427.00  Y=-300.00  Z=300.00  B=0.50  C=-28.00
+  Home  : X=415.95  Y=-0.22  Z=581.44  B=-49.90  C=0.02
+[PLCController] Gripper open
+[1] Gripper open
+
+════════════════════════════════════════════════
+  TCP MOVE  [ABS]
+════════════════════════════════════════════════
+  Current  TCP : X= 415.95  Y=  -0.22  Z= 581.44  B=-49.90  C=  0.02
+  Target   TCP : X= 500.00  Y=-140.00  Z= 380.00  B=  0.50  C= -8.00
+  Distance     : 259.19 mm
+════════════════════════════════════════════════
+
+[PLCController] Target TCP: X=500.00 Y=-140.00 Z=380.00 B=0.50 C=-8.00
+[PLCController] MoveLinear triggered
+[tcp_move] Move executing...
+[PLCController] Waiting for move completion...
+[PLCController] In position
+
+[tcp_move] Post-move verification:
+  Target  TCP : X= 500.00  Y=-140.00  Z= 380.00
+  Actual  TCP : X= 500.00  Y=-140.00  Z= 380.00
+  TCP error   : 0.000 mm
+
+  Move complete. TCP error within tolerance (0.000 mm)
+
+[2] Above pick position
+
+════════════════════════════════════════════════
+  TCP MOVE  [ABS]
+════════════════════════════════════════════════
+  Current  TCP : X= 500.00  Y=-140.00  Z= 380.00  B=  0.50  C= -8.00
+  Target   TCP : X= 500.00  Y=-140.00  Z= 300.00  B=  0.50  C= -8.00
+  Distance     : 80.00 mm
+════════════════════════════════════════════════
+
+[PLCController] Target TCP: X=500.00 Y=-140.00 Z=300.00 B=0.50 C=-8.00
+[PLCController] MoveLinear triggered
+[tcp_move] Move executing...
+[PLCController] Waiting for move completion...
+[PLCController] In position
+
+[tcp_move] Post-move verification:
+  Target  TCP : X= 500.00  Y=-140.00  Z= 300.00
+  Actual  TCP : X= 500.00  Y=-140.00  Z= 300.00
+  TCP error   : 0.000 mm
+
+  Move complete. TCP error within tolerance (0.000 mm)
+
+[3] At pick position
+[PLCController] Gripper close
+[4] Gripper closed
+
+════════════════════════════════════════════════
+  TCP MOVE  [ABS]
+════════════════════════════════════════════════
+  Current  TCP : X= 500.00  Y=-140.00  Z= 300.00  B=  0.50  C= -8.00
+  Target   TCP : X= 500.00  Y=-140.00  Z= 380.00  B=  0.50  C= -8.00
+  Distance     : 80.00 mm
+════════════════════════════════════════════════
+
+[PLCController] Target TCP: X=500.00 Y=-140.00 Z=380.00 B=0.50 C=-8.00
+[PLCController] MoveLinear triggered
+[tcp_move] Move executing...
+[PLCController] Waiting for move completion...
+[PLCController] In position
+
+[tcp_move] Post-move verification:
+  Target  TCP : X= 500.00  Y=-140.00  Z= 380.00
+  Actual  TCP : X= 500.00  Y=-140.00  Z= 380.00
+  TCP error   : 0.000 mm
+
+  Move complete. TCP error within tolerance (0.000 mm)
+
+[5] Lifted
+
+════════════════════════════════════════════════
+  TCP MOVE  [ABS]
+════════════════════════════════════════════════
+  Current  TCP : X= 500.00  Y=-140.00  Z= 380.00  B=  0.50  C= -8.00
+  Target   TCP : X= 427.00  Y=-300.00  Z= 380.00  B=  0.50  C=-28.00
+  Distance     : 175.87 mm
+════════════════════════════════════════════════
+
+[PLCController] Target TCP: X=427.00 Y=-300.00 Z=380.00 B=0.50 C=-28.00
+[PLCController] MoveLinear triggered
+[tcp_move] Move executing...
+[PLCController] Waiting for move completion...
+[PLCController] In position
+
+[tcp_move] Post-move verification:
+  Target  TCP : X= 427.00  Y=-300.00  Z= 380.00
+  Actual  TCP : X= 427.00  Y=-300.00  Z= 380.00
+  TCP error   : 0.000 mm
+
+  Move complete. TCP error within tolerance (0.000 mm)
+
+[6] Above place position
+
+════════════════════════════════════════════════
+  TCP MOVE  [ABS]
+════════════════════════════════════════════════
+  Current  TCP : X= 427.00  Y=-300.00  Z= 380.00  B=  0.50  C=-28.00
+  Target   TCP : X= 427.00  Y=-300.00  Z= 300.00  B=  0.50  C=-28.00
+  Distance     : 80.00 mm
+════════════════════════════════════════════════
+
+[PLCController] Target TCP: X=427.00 Y=-300.00 Z=300.00 B=0.50 C=-28.00
+[PLCController] MoveLinear triggered
+[tcp_move] Move executing...
+[PLCController] Waiting for move completion...
+[PLCController] In position
+
+[tcp_move] Post-move verification:
+  Target  TCP : X= 427.00  Y=-300.00  Z= 300.00
+  Actual  TCP : X= 427.00  Y=-300.00  Z= 300.00
+  TCP error   : 0.000 mm
+
+  Move complete. TCP error within tolerance (0.000 mm)
+
+[7] At place position
+[PLCController] Gripper open
+[8] Gripper open — bottle released
+
+════════════════════════════════════════════════
+  TCP MOVE  [ABS]
+════════════════════════════════════════════════
+  Current  TCP : X= 427.00  Y=-300.00  Z= 300.00  B=  0.50  C=-28.00
+  Target   TCP : X= 415.95  Y=  -0.22  Z= 581.44  B=-49.90  C=  0.02
+  Distance     : 411.33 mm
+════════════════════════════════════════════════
+
+[PLCController] Target TCP: X=415.95 Y=-0.22 Z=581.44 B=-49.90 C=0.02
+[PLCController] MoveLinear triggered
+[tcp_move] Move executing...
+[PLCController] Waiting for move completion...
+[PLCController] In position
+
+[tcp_move] Post-move verification:
+  Target  TCP : X= 415.95  Y=  -0.22  Z= 581.44
+  Actual  TCP : X= 415.95  Y=  -0.22  Z= 581.44
+  TCP error   : 0.000 mm
+
+  Move complete. TCP error within tolerance (0.000 mm)
+
+[9] Back at home
+=== PICK AND PLACE DONE ===
+
+
+=== PICK AND PLACE START ===
+  Pick  : X=500.00  Y=-140.00  Z=300.00  B=0.50  C=-8.00
+  Place : X=427.00  Y=-300.00  Z=300.00  B=0.50  C=-28.00
+  Home  : X=415.95  Y=-0.22  Z=581.44  B=-49.90  C=0.02
+[PLCController] Gripper open
+[1] Gripper open
+
+════════════════════════════════════════════════
+  TCP MOVE  [ABS]
+════════════════════════════════════════════════
+  Current  TCP : X= 415.95  Y=  -0.22  Z= 581.44  B=-49.90  C=  0.02
+  Target   TCP : X= 500.00  Y=-140.00  Z= 380.00  B=  0.50  C= -8.00
+  Distance     : 259.19 mm
+════════════════════════════════════════════════
+
+[PLCController] Target TCP: X=500.00 Y=-140.00 Z=380.00 B=0.50 C=-8.00
+[PLCController] MoveLinear triggered
+[tcp_move] Move executing...
+[PLCController] Waiting for move completion...
+[PLCController] Error during move (ErrorID=0)
+[tcp_move] Move did not complete within 60s.
+
+[PLCController] ══ Status Snapshot ══
+  Ready      : 1
+  Homed      : 1
+  PowerOn    : 1
+  Moving     : 1
+  InPosition : 0
+  Error      : 0  (ID=0)
+  Actual TCP : X=441.55  Y=-42.80  Z=519.92  B=-34.47  C=-2.44
+  Actual Q   : [5.589  -21.145  16.549  -21.146  -13.183]
+[PLCController] ══════════════════════
+
+[2] Above pick position
+
+════════════════════════════════════════════════
+  TCP MOVE  [ABS]
+════════════════════════════════════════════════
+  Current  TCP : X= 442.98  Y= -45.28  Z= 516.35  B=-33.61  C= -2.59
+  Target   TCP : X= 500.00  Y=-140.00  Z= 300.00  B=  0.50  C= -8.00
+  Distance     : 242.96 mm
+════════════════════════════════════════════════
+
+[PLCController] Target TCP: X=500.00 Y=-140.00 Z=300.00 B=0.50 C=-8.00
+[PLCController] MoveLinear triggered
+[tcp_move] Move executing...
+[PLCController] Waiting for move completion...
+[PLCController] In position
+
+[tcp_move] Post-move verification:
+  Target  TCP : X= 500.00  Y=-140.00  Z= 300.00
+  Actual  TCP : X= 500.00  Y=-140.00  Z= 380.00
+  TCP error   : 80.000 mm
+
+[tcp_move] TCP error 80.00 mm exceeds tolerance (2.0 mm)
+[tcp_move] Check mechanical system config or re-home.
+
+[3] At pick position
+[PLCController] Gripper close
+[4] Gripper closed
+
+════════════════════════════════════════════════
+  TCP MOVE  [ABS]
+════════════════════════════════════════════════
+  Current  TCP : X= 500.00  Y=-140.00  Z= 380.00  B=  0.50  C= -8.00
+  Target   TCP : X= 500.00  Y=-140.00  Z= 380.00  B=  0.50  C= -8.00
+  Distance     : 0.00 mm
+════════════════════════════════════════════════
+
+[PLCController] Target TCP: X=500.00 Y=-140.00 Z=380.00 B=0.50 C=-8.00
+[PLCController] MoveLinear triggered
+[tcp_move] Move executing...
+[PLCController] Waiting for move completion...
+[PLCController] In position
+
+[tcp_move] Post-move verification:
+  Target  TCP : X= 500.00  Y=-140.00  Z= 380.00
+  Actual  TCP : X= 500.00  Y=-140.00  Z= 380.00
+  TCP error   : 0.000 mm
+
+  Move complete. TCP error within tolerance (0.000 mm)
+
+[5] Lifted
+
+════════════════════════════════════════════════
+  TCP MOVE  [ABS]
+════════════════════════════════════════════════
+  Current  TCP : X= 500.00  Y=-140.00  Z= 380.00  B=  0.50  C= -8.00
+  Target   TCP : X= 427.00  Y=-300.00  Z= 380.00  B=  0.50  C=-28.00
+  Distance     : 175.87 mm
+════════════════════════════════════════════════
+
+[PLCController] Target TCP: X=427.00 Y=-300.00 Z=380.00 B=0.50 C=-28.00
+[PLCController] MoveLinear triggered
+[tcp_move] Move executing...
+[PLCController] Waiting for move completion...
+[PLCController] In position
+
+[tcp_move] Post-move verification:
+  Target  TCP : X= 427.00  Y=-300.00  Z= 380.00
+  Actual  TCP : X= 427.00  Y=-300.00  Z= 380.00
+  TCP error   : 0.000 mm
+
+  Move complete. TCP error within tolerance (0.000 mm)
+
+[6] Above place position
+
+════════════════════════════════════════════════
+  TCP MOVE  [ABS]
+════════════════════════════════════════════════
+  Current  TCP : X= 427.00  Y=-300.00  Z= 380.00  B=  0.50  C=-28.00
+  Target   TCP : X= 427.00  Y=-300.00  Z= 300.00  B=  0.50  C=-28.00
+  Distance     : 80.00 mm
+════════════════════════════════════════════════
+
+[PLCController] Target TCP: X=427.00 Y=-300.00 Z=300.00 B=0.50 C=-28.00
+[PLCController] MoveLinear triggered
+[tcp_move] Move executing...
+[PLCController] Waiting for move completion...
+[PLCController] In position
+
+[tcp_move] Post-move verification:
+  Target  TCP : X= 427.00  Y=-300.00  Z= 300.00
+  Actual  TCP : X= 427.00  Y=-300.00  Z= 300.00
+  TCP error   : 0.000 mm
+
+  Move complete. TCP error within tolerance (0.000 mm)
+
+[7] At place position
+[PLCController] Gripper open
+[8] Gripper open — bottle released
+
+════════════════════════════════════════════════
+  TCP MOVE  [ABS]
+════════════════════════════════════════════════
+  Current  TCP : X= 427.00  Y=-300.00  Z= 300.00  B=  0.50  C=-28.00
+  Target   TCP : X= 415.95  Y=  -0.22  Z= 581.44  B=-49.90  C=  0.02
+  Distance     : 411.33 mm
+════════════════════════════════════════════════
+
+[PLCController] Target TCP: X=415.95 Y=-0.22 Z=581.44 B=-49.90 C=0.02
+[PLCController] MoveLinear triggered
+[tcp_move] Move executing...
+[PLCController] Waiting for move completion...
+[PLCController] In position
+
+[tcp_move] Post-move verification:
+  Target  TCP : X= 415.95  Y=  -0.22  Z= 581.44
+  Actual  TCP : X= 415.95  Y=  -0.22  Z= 581.44
+  TCP error   : 0.000 mm
+
+  Move complete. TCP error within tolerance (0.000 mm)
+
+[9] Back at home
+=== PICK AND PLACE DONE ===
+
+
+=== PICK AND PLACE START ===
+  Pick  : X=500.00  Y=-140.00  Z=300.00  B=0.50  C=-8.00
+  Place : X=427.00  Y=-300.00  Z=300.00  B=0.50  C=-28.00
+  Home  : X=415.95  Y=-0.22  Z=581.44  B=-49.90  C=0.02
+[PLCController] Gripper open
+[PLCController] Stop command sent
+[1] Gripper open
+
+════════════════════════════════════════════════
+  TCP MOVE  [ABS]
+════════════════════════════════════════════════
+  Current  TCP : X= 415.95  Y=  -0.22  Z= 581.44  B=-49.90  C=  0.02
+  Target   TCP : X= 500.00  Y=-140.00  Z= 380.00  B=  0.50  C= -8.00
+  Distance     : 259.19 mm
+════════════════════════════════════════════════
+
+[PLCController] Target TCP: X=500.00 Y=-140.00 Z=380.00 B=0.50 C=-8.00
+[PLCController] MoveLinear triggered
+[tcp_move] Move executing...
+[PLCController] Waiting for move completion...
+[PLCController] Error during move (ErrorID=-1067211008)
+[tcp_move] Move did not complete within 60s.
+
+[PLCController] ══ Status Snapshot ══
+  Ready      : 0
+  Homed      : 1
+  PowerOn    : 1
+  Moving     : 0
+  InPosition : 0
+  Error      : 1  (ID=-1067211008)
+  Actual TCP : X=446.43  Y=-50.04  Z=507.13  B=-31.41  C=-2.86
+  Actual Q   : [6.395  -23.453  18.010  -23.147  -13.536]
+[PLCController] ══════════════════════
+
+[2] Above pick position
+[tcp_move] Robot is in error state (ErrorID=-1067211008)
+[tcp_move] Call plc.resetError() to clear, then re-home if needed.
+[3] At pick position
+[PLCController] Gripper close
+[4] Gripper closed
+[tcp_move] Robot is in error state (ErrorID=-1067211008)
+[tcp_move] Call plc.resetError() to clear, then re-home if needed.
+[5] Lifted
+[tcp_move] Robot is in error state (ErrorID=-1067211008)
+[tcp_move] Call plc.resetError() to clear, then re-home if needed.
+[6] Above place position
+[tcp_move] Robot is in error state (ErrorID=-1067211008)
+[tcp_move] Call plc.resetError() to clear, then re-home if needed.
+[7] At place position
+[PLCController] Gripper open
+[8] Gripper open — bottle released
+[tcp_move] Robot is in error state (ErrorID=-1067211008)
+[tcp_move] Call plc.resetError() to clear, then re-home if needed.
+[9] Back at home
+=== PICK AND PLACE DONE ===
+
+
+=== PICK AND PLACE START ===
+  Pick  : X=500.00  Y=-140.00  Z=300.00  B=0.50  C=-8.00
+  Place : X=427.00  Y=-300.00  Z=300.00  B=0.50  C=-28.00
+  Home  : X=415.95  Y=-0.22  Z=581.44  B=-49.90  C=0.02
+[PLCController] Gripper open
+[1] Gripper open
+[tcp_move] Robot is in error state (ErrorID=-1067211008)
+[tcp_move] Call plc.resetError() to clear, then re-home if needed.
+[2] Above pick position
+[tcp_move] Robot is in error state (ErrorID=-1067211008)
+[tcp_move] Call plc.resetError() to clear, then re-home if needed.
+[3] At pick position
+[PLCController] Gripper close
+[4] Gripper closed
+[tcp_move] Robot is in error state (ErrorID=-1067211008)
+[tcp_move] Call plc.resetError() to clear, then re-home if needed.
+[5] Lifted
+[tcp_move] Robot is in error state (ErrorID=-1067211008)
+[tcp_move] Call plc.resetError() to clear, then re-home if needed.
+[6] Above place position
+[tcp_move] Robot is in error state (ErrorID=-1067211008)
+[tcp_move] Call plc.resetError() to clear, then re-home if needed.
+[7] At place position
+[PLCController] Gripper open
+[8] Gripper open — bottle released
+[tcp_move] Robot is in error state (ErrorID=-1067211008)
+[tcp_move] Call plc.resetError() to clear, then re-home if needed.
+[9] Back at home
+=== PICK AND PLACE DONE ===
+
+
+=== PICK AND PLACE START ===
+  Pick  : X=500.00  Y=-140.00  Z=300.00  B=0.50  C=-8.00
+  Place : X=427.00  Y=-300.00  Z=300.00  B=0.50  C=-28.00
+  Home  : X=415.95  Y=-0.22  Z=581.44  B=-49.90  C=0.02
+[PLCController] Gripper open
+[1] Gripper open
+[tcp_move] Robot is in error state (ErrorID=-1067211008)
+[tcp_move] Call plc.resetError() to clear, then re-home if needed.
+[2] Above pick position
+[tcp_move] Robot is in error state (ErrorID=-1067211008)
+[tcp_move] Call plc.resetError() to clear, then re-home if needed.
+[3] At pick position
+[PLCController] Gripper close
+[4] Gripper closed
+[tcp_move] Robot is in error state (ErrorID=-1067211008)
+[tcp_move] Call plc.resetError() to clear, then re-home if needed.
+[5] Lifted
+[tcp_move] Robot is in error state (ErrorID=-1067211008)
+[tcp_move] Call plc.resetError() to clear, then re-home if needed.
+[6] Above place position
+[tcp_move] Robot is in error state (ErrorID=-1067211008)
+[tcp_move] Call plc.resetError() to clear, then re-home if needed.
+[7] At place position
+[PLCController] Gripper open
+[8] Gripper open — bottle released
+[tcp_move] Robot is in error state (ErrorID=-1067211008)
+[tcp_move] Call plc.resetError() to clear, then re-home if needed.
+[9] Back at home
+=== PICK AND PLACE DONE ===
+
+
+=== PICK AND PLACE START ===
+  Pick  : X=500.00  Y=-140.00  Z=300.00  B=0.50  C=-8.00
+  Place : X=427.00  Y=-300.00  Z=300.00  B=0.50  C=-28.00
+  Home  : X=415.95  Y=-0.22  Z=581.44  B=-49.90  C=0.02
+[PLCController] Gripper open
+[1] Gripper open
+[tcp_move] Robot is in error state (ErrorID=-1067211008)
+[tcp_move] Call plc.resetError() to clear, then re-home if needed.
+[2] Above pick position
+[tcp_move] Robot is in error state (ErrorID=-1067211008)
+[tcp_move] Call plc.resetError() to clear, then re-home if needed.
+[3] At pick position
+[PLCController] Gripper close
+[4] Gripper closed
+[tcp_move] Robot is in error state (ErrorID=-1067211008)
+[tcp_move] Call plc.resetError() to clear, then re-home if needed.
+[5] Lifted
+[tcp_move] Robot is in error state (ErrorID=-1067211008)
+[tcp_move] Call plc.resetError() to clear, then re-home if needed.
+[6] Above place position
+[tcp_move] Robot is in error state (ErrorID=-1067211008)
+[tcp_move] Call plc.resetError() to clear, then re-home if needed.
+[7] At place position
+[PLCController] Gripper open
+[8] Gripper open — bottle released
+[tcp_move] Robot is in error state (ErrorID=-1067211008)
+[tcp_move] Call plc.resetError() to clear, then re-home if needed.
+[9] Back at home
+=== PICK AND PLACE DONE ===
+
+>> analyzeLog(log)
+
+══════════════ Log Analysis ══════════════
+  Samples           : 576
+  Duration          : 59.97 s
+  Tracking error    :
+     max            : 415.822 mm
+     mean           : 411.339 mm
+     RMS            : 411.339 mm
+     final          : 411.333 mm
+  Settling time     : did not settle within ±2.0 mm
+  Peak  TCP speed   : 35.79 mm/s
+  Mean  TCP speed   : 19.46 mm/s
+  Joint travel [deg]: Q1=0.50 Q2=0.50 Q3=0.57 Q4=0.57 Q5=2.09
+═════════════════════════════════════════
+
+
+ans = 
+
+  struct with fields:
+
+           numSamples: 576
+           duration_s: 59.9726
+          maxError_mm: 415.8223
+         meanError_mm: 411.3387
+          rmsError_mm: 411.3388
+        finalError_mm: 411.3333
+       settlingTime_s: NaN
+    peakVelocity_mm_s: 35.7886
+    meanVelocity_mm_s: 19.4618
+      jointTravel_deg: [0.4960 0.5032 0.5720 0.5744 2.0920]
+
+[PLCController] Error reset sent
+
+=== PICK AND PLACE START ===
+  Pick  : X=500.00  Y=-140.00  Z=300.00  B=0.50  C=-8.00
+  Place : X=427.00  Y=-300.00  Z=300.00  B=0.50  C=-28.00
+  Home  : X=415.91  Y=-0.18  Z=581.57  B=-49.91  C=0.02
+[PLCController] Gripper open
+[1] Gripper open
+
+════════════════════════════════════════════════
+  TCP MOVE  [ABS]
+════════════════════════════════════════════════
+  Current  TCP : X= 415.91  Y=  -0.18  Z= 581.57  B=-49.91  C=  0.02
+  Target   TCP : X= 500.00  Y=-140.00  Z= 380.00  B=  0.50  C= -8.00
+  Distance     : 259.33 mm
+════════════════════════════════════════════════
+
+[PLCController] Target TCP: X=500.00 Y=-140.00 Z=380.00 B=0.50 C=-8.00
+[PLCController] MoveLinear triggered
+[tcp_move] Move executing...
+[PLCController] Waiting for move completion...
+[PLCController] In position
+
+[tcp_move] Post-move verification:
+  Target  TCP : X= 500.00  Y=-140.00  Z= 380.00
+  Actual  TCP : X= 500.00  Y=-140.00  Z= 380.00
+  TCP error   : 0.000 mm
+
+  Move complete. TCP error within tolerance (0.000 mm)
+
+[2] Above pick position
+
+════════════════════════════════════════════════
+  TCP MOVE  [ABS]
+════════════════════════════════════════════════
+  Current  TCP : X= 500.00  Y=-140.00  Z= 380.00  B=  0.50  C= -8.00
+  Target   TCP : X= 500.00  Y=-140.00  Z= 300.00  B=  0.50  C= -8.00
+  Distance     : 80.00 mm
+════════════════════════════════════════════════
+
+[PLCController] Target TCP: X=500.00 Y=-140.00 Z=300.00 B=0.50 C=-8.00
+[PLCController] MoveLinear triggered
+[tcp_move] Move executing...
+[PLCController] Waiting for move completion...
+[PLCController] In position
+
+[tcp_move] Post-move verification:
+  Target  TCP : X= 500.00  Y=-140.00  Z= 300.00
+  Actual  TCP : X= 500.00  Y=-140.00  Z= 300.00
+  TCP error   : 0.000 mm
+
+  Move complete. TCP error within tolerance (0.000 mm)
+
+[3] At pick position
+[PLCController] Gripper close
+[4] Gripper closed
+
+════════════════════════════════════════════════
+  TCP MOVE  [ABS]
+════════════════════════════════════════════════
+  Current  TCP : X= 500.00  Y=-140.00  Z= 300.00  B=  0.50  C= -8.00
+  Target   TCP : X= 500.00  Y=-140.00  Z= 380.00  B=  0.50  C= -8.00
+  Distance     : 80.00 mm
+════════════════════════════════════════════════
+
+[PLCController] Target TCP: X=500.00 Y=-140.00 Z=380.00 B=0.50 C=-8.00
+[PLCController] MoveLinear triggered
+[tcp_move] Move executing...
+[PLCController] Waiting for move completion...
+[PLCController] In position
+
+[tcp_move] Post-move verification:
+  Target  TCP : X= 500.00  Y=-140.00  Z= 380.00
+  Actual  TCP : X= 500.00  Y=-140.00  Z= 380.00
+  TCP error   : 0.000 mm
+
+  Move complete. TCP error within tolerance (0.000 mm)
+
+[5] Lifted
+
+════════════════════════════════════════════════
+  TCP MOVE  [ABS]
+════════════════════════════════════════════════
+  Current  TCP : X= 500.00  Y=-140.00  Z= 380.00  B=  0.50  C= -8.00
+  Target   TCP : X= 427.00  Y=-300.00  Z= 380.00  B=  0.50  C=-28.00
+  Distance     : 175.87 mm
+════════════════════════════════════════════════
+
+[PLCController] Target TCP: X=427.00 Y=-300.00 Z=380.00 B=0.50 C=-28.00
+[PLCController] MoveLinear triggered
+[tcp_move] Move executing...
+[PLCController] Waiting for move completion...
+[PLCController] In position
+
+[tcp_move] Post-move verification:
+  Target  TCP : X= 427.00  Y=-300.00  Z= 380.00
+  Actual  TCP : X= 427.00  Y=-300.00  Z= 380.00
+  TCP error   : 0.000 mm
+
+  Move complete. TCP error within tolerance (0.000 mm)
+
+[6] Above place position
+
+════════════════════════════════════════════════
+  TCP MOVE  [ABS]
+════════════════════════════════════════════════
+  Current  TCP : X= 427.00  Y=-300.00  Z= 380.00  B=  0.50  C=-28.00
+  Target   TCP : X= 427.00  Y=-300.00  Z= 300.00  B=  0.50  C=-28.00
+  Distance     : 80.00 mm
+════════════════════════════════════════════════
+
+[PLCController] Target TCP: X=427.00 Y=-300.00 Z=300.00 B=0.50 C=-28.00
+[PLCController] MoveLinear triggered
+[tcp_move] Move executing...
+[PLCController] Waiting for move completion...
+[PLCController] In position
+
+[tcp_move] Post-move verification:
+  Target  TCP : X= 427.00  Y=-300.00  Z= 300.00
+  Actual  TCP : X= 427.00  Y=-300.00  Z= 300.00
+  TCP error   : 0.000 mm
+
+  Move complete. TCP error within tolerance (0.000 mm)
+
+[7] At place position
+[PLCController] Gripper open
+[8] Gripper open — bottle released
+
+════════════════════════════════════════════════
+  TCP MOVE  [ABS]
+════════════════════════════════════════════════
+  Current  TCP : X= 427.00  Y=-300.00  Z= 300.00  B=  0.50  C=-17.09
+  Target   TCP : X= 415.91  Y=  -0.18  Z= 581.57  B=-49.91  C=  0.02
+  Distance     : 411.46 mm
+════════════════════════════════════════════════
+
+[PLCController] Target TCP: X=415.91 Y=-0.18 Z=581.57 B=-49.91 C=0.02
+[PLCController] MoveLinear triggered
+[tcp_move] Move executing...
+[PLCController] Waiting for move completion...
+[PLCController] In position
+
+[tcp_move] Post-move verification:
+  Target  TCP : X= 415.91  Y=  -0.18  Z= 581.57
+  Actual  TCP : X= 415.91  Y=  -0.18  Z= 581.57
+  TCP error   : 0.000 mm
+
+  Move complete. TCP error within tolerance (0.000 mm)
+
+[9] Back at home
+=== PICK AND PLACE DONE ===
+
+>> analyzeLog(log)
+
+══════════════ Log Analysis ══════════════
+  Samples           : 576
+  Duration          : 59.97 s
+  Tracking error    :
+     max            : 415.822 mm
+     mean           : 411.339 mm
+     RMS            : 411.339 mm
+     final          : 411.333 mm
+  Settling time     : did not settle within ±2.0 mm
+  Peak  TCP speed   : 35.79 mm/s
+  Mean  TCP speed   : 19.46 mm/s
+  Joint travel [deg]: Q1=0.50 Q2=0.50 Q3=0.57 Q4=0.57 Q5=2.09
+═════════════════════════════════════════
+
+
+ans = 
+
+  struct with fields:
+
+           numSamples: 576
+           duration_s: 59.9726
+          maxError_mm: 415.8223
+         meanError_mm: 411.3387
+          rmsError_mm: 411.3388
+        finalError_mm: 411.3333
+       settlingTime_s: NaN
+    peakVelocity_mm_s: 35.7886
+    meanVelocity_mm_s: 19.4618
+      jointTravel_deg: [0.4960 0.5032 0.5720 0.5744 2.0920]
+
+>> 

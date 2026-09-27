@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="ButtonBarBinding" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Bindings>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::Main:MainPar.Cmd.Home" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ButtonBar" widgetRefId="MomentaryPushButtonHome" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::Main:MainPar.Cmd.PowerOn" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ButtonBar" widgetRefId="ToggleButtonPowerOn" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::Main:MainPar.Cmd.Start" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ButtonBar" widgetRefId="MomentaryPushButtonStart" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::Main:MainPar.Cmd.Stop" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ButtonBar" widgetRefId="MomentaryPushButtonStop" attribute="value" />
+		</Binding>
+
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::Main:MainPar.VisuPars.Enable.DisableButtonJog" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ButtonBar" widgetRefId="MomentaryPushButtonStop" attribute="visible" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::Main:MainPar.VisuPars.Enable.DisableButtonJog" attribute="value" />
+			<Target xsi:type="brease" contentRefId="ButtonBar" widgetRefId="MomentaryPushButtonStart" attribute="visible" />
+		</Binding>
+	</Bindings>
+</BindingsSet>

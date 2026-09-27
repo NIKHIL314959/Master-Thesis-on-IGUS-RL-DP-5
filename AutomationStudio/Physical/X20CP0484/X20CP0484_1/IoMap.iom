@@ -1,0 +1,10 @@
+VAR_CONFIG
+	::gEStop_OK AT %IX."X20DM9324".DigitalInput06;
+	::SM_Module_TriggerVars.Axis1 AT %IX."X20DM9324".DigitalInput01;
+	::SM_Module_TriggerVars.Axis2 AT %IX."X20DM9324".DigitalInput02;
+	::SM_Module_TriggerVars.Axis3 AT %IX."X20DM9324".DigitalInput03;
+	::SM_Module_TriggerVars.Axis4 AT %IX."X20DM9324".DigitalInput04;
+	::SM_Module_TriggerVars.Axis5 AT %IX."X20DM9324".DigitalInput05;
+	::Motion_Con:gGripperOpen AT %QX."X20DM9324".DigitalOutput01;
+	::Motion_Con:gGripperClose AT %QX."X20DM9324".DigitalOutput02;
+END_VAR

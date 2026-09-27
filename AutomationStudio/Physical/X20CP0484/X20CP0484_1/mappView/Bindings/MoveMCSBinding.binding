@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="MoveMCSBinding" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Bindings>
+
+
+
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::InitRobot:Par.Velocity" attribute="node" />
+			<Target xsi:type="brease" contentRefId="Par_MCS" widgetRefId="NumericInputVelocity" attribute="node" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::InitRobot:Par.PosMCS[4]" attribute="node" />
+			<Target xsi:type="brease" contentRefId="Move_MCS" widgetRefId="NumericInputC" attribute="node" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::InitRobot:Par.PosMCS[3]" attribute="node" />
+			<Target xsi:type="brease" contentRefId="Move_MCS" widgetRefId="NumericInputB" attribute="node" />
+		</Binding>
+
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::InitRobot:Par.PosMCS[1]" attribute="node" />
+			<Target xsi:type="brease" contentRefId="Move_MCS" widgetRefId="NumericInputY" attribute="node" />
+		</Binding>
+
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::InitRobot:Par.IndexDirectionImage[4]" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Par_MCS" widgetRefId="ImageListCoordinateC" attribute="selectedIndex" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::InitRobot:Par.IndexDirectionImage[3]" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Par_MCS" widgetRefId="ImageListCoordinateB" attribute="selectedIndex" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::InitRobot:Par.IndexDirectionImage[2]" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Par_MCS" widgetRefId="ImageListCoordinateZ" attribute="selectedIndex" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::InitRobot:Par.IndexDirectionImage[1]" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Par_MCS" widgetRefId="ImageListCoordinateY" attribute="selectedIndex" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::InitRobot:Par.IndexDirectionImage[0]" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Par_MCS" widgetRefId="ImageListCoordinateX" attribute="selectedIndex" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::InitRobot:Par.Deceleration" attribute="node" />
+			<Target xsi:type="brease" contentRefId="Par_MCS" widgetRefId="NumericInputDeceleration" attribute="node" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::InitRobot:Par.Acceleration" attribute="node" />
+			<Target xsi:type="brease" contentRefId="Par_MCS" widgetRefId="NumericInputAcceleration" attribute="node" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::InitRobot:Par.PosMCS[0]" attribute="node" />
+			<Target xsi:type="brease" contentRefId="Move_MCS" widgetRefId="NumericInputX" attribute="node" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::InitRobot:Par.PosMCS[2]" attribute="node" />
+			<Target xsi:type="brease" contentRefId="Move_MCS" widgetRefId="NumericInputZ" attribute="node" />
+		</Binding>
+	</Bindings>
+</BindingsSet>

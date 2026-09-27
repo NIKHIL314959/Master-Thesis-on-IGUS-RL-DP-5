@@ -1,0 +1,459 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Data>
+	<Object objecttypeid="1" name="Scene" visible="1" mask="" binding="" jointoparent="0">
+		<ParID parid="80" val="TRUE"/>
+		<ParID parid="81" val="60"/>
+		<ParID parid="82" val="1"/>
+		<ParID parid="90" val="0"/>
+		<ParID parid="100" val="1320.2"/>
+		<ParID parid="101" val="-1240.2"/>
+		<ParID parid="102" val="200"/>
+		<ParID parid="103" val="-0.707107"/>
+		<ParID parid="104" val="0.707107"/>
+		<ParID parid="105" val="0"/>
+		<ParID parid="106" val="0"/>
+		<ParID parid="107" val="0"/>
+		<ParID parid="108" val="1"/>
+		<ParID parid="110" val="0.5"/>
+		<ParID parid="120" val="1,1,1"/>
+		<ParID parid="140" val="0.75,0.75,0.75"/>
+		<ParID parid="145" val=""/>
+		<ParID parid="146" val="0"/>
+		<Object objecttypeid="2" name="Light 1" visible="1" mask="" binding="" jointoparent="0">
+			<ParID parid="100" val="1500"/>
+			<ParID parid="101" val="-3000"/>
+			<ParID parid="102" val="-3000"/>
+			<ParID parid="130" val="1"/>
+			<ParID parid="140" val="1,1,1"/>
+			<ParID parid="150" val="FALSE"/>
+		</Object>
+		<Object objecttypeid="2" name="Light 2" visible="1" mask="" binding="" jointoparent="0">
+			<ParID parid="100" val="0"/>
+			<ParID parid="101" val="0"/>
+			<ParID parid="102" val="6000"/>
+			<ParID parid="130" val="1"/>
+			<ParID parid="140" val="1,1,1"/>
+			<ParID parid="150" val="FALSE"/>
+		</Object>
+		<Object objecttypeid="110" name="igus_stand.STL" visible="1" mask="" binding="" jointoparent="0">
+			<ParID parid="100" val="-80"/>
+			<ParID parid="101" val="0"/>
+			<ParID parid="102" val="200"/>
+			<ParID parid="103" val="0"/>
+			<ParID parid="104" val="0"/>
+			<ParID parid="105" val="0"/>
+			<ParID parid="106" val="1"/>
+			<ParID parid="107" val="1"/>
+			<ParID parid="108" val="1"/>
+			<ParID parid="120" val=".\Parts\RL_DP_5_Robot\igus_stand.STL"/>
+			<ParID parid="121" val="3: Grey Matte"/>
+			<ParID parid="130" val="1"/>
+			<Object objecttypeid="110" name="Joint0.stl" visible="1" mask="" binding="" jointoparent="0">
+				<ParID parid="100" val="80"/>
+				<ParID parid="101" val="0"/>
+				<ParID parid="102" val="0"/>
+				<ParID parid="103" val="0"/>
+				<ParID parid="104" val="0"/>
+				<ParID parid="105" val="0"/>
+				<ParID parid="106" val="1"/>
+				<ParID parid="107" val="1"/>
+				<ParID parid="108" val="1"/>
+				<ParID parid="120" val=".\Parts\RL_DP_5_Robot\Joint0.stl"/>
+				<ParID parid="121" val="3: Grey Matte"/>
+				<ParID parid="130" val="1"/>
+				<Object objecttypeid="110" name="Motor.stl" visible="1" mask="" binding="" jointoparent="0">
+					<ParID parid="100" val="-250"/>
+					<ParID parid="101" val="130"/>
+					<ParID parid="102" val="600"/>
+					<ParID parid="103" val="0"/>
+					<ParID parid="104" val="0"/>
+					<ParID parid="105" val="-90"/>
+					<ParID parid="106" val="10"/>
+					<ParID parid="107" val="10"/>
+					<ParID parid="108" val="10"/>
+					<ParID parid="120" val=".\Parts\RL_DP_5_Robot\Motor.stl"/>
+					<ParID parid="121" val="3: Grey Matte"/>
+					<ParID parid="130" val="1"/>
+				</Object>
+			</Object>
+			<Object objecttypeid="251" name="GCS" visible="1" mask="" binding="" jointoparent="0">
+				<ParID parid="100" val="80"/>
+				<ParID parid="101" val="0"/>
+				<ParID parid="102" val="0"/>
+				<ParID parid="103" val="0"/>
+				<ParID parid="104" val="0"/>
+				<ParID parid="105" val="0"/>
+				<ParID parid="120" val="Frame_1"/>
+				<ParID parid="124" val="100"/>
+				<ParID parid="125" val="TRUE"/>
+				<Object objecttypeid="220" name="Q1" visible="1" mask="" binding="#150*::AsGlobalPV:gZeroedAngle_Q1" jointoparent="0">
+					<ParID parid="100" val="0"/>
+					<ParID parid="101" val="0"/>
+					<ParID parid="102" val="0"/>
+					<ParID parid="103" val="0"/>
+					<ParID parid="104" val="0"/>
+					<ParID parid="105" val="0"/>
+					<ParID parid="106" val="1"/>
+					<ParID parid="107" val="1"/>
+					<ParID parid="108" val="1"/>
+					<ParID parid="120" val="2: Blue Matte"/>
+					<ParID parid="121" val="1: Red Matte"/>
+					<ParID parid="123" val="20"/>
+					<ParID parid="124" val="FALSE"/>
+					<ParID parid="125" val="FALSE"/>
+					<ParID parid="130" val="0"/>
+					<ParID parid="131" val="0"/>
+					<ParID parid="140" val="1e-06"/>
+					<ParID parid="141" val="1e-06"/>
+					<ParID parid="142" val="0"/>
+					<ParID parid="143" val="0"/>
+					<ParID parid="144" val="0"/>
+					<ParID parid="150" val="-0.0630001"/>
+					<ParID parid="160" val="FALSE"/>
+					<Object objecttypeid="110" name="Joint1.stl" visible="1" mask="" binding="" jointoparent="0">
+						<ParID parid="100" val="0"/>
+						<ParID parid="101" val="0"/>
+						<ParID parid="102" val="0"/>
+						<ParID parid="103" val="0"/>
+						<ParID parid="104" val="0"/>
+						<ParID parid="105" val="0"/>
+						<ParID parid="106" val="1"/>
+						<ParID parid="107" val="1"/>
+						<ParID parid="108" val="1"/>
+						<ParID parid="120" val=".\Parts\RL_DP_5_Robot\Joint1.stl"/>
+						<ParID parid="121" val="3: Grey Matte"/>
+						<ParID parid="130" val="1"/>
+					</Object>
+					<Object objecttypeid="220" name="Q2" visible="1" mask="" binding="#150*::AsGlobalPV:gZeroedAngle_Q2" jointoparent="0">
+						<ParID parid="100" val="0"/>
+						<ParID parid="101" val="0"/>
+						<ParID parid="102" val="154.5"/>
+						<ParID parid="103" val="0"/>
+						<ParID parid="104" val="0"/>
+						<ParID parid="105" val="-90"/>
+						<ParID parid="106" val="1"/>
+						<ParID parid="107" val="1"/>
+						<ParID parid="108" val="1"/>
+						<ParID parid="120" val="2: Blue Matte"/>
+						<ParID parid="121" val="1: Red Matte"/>
+						<ParID parid="123" val="20"/>
+						<ParID parid="124" val="FALSE"/>
+						<ParID parid="125" val="FALSE"/>
+						<ParID parid="130" val="0"/>
+						<ParID parid="131" val="0"/>
+						<ParID parid="140" val="1e-06"/>
+						<ParID parid="141" val="1e-06"/>
+						<ParID parid="142" val="0"/>
+						<ParID parid="143" val="0"/>
+						<ParID parid="144" val="0"/>
+						<ParID parid="150" val="0.0563501"/>
+						<ParID parid="160" val="FALSE"/>
+						<Object objecttypeid="110" name="Joint2.stl" visible="1" mask="" binding="" jointoparent="0">
+							<ParID parid="100" val="0"/>
+							<ParID parid="101" val="0"/>
+							<ParID parid="102" val="0"/>
+							<ParID parid="103" val="0"/>
+							<ParID parid="104" val="0"/>
+							<ParID parid="105" val="90"/>
+							<ParID parid="106" val="1"/>
+							<ParID parid="107" val="1"/>
+							<ParID parid="108" val="1"/>
+							<ParID parid="120" val=".\Parts\RL_DP_5_Robot\Joint2.stl"/>
+							<ParID parid="121" val="3: Grey Matte"/>
+							<ParID parid="130" val="1"/>
+						</Object>
+						<Object objecttypeid="220" name="Q3" visible="1" mask="" binding="#150*::AsGlobalPV:gZeroedAngle_Q3" jointoparent="0">
+							<ParID parid="100" val="0"/>
+							<ParID parid="101" val="-350"/>
+							<ParID parid="102" val="0"/>
+							<ParID parid="103" val="0"/>
+							<ParID parid="104" val="0"/>
+							<ParID parid="105" val="0"/>
+							<ParID parid="106" val="1"/>
+							<ParID parid="107" val="1"/>
+							<ParID parid="108" val="1"/>
+							<ParID parid="120" val="2: Blue Matte"/>
+							<ParID parid="121" val="1: Red Matte"/>
+							<ParID parid="123" val="20"/>
+							<ParID parid="124" val="FALSE"/>
+							<ParID parid="125" val="FALSE"/>
+							<ParID parid="130" val="0"/>
+							<ParID parid="131" val="0"/>
+							<ParID parid="140" val="1e-06"/>
+							<ParID parid="141" val="1e-06"/>
+							<ParID parid="142" val="0"/>
+							<ParID parid="143" val="0"/>
+							<ParID parid="144" val="0"/>
+							<ParID parid="150" val="0.0567998"/>
+							<ParID parid="160" val="FALSE"/>
+							<Object objecttypeid="110" name="Joint3.stl" visible="1" mask="" binding="" jointoparent="0">
+								<ParID parid="100" val="0"/>
+								<ParID parid="101" val="0"/>
+								<ParID parid="102" val="0"/>
+								<ParID parid="103" val="90"/>
+								<ParID parid="104" val="0"/>
+								<ParID parid="105" val="90"/>
+								<ParID parid="106" val="1"/>
+								<ParID parid="107" val="1"/>
+								<ParID parid="108" val="1"/>
+								<ParID parid="120" val=".\Parts\RL_DP_5_Robot\Joint3.stl"/>
+								<ParID parid="121" val="3: Grey Matte"/>
+								<ParID parid="130" val="1"/>
+							</Object>
+							<Object objecttypeid="220" name="Q4" visible="1" mask="" binding="#150*::AsGlobalPV:gZeroedAngle_Q4" jointoparent="0">
+								<ParID parid="100" val="270"/>
+								<ParID parid="101" val="0"/>
+								<ParID parid="102" val="0"/>
+								<ParID parid="103" val="90"/>
+								<ParID parid="104" val="0"/>
+								<ParID parid="105" val="0"/>
+								<ParID parid="106" val="1"/>
+								<ParID parid="107" val="1"/>
+								<ParID parid="108" val="1"/>
+								<ParID parid="120" val="2: Blue Matte"/>
+								<ParID parid="121" val="1: Red Matte"/>
+								<ParID parid="123" val="20"/>
+								<ParID parid="124" val="FALSE"/>
+								<ParID parid="125" val="FALSE"/>
+								<ParID parid="130" val="0"/>
+								<ParID parid="131" val="0"/>
+								<ParID parid="140" val="1e-06"/>
+								<ParID parid="141" val="1e-06"/>
+								<ParID parid="142" val="0"/>
+								<ParID parid="143" val="0"/>
+								<ParID parid="144" val="0"/>
+								<ParID parid="150" val="-50.06"/>
+								<ParID parid="160" val="FALSE"/>
+								<Object objecttypeid="110" name="Joint4.stl" visible="1" mask="" binding="" jointoparent="0">
+									<ParID parid="100" val="0"/>
+									<ParID parid="101" val="0"/>
+									<ParID parid="102" val="0"/>
+									<ParID parid="103" val="90"/>
+									<ParID parid="104" val="0"/>
+									<ParID parid="105" val="90"/>
+									<ParID parid="106" val="1"/>
+									<ParID parid="107" val="1"/>
+									<ParID parid="108" val="1"/>
+									<ParID parid="120" val=".\Parts\RL_DP_5_Robot\Joint4.stl"/>
+									<ParID parid="121" val="3: Grey Matte"/>
+									<ParID parid="130" val="1"/>
+								</Object>
+								<Object objecttypeid="220" name="Q5" visible="1" mask="" binding="#150*::AsGlobalPV:gZeroedAngle_Q5" jointoparent="0">
+									<ParID parid="100" val="190"/>
+									<ParID parid="101" val="0"/>
+									<ParID parid="102" val="0"/>
+									<ParID parid="103" val="0"/>
+									<ParID parid="104" val="-90"/>
+									<ParID parid="105" val="0"/>
+									<ParID parid="106" val="1"/>
+									<ParID parid="107" val="1"/>
+									<ParID parid="108" val="1"/>
+									<ParID parid="120" val="2: Blue Matte"/>
+									<ParID parid="121" val="1: Red Matte"/>
+									<ParID parid="123" val="20"/>
+									<ParID parid="124" val="FALSE"/>
+									<ParID parid="125" val="FALSE"/>
+									<ParID parid="130" val="0"/>
+									<ParID parid="131" val="0"/>
+									<ParID parid="140" val="1e-06"/>
+									<ParID parid="141" val="1e-06"/>
+									<ParID parid="142" val="0"/>
+									<ParID parid="143" val="0"/>
+									<ParID parid="144" val="0"/>
+									<ParID parid="150" val="0.0443144"/>
+									<ParID parid="160" val="FALSE"/>
+									<Object objecttypeid="110" name="Joint5.stl" visible="1" mask="" binding="" jointoparent="0">
+										<ParID parid="100" val="0"/>
+										<ParID parid="101" val="0"/>
+										<ParID parid="102" val="0"/>
+										<ParID parid="103" val="0"/>
+										<ParID parid="104" val="0"/>
+										<ParID parid="105" val="0"/>
+										<ParID parid="106" val="1"/>
+										<ParID parid="107" val="1"/>
+										<ParID parid="108" val="1"/>
+										<ParID parid="120" val=".\Parts\RL_DP_5_Robot\Joint5.stl"/>
+										<ParID parid="121" val="3: Grey Matte"/>
+										<ParID parid="130" val="1"/>
+									</Object>
+									<Object objecttypeid="180" name="Cone" visible="1" mask="" binding="" jointoparent="0">
+										<ParID parid="100" val="0"/>
+										<ParID parid="101" val="0"/>
+										<ParID parid="102" val="0"/>
+										<ParID parid="103" val="0"/>
+										<ParID parid="104" val="0"/>
+										<ParID parid="105" val="0"/>
+										<ParID parid="106" val="1"/>
+										<ParID parid="107" val="1"/>
+										<ParID parid="108" val="1"/>
+										<ParID parid="120" val="6: Orange Matte"/>
+										<ParID parid="121" val="32"/>
+										<ParID parid="122" val="TRUE"/>
+										<ParID parid="123" val="FALSE"/>
+										<ParID parid="140" val="0"/>
+										<ParID parid="141" val="0"/>
+										<ParID parid="142" val="9"/>
+										<ParID parid="143" val="360"/>
+									</Object>
+									<Object objecttypeid="200" name="Path tracker" visible="1" mask="" binding="" jointoparent="0">
+										<ParID parid="100" val="0"/>
+										<ParID parid="101" val="0"/>
+										<ParID parid="102" val="0"/>
+										<ParID parid="103" val="0"/>
+										<ParID parid="104" val="0"/>
+										<ParID parid="105" val="0"/>
+										<ParID parid="109" val="MCS"/>
+										<ParID parid="110" val="1"/>
+										<ParID parid="111" val="4000"/>
+										<ParID parid="112" val="0"/>
+										<ParID parid="113" val="0"/>
+										<ParID parid="130" val="0,0,0"/>
+										<ParID parid="131" val="0,0,0"/>
+										<ParID parid="140" val="FALSE"/>
+										<ParID parid="141" val="FALSE"/>
+									</Object>
+									<Object objecttypeid="210" name="Arrow" visible="1" mask="" binding="" jointoparent="0">
+										<ParID parid="100" val="0"/>
+										<ParID parid="101" val="0"/>
+										<ParID parid="102" val="0"/>
+										<ParID parid="103" val="0"/>
+										<ParID parid="104" val="0"/>
+										<ParID parid="105" val="0"/>
+										<ParID parid="106" val="1"/>
+										<ParID parid="107" val="1"/>
+										<ParID parid="108" val="1"/>
+										<ParID parid="120" val="6: Orange Matte"/>
+										<ParID parid="121" val="FALSE"/>
+										<ParID parid="125" val="FALSE"/>
+										<ParID parid="140" val="20"/>
+										<ParID parid="141" val="50"/>
+										<ParID parid="142" val="0.5"/>
+										<ParID parid="143" val="15"/>
+										<ParID parid="144" val="1e-06"/>
+									</Object>
+									<Object objecttypeid="160" name="Positioner" visible="1" mask="" binding="" jointoparent="0">
+										<ParID parid="100" val="0"/>
+										<ParID parid="101" val="0"/>
+										<ParID parid="102" val="0"/>
+										<ParID parid="103" val="0"/>
+										<ParID parid="104" val="0"/>
+										<ParID parid="105" val="0"/>
+										<ParID parid="109" val=""/>
+										<ParID parid="110" val="50"/>
+										<ParID parid="120" val="20"/>
+										<ParID parid="121" val="1"/>
+										<ParID parid="130" val="0,0,0"/>
+										<ParID parid="150" val="FALSE"/>
+										<ParID parid="151" val="32"/>
+									</Object>
+								</Object>
+							</Object>
+						</Object>
+					</Object>
+				</Object>
+			</Object>
+		</Object>
+	</Object>
+	<Materials>
+		<Material ID="0" Name="Undefined" Ambient="0.100000 0.100000 0.100000 1.000000" Specular="0.000000 0.000000 0.000000 1.000000" Emission="0.000000 0.000000 0.000000 1.000000" Shininess="32.000000"/>
+		<Material ID="1" Name="Red Matte" Ambient="0.700000 0.050000 0.050000 1.000000" Specular="0.000000 0.000000 0.000000 1.000000" Emission="0.000000 0.000000 0.000000 1.000000" Shininess="64.000000"/>
+		<Material ID="2" Name="Blue Matte" Ambient="0.100000 0.100000 0.800000 1.000000" Specular="0.000000 0.000000 0.000000 1.000000" Emission="0.000000 0.000000 0.000000 1.000000" Shininess="64.000000"/>
+		<Material ID="3" Name="Grey Matte" Ambient="0.400000 0.400000 0.400000 1.000000" Specular="0.000000 0.000000 0.000000 1.000000" Emission="0.000000 0.000000 0.000000 1.000000" Shininess="64.000000"/>
+		<Material ID="4" Name="Yellow Matte" Ambient="0.800000 0.800000 0.000000 1.000000" Specular="0.000000 0.000000 0.000000 1.000000" Emission="0.000000 0.000000 0.000000 1.000000" Shininess="64.000000"/>
+		<Material ID="5" Name="Green Matte" Ambient="0.100000 0.800000 0.100000 1.000000" Specular="0.000000 0.000000 0.000000 1.000000" Emission="0.000000 0.000000 0.000000 1.000000" Shininess="64.000000"/>
+		<Material ID="6" Name="Orange Matte" Ambient="0.800000 0.400000 0.000000 1.000000" Specular="0.000000 0.000000 0.000000 1.000000" Emission="0.000000 0.000000 0.000000 1.000000" Shininess="64.000000"/>
+		<Material ID="7" Name="White Matte" Ambient="0.900000 0.900000 0.900000 1.000000" Specular="0.000000 0.000000 0.000000 1.000000" Emission="0.000000 0.000000 0.000000 1.000000" Shininess="64.000000"/>
+		<Material ID="8" Name="Black Matte" Ambient="0.100000 0.100000 0.100000 1.000000" Specular="0.000000 0.000000 0.000000 1.000000" Emission="0.000000 0.000000 0.000000 1.000000" Shininess="64.000000"/>
+		<Material ID="9" Name="Violet Matte" Ambient="0.700000 0.000000 0.700000 1.000000" Specular="0.000000 0.000000 0.000000 1.000000" Emission="0.000000 0.000000 0.000000 1.000000" Shininess="64.000000"/>
+		<Material ID="10" Name="Grey Metal" Ambient="0.200000 0.200000 0.200000 1.000000" Specular="0.800000 0.800000 1.000000 1.000000" Emission="0.000000 0.000000 0.000000 1.000000" Shininess="25.000000"/>
+		<Material ID="11" Name="Red Metal" Ambient="0.600000 0.000000 0.000000 1.000000" Specular="1.000000 0.700000 0.700000 1.000000" Emission="0.000000 0.000000 0.000000 1.000000" Shininess="10.000000"/>
+		<Material ID="12" Name="Yellow Metal" Ambient="0.500000 0.500000 0.000000 1.000000" Specular="0.600000 0.600000 0.850000 1.000000" Emission="0.000000 0.000000 0.000000 1.000000" Shininess="25.000000"/>
+		<Material ID="13" Name="Black Metal" Ambient="0.200000 0.200000 0.200000 1.000000" Specular="0.500000 0.500000 0.500000 1.000000" Emission="0.000000 0.000000 0.000000 1.000000" Shininess="12.500000"/>
+		<Material ID="14" Name="Cyan Matte" Ambient="0.000000 0.500000 0.500000 1.000000" Specular="0.000000 0.000000 0.000000 1.000000" Emission="0.000000 0.000000 0.000000 1.000000" Shininess="64.000000"/>
+		<Material ID="15" Name="Magenta Matte" Ambient="0.500000 0.000000 0.500000 1.000000" Specular="0.000000 0.000000 0.000000 1.000000" Emission="0.000000 0.000000 0.000000 1.000000" Shininess="64.000000"/>
+		<Material ID="16" Name="Light Grey Matte" Ambient="0.700000 0.700000 0.700000 1.000000" Specular="0.000000 0.000000 0.000000 1.000000" Emission="0.000000 0.000000 0.000000 1.000000" Shininess="64.000000"/>
+		<Material ID="17" Name="Cerulean Blue Metal" Ambient="0.000000 0.540000 0.750000 1.000000" Specular="0.600000 0.600000 0.850000 1.000000" Emission="0.000000 0.000000 0.000000 1.000000" Shininess="25.000000"/>
+		<Material ID="18" Name="Silver" Ambient="0.550000 0.600000 0.650000 1.000000" Specular="0.500000 0.550000 0.600000 1.000000" Emission="0.000000 0.000000 0.000000 1.000000" Shininess="64.000000"/>
+		<Material ID="19" Name="Dark Grey Metal" Ambient="0.100000 0.100000 0.100000 1.000000" Specular="0.800000 0.800000 1.000000 1.000000" Emission="0.000000 0.000000 0.000000 1.000000" Shininess="25.000000"/>
+		<Material ID="20" Name="Dark Blue Metal" Ambient="0.200000 0.200000 0.300000 1.000000" Specular="0.800000 0.800000 1.000000 1.000000" Emission="0.000000 0.000000 0.000000 1.000000" Shininess="25.000000"/>
+		<Material ID="21" Name="Dark Yellow Metal" Ambient="0.200000 0.200000 0.000000 1.000000" Specular="0.900000 0.900000 0.800000 1.000000" Emission="0.000000 0.000000 0.000000 1.000000" Shininess="25.000000"/>
+		<Material ID="22" Name="Dark Red Metal" Ambient="0.300000 0.100000 0.100000 1.000000" Specular="1.000000 0.800000 0.800000 1.000000" Emission="0.000000 0.000000 0.000000 1.000000" Shininess="25.000000"/>
+	</Materials>
+	<Views/>
+	<Connection>
+		<PVI>
+			<NameTask>
+				vis
+			</NameTask>
+			<NameTime>
+			</NameTime>
+			<NameVariable>
+				vis
+			</NameVariable>
+			<ExtraSettings>
+			</ExtraSettings>
+			<ConectionParameters>
+			</ConectionParameters>
+			<RF>
+			</RF>
+			<DAIP>
+				127.0.0.1
+			</DAIP>
+			<Size>
+				0
+			</Size>
+			<TimerModeOn>
+				0
+			</TimerModeOn>
+		</PVI>
+	</Connection>
+	<OpcUa>
+		<UserName>
+			Anonymous
+		</UserName>
+		<Password>
+		</Password>
+		<URL>
+			opc.tcp://169.254.137.11:48400
+		</URL>
+		<AuthenticationMethod>
+			0
+		</AuthenticationMethod>
+		<EndPointId>
+			0
+		</EndPointId>
+		<Reconnect>
+			0
+		</Reconnect>
+		<UseEfficiencyMode>
+			0
+		</UseEfficiencyMode>
+		<PerformanceModeSyncReadInterval>
+			15
+		</PerformanceModeSyncReadInterval>
+		<EfficiencyModeSyncReadInterval>
+			33
+		</EfficiencyModeSyncReadInterval>
+		<SystemPublishingInterval>
+			100
+		</SystemPublishingInterval>
+		<SystemSamplingInterval>
+			100
+		</SystemSamplingInterval>
+		<EfficiencyModePublishingInterval>
+			50
+		</EfficiencyModePublishingInterval>
+		<EfficiencyModeSamplingInterval>
+			50
+		</EfficiencyModeSamplingInterval>
+		<SaveToScene>
+			1
+		</SaveToScene>
+		<EndpointName>
+			None - None (uatcp-uasc-uabinary)
+		</EndpointName>
+		<SecurityMode>
+			1
+		</SecurityMode>
+	</OpcUa>
+</Data>

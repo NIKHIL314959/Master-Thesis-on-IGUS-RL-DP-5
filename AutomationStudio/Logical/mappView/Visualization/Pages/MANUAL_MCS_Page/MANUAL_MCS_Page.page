@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<pdef:Page xmlns:pdef="http://www.br-automation.com/iat2015/pageDefinition/v2" id="MANUAL_MCS_Page" layoutRefId="MainMove">
+  <Assignments>
+    <Assignment type="Content" baseContentRefId="Navigation" areaRefId="Navigation" backColor="rgba(50, 50, 50, 1)" />
+    <Assignment type="Content" baseContentRefId="Black_Fill_widht1" areaRefId="Black_Bottom" backColor="rgba(50, 50, 50, 1)" />
+    <Assignment type="Content" baseContentRefId="Info_Bar" areaRefId="Info_Bar" backColor="rgba(50, 50, 50, 1)" />
+    <Assignment type="Content" baseContentRefId="Status_Bar" areaRefId="Status_Bar" backColor="rgba(50, 50, 50, 1)" />
+    <Assignment type="Content" baseContentRefId="Black_Fill_Height1" areaRefId="Button_Bar" backColor="rgba(50, 50, 50, 1)" />
+    <Assignment type="Content" baseContentRefId="ButtonBar" areaRefId="Black_Left" backColor="rgba(50, 50, 50, 1)" />
+    <Assignment type="Content" baseContentRefId="Par_MCS" areaRefId="Right_Action" backColor="rgba(65, 65, 65, 1)" />
+    <Assignment type="Content" baseContentRefId="Move_MCS" areaRefId="Left_Action" backColor="rgba(65, 65, 65, 1)" />
+    <Assignment type="Content" baseContentRefId="Fill_Mid_MCS" areaRefId="Fill_Mid" backColor="rgba(50, 50, 50, 1)" />
+  </Assignments>
+</pdef:Page>

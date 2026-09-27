@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File">Joint0.stl</Object>
+    <Object Type="File">Joint1.stl</Object>
+    <Object Type="File">Joint2.stl</Object>
+    <Object Type="File">Joint3.stl</Object>
+    <Object Type="File">Joint4.stl</Object>
+    <Object Type="File">Joint5.stl</Object>
+    <Object Type="File">Motor.stl</Object>
+    <Object Type="File">stand.stl</Object>
+  </Objects>
+</Package>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tmx version="1.4">
+  <header creationtool="B&amp;R Automation Studio" creationtoolversion="4.2" datatype="unknown" segtype="sentence" adminlang="en" srclang="en" o-tmf="TMX">
+    <note>Change the namespace to define where this text module should be located within the logical structure of your texts</note>
+    <prop type="x-BR-TS:Namespace">IAT</prop>
+  </header>
+  <body>
+    <tu tuid="OutputX.0">
+      <tuv xml:lang="de">
+        <seg>Positive X Bewegung eingestellt</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>X would move in positive direction</seg>
+      </tuv>
+      <tuv xml:lang="fr">
+        <seg>Bonjour tout le monde!</seg>
+      </tuv>
+    </tu>
+    <tu tuid="OutputX.1">
+      <tuv xml:lang="de">
+        <seg>Negative X Bewegung eingestellt</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>X would move in negative direction</seg>
+      </tuv>
+    </tu>
+    <tu tuid="OutputX.2">
+      <tuv xml:lang="de">
+        <seg>Roboter ist ausgeschalten</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Robot is powered off</seg>
+      </tuv>
+    </tu>
+    <tu tuid="OutputX.3">
+      <tuv xml:lang="de">
+        <seg>Roboter ist in Error</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Robot is in error</seg>
+      </tuv>
+    </tu>
+    <tu tuid="OutputX.4">
+      <tuv xml:lang="de">
+        <seg>Keine Bewegungen in X Richtung</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>No movements in X direction</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>

@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="AutomaticBinding" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Bindings>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::InitRobot:Par.PrgPar.SecondLast" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Choose" widgetRefId="TextOutput2" attribute="value" />
+		</Binding>
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::InitRobot:Par.PrgPar.BlockNumber" attribute="node" />
+			<Target xsi:type="brease" contentRefId="Choose" widgetRefId="NumericOutput2" attribute="node" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::InitRobot:ChosenPrg" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Choose" widgetRefId="Table1" attribute="selectedRow" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:Files" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Choose" widgetRefId="TableItem1" attribute="stringValue" />
+		</Binding>
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::InitRobot:Par.PrgPar.LineNumber" attribute="node" />
+			<Target xsi:type="brease" contentRefId="Choose" widgetRefId="NumericOutput1" attribute="node" />
+		</Binding>
+
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::InitRobot:Par.PrgPar.CurrentPrg" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Choose" widgetRefId="TextOutput1" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::InitRobot:Par.PrgPar.SecondNext" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Choose" widgetRefId="TextOutput6" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::InitRobot:Par.PrgPar.Next" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Choose" widgetRefId="TextOutput5" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::InitRobot:Par.PrgPar.Current" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Choose" widgetRefId="TextOutput4" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::InitRobot:Par.PrgPar.Last" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Choose" widgetRefId="TextOutput3" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::InitRobot:Par.PrgPar.RemainingDistance" attribute="node" />
+			<Target xsi:type="brease" contentRefId="WorkingTable" widgetRefId="NumericOutput4" attribute="node" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::InitRobot:Par.PrgPar.CurrentPathVelocity" attribute="node" />
+			<Target xsi:type="brease" contentRefId="WorkingTable" widgetRefId="NumericOutput3" attribute="node" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::InitRobot:Par.PrgPar.ProgrammedPathVelocity" attribute="node" />
+			<Target xsi:type="brease" contentRefId="WorkingTable" widgetRefId="NumericOutput2" attribute="node" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::InitRobot:Par.Override" attribute="node" />
+			<Target xsi:type="brease" contentRefId="WorkingTable" widgetRefId="BasicSlider1" attribute="node" />
+		</Binding>
+	</Bindings>
+</BindingsSet>

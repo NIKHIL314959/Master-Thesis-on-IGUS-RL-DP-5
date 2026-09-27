@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File">Main_Error.eventbinding</Object>
+    <Object Type="File">WorkingTable.eventbinding</Object>
+    <Object Type="File">Info_Bar.eventbinding</Object>
+    <Object Type="File">Navigation.eventbinding</Object>
+  </Objects>
+</Package>

@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tmx version="1.4">
+  <header creationtool="B&amp;R Automation Studio" creationtoolversion="4.2" datatype="unknown" segtype="sentence" adminlang="en" srclang="en" o-tmf="TMX">
+    <note>Change the namespace to define where this text module should be located within the logical structure of your texts</note>
+    <prop type="x-BR-TS:Namespace">IAT</prop>
+  </header>
+  <body>
+    <tu tuid="Status.0">
+      <tuv xml:lang="de">
+        <seg>Status: Ausgeschalten</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Current status: Disabled</seg>
+      </tuv>
+      <tuv xml:lang="fr">
+        <seg>Bonjour tout le monde!</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Status.5">
+      <tuv xml:lang="de">
+        <seg>Status: Eingeschalten</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Current status: Powered</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Status.9">
+      <tuv xml:lang="de">
+        <seg>Status: Warte auf Homing Befehl</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Current status: Wait for home command</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Status.10">
+      <tuv xml:lang="de">
+        <seg>Status: Roboter wird gehomed</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Current status: Robot is currently homing</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Status.20">
+      <tuv xml:lang="de">
+        <seg>Status: Untätig</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Current status: Idle</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Status.30">
+      <tuv xml:lang="de">
+        <seg>Status: G-Code wird ausgeführt</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Current status: Moving G-Code</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Status.40">
+      <tuv xml:lang="de">
+        <seg>Status: Jog ist aktiv</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Current status: Active jogging</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Status.50">
+      <tuv xml:lang="de">
+        <seg>Status: Roboter bewegt sich zur gesetzten Position</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Current status: Robot is moving to the set position</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Status.99">
+      <tuv xml:lang="de">
+        <seg>Status: Ein Error ist aufgetreten. System gestoppt.
+</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Current status: Error occured. System stopped</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>

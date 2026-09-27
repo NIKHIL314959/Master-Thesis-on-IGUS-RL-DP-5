@@ -1,0 +1,753 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tmx version="1.4">
+  <header creationtool="B&amp;R Automation Studio" creationtoolversion="4.2" datatype="unknown" segtype="sentence" adminlang="en" srclang="en" o-tmf="TMX">
+    <note>Change the namespace to define where this text module should be located within the logical structure of your texts</note>
+    <prop type="x-BR-TS:Namespace">IAT/Languages</prop>
+  </header>
+  <body>
+    <tu tuid="CoordinateX">
+      <tuv xml:lang="de">
+        <seg>Position X:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Position X:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CoordinateY">
+      <tuv xml:lang="de">
+        <seg>Position Y:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Position Y:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CoordinateZ">
+      <tuv xml:lang="de">
+        <seg>Position Z:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Position Z:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CoordinateB">
+      <tuv xml:lang="de">
+        <seg>Position B:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Position B:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CoordinateC">
+      <tuv xml:lang="de">
+        <seg>Position C:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Position C:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Velo1">
+      <tuv xml:lang="de">
+        <seg>Geschwindigkeit Achse 1:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Velocity axis 1:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Velo2">
+      <tuv xml:lang="de">
+        <seg>Geschwindigkeit Achse 2:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Velocity axis 2:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Velo3">
+      <tuv xml:lang="de">
+        <seg>Geschwindigkeit Achse 3:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Velocity axis 3:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Velo4">
+      <tuv xml:lang="de">
+        <seg>Geschwindigkeit Achse 4:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Velocity axis 4:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Velo5">
+      <tuv xml:lang="de">
+        <seg>Geschwindigkeit Achse 5:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Velocity axis 5:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Properties">
+      <tuv xml:lang="de">
+        <seg>Eigenschaften</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Properties</seg>
+      </tuv>
+    </tu>
+    <tu tuid="MoveRobot">
+      <tuv xml:lang="de">
+        <seg>Bewegungen Roboter</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Move robot</seg>
+      </tuv>
+    </tu>
+    <tu tuid="GCode">
+      <tuv xml:lang="de">
+        <seg>Veränderungen am G Code</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Change the G-Code</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Load">
+      <tuv xml:lang="de">
+        <seg>Lade Datei</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Load file</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Save">
+      <tuv xml:lang="de">
+        <seg>Speichere Datei</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Save file</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Refresh">
+      <tuv xml:lang="de">
+        <seg>Table aktualisieren</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Refresh table</seg>
+      </tuv>
+    </tu>
+    <tu tuid="MoveProg">
+      <tuv xml:lang="de">
+        <seg>Start Programm</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Start program</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Output">
+      <tuv xml:lang="de">
+        <seg>Ausgänge</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Outputs</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Hallo">
+      <tuv xml:lang="de">
+        <seg>Willkommen</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Welcome</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Intro">
+      <tuv xml:lang="de">
+        <seg>Diese Visualizierung kontrolliert den IGUS Roboter.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>This visualization is controlling the IGUS robot.</seg>
+      </tuv>
+    </tu>
+    <tu tuid="State">
+      <tuv xml:lang="de">
+        <seg>Zustand:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Current state:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="programs">
+      <tuv xml:lang="de">
+        <seg>Programme</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Programs</seg>
+      </tuv>
+    </tu>
+    <tu tuid="StartProg">
+      <tuv xml:lang="de">
+        <seg>Starte Programm</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Start program</seg>
+      </tuv>
+    </tu>
+    <tu tuid="VeloX">
+      <tuv xml:lang="de">
+        <seg>Geschwindigkeit Richtung X:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Velocity direction X:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="VeloY">
+      <tuv xml:lang="de">
+        <seg>Geschwindigkeit Richtung Y:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Velocity direction Y:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="VeloZ">
+      <tuv xml:lang="de">
+        <seg>Geschwindigkeit Richtung Z:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Velocity direction Z:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="VeloB">
+      <tuv xml:lang="de">
+        <seg>Geschwindigkeit Winkel B:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Velocity angle B:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="VeloC">
+      <tuv xml:lang="de">
+        <seg>Geschwindigkeit Winkel C:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Velocity direction C:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Diag">
+      <tuv xml:lang="de">
+        <seg>Wert Achsen:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Value axis:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Velo">
+      <tuv xml:lang="de">
+        <seg>Geschwindigkeit:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Velocity:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Degree1">
+      <tuv xml:lang="de">
+        <seg>Winkel Achse 1:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Degree axis 1:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Degree2">
+      <tuv xml:lang="de">
+        <seg>Winkel Achse 2:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Degree axis 2:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Degree3">
+      <tuv xml:lang="de">
+        <seg>Winkel Achse 3:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Degree axis 3:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Degree4">
+      <tuv xml:lang="de">
+        <seg>Winkel Achse 4:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Degree axis 4:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Degree5">
+      <tuv xml:lang="de">
+        <seg>Winkel Achse 5:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Degree axis 5:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Acc">
+      <tuv xml:lang="de">
+        <seg>Beschleunigung:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Acceleration:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Dec">
+      <tuv xml:lang="de">
+        <seg>Verlangsamerung:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Deceleration:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Info">
+      <tuv xml:lang="de">
+        <seg>Die Winkel aller Achsen sind in der Startposition Null.</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>The home position is for every angle equal to zero. </seg>
+      </tuv>
+    </tu>
+    <tu tuid="Monitor">
+      <tuv xml:lang="de">
+        <seg>Programm Monitor</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Program monitor</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CurProg">
+      <tuv xml:lang="de">
+        <seg>Aktuelles Programm:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Current program:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Default">
+      <tuv xml:lang="de">
+        <seg>Standardwerte in Einstellungen setzen</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Set default setting values</seg>
+      </tuv>
+    </tu>
+    <tu tuid="settings">
+      <tuv xml:lang="de">
+        <seg>Einstellungen</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Settings</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CurValue">
+      <tuv xml:lang="de">
+        <seg>Setzt derzeitige Position als Input</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Set current position as input</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ErrorEStop">
+      <tuv xml:lang="de">
+        <seg>E-Stop wurde betätigt</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>E-Stop has been pressed</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CurPathVelo">
+      <tuv xml:lang="de">
+        <seg>Derzeitige Bahngeschwindigkeit:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Current path velocity:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ProgPathVelo">
+      <tuv xml:lang="de">
+        <seg>Programmierte Bahngeschwindigkeit:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Programmed path velocity:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="RemDis">
+      <tuv xml:lang="de">
+        <seg>Verbleibende Strecke:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Remaining distance:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SetDefPos">
+      <tuv xml:lang="de">
+        <seg>Standardwerte als Position setzen</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Set default position values</seg>
+      </tuv>
+    </tu>
+    <tu tuid="PowOn">
+      <tuv xml:lang="de">
+        <seg>Power An</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Power On</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Interrupt">
+      <tuv xml:lang="de">
+        <seg>Unterbrechen</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Interrupt</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Main">
+      <tuv xml:lang="de">
+        <seg>Allgemein</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>General</seg>
+      </tuv>
+    </tu>
+    <tu tuid="AutoMode">
+      <tuv xml:lang="de">
+        <seg>Automatischer Modus</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Automatic mode</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ManualACS">
+      <tuv xml:lang="de">
+        <seg>Manueller Modus ACS</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Manual mode ACS</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ManualMCS">
+      <tuv xml:lang="de">
+        <seg>Manueller Modus MCS</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Manual mode MCS</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Powered">
+      <tuv xml:lang="de">
+        <seg>Bestromt</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Powered</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Homed">
+      <tuv xml:lang="de">
+        <seg>Referenziert</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Homed</seg>
+      </tuv>
+    </tu>
+    <tu tuid="MoveActive">
+      <tuv xml:lang="de">
+        <seg>Kommando wird ausgeführt</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Command is executed</seg>
+      </tuv>
+    </tu>
+    <tu tuid="InMotion">
+      <tuv xml:lang="de">
+        <seg>In Bewegung</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>In motion</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Stopped">
+      <tuv xml:lang="de">
+        <seg>Gestopped</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Stopped</seg>
+      </tuv>
+    </tu>
+    <tu tuid="MoveInterrupt">
+      <tuv xml:lang="de">
+        <seg>Bewegung unterbrochen</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Move interrupted</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Message">
+      <tuv xml:lang="de">
+        <seg>Nachricht</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Message</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Acknowledge">
+      <tuv xml:lang="de">
+        <seg>Bestätigen</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Acknowledge</seg>
+      </tuv>
+    </tu>
+    <tu tuid="AcknowledgeAll">
+      <tuv xml:lang="de">
+        <seg>Alles bestätigen</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Acknowledge all</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Timestamp">
+      <tuv xml:lang="de">
+        <seg>Zeitpunkt</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Timestamp</seg>
+      </tuv>
+    </tu>
+    <tu tuid="ErrState">
+      <tuv xml:lang="de">
+        <seg>Status</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>State</seg>
+      </tuv>
+    </tu>
+    <tu tuid="MoveLin">
+      <tuv xml:lang="de">
+        <seg>Lineare Bewegung</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Move linear</seg>
+      </tuv>
+    </tu>
+    <tu tuid="MoveDir">
+      <tuv xml:lang="de">
+        <seg>Direkte Bewegung</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Move direct</seg>
+      </tuv>
+    </tu>
+    <tu tuid="LineNum">
+      <tuv xml:lang="de">
+        <seg>Linien Nummer:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Line number:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="BlockNum">
+      <tuv xml:lang="de">
+        <seg>Block Nummer:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Block number:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SecLast">
+      <tuv xml:lang="de">
+        <seg>Vorletzte:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Second last:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Last">
+      <tuv xml:lang="de">
+        <seg>Letzte:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Last:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Current">
+      <tuv xml:lang="de">
+        <seg>Aktuell:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Current:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Next">
+      <tuv xml:lang="de">
+        <seg>Nächste:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Next:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SecNext">
+      <tuv xml:lang="de">
+        <seg>Übernächste:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Second next:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="CurFile">
+      <tuv xml:lang="de">
+        <seg>Aktuelle Datei</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Current file</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SelectFile">
+      <tuv xml:lang="de">
+        <seg>Auswahl der aktuellen Datei</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Selection of the current file</seg>
+      </tuv>
+    </tu>
+    <tu tuid="TeachFile">
+      <tuv xml:lang="de">
+        <seg>Gelernte Dateien</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Teached files</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SelectPoint">
+      <tuv xml:lang="de">
+        <seg>Auswahl des Punktes (markiert in der linken Tabelle):</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Selection of the used point (marked on the left table):</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Delete">
+      <tuv xml:lang="de">
+        <seg>Lösche Punkt</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Delete point</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Change">
+      <tuv xml:lang="de">
+        <seg>Ändern</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Change</seg>
+      </tuv>
+    </tu>
+    <tu tuid="MoveCurrentFile">
+      <tuv xml:lang="de">
+        <seg>Fahre die aktuelle Datei</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Move current teachfile</seg>
+      </tuv>
+    </tu>
+    <tu tuid="SaveTeach">
+      <tuv xml:lang="de">
+        <seg>Speichern der gelernten Punkte</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Save teached points</seg>
+      </tuv>
+    </tu>
+    <tu tuid="NewFile">
+      <tuv xml:lang="de">
+        <seg>Name der neuen Datei:</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Name of the new file:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="BackHome">
+      <tuv xml:lang="de">
+        <seg>Zurück zur Homeposition nach der Bewegung?</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Drive back to homeposition after the movement?</seg>
+      </tuv>
+    </tu>
+    <tu tuid="TeachPoint">
+      <tuv xml:lang="de">
+        <seg>Speicher Punkt</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Teach point</seg>
+      </tuv>
+    </tu>
+    <tu tuid="InfoTipping">
+      <tuv xml:lang="de">
+        <seg>Selektieren Sie eine Achse</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Choose axis by clicking on it</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Pos">
+      <tuv xml:lang="de">
+        <seg>Positiv</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Positive</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Neg">
+      <tuv xml:lang="de">
+        <seg>Negativ</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Negative</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Ax1">
+      <tuv xml:lang="de">
+        <seg>Bewegungsrichtung der X Koordinate</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Movement direction of coordinate X</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Ax2">
+      <tuv xml:lang="de">
+        <seg>Bewegungsrichtung der Y Koordinate</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Movement direction of coordinate Y</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Ax3">
+      <tuv xml:lang="de">
+        <seg>Bewegungsrichtung der Z Koordinate</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Movement direction of coordinate Z</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Ax4">
+      <tuv xml:lang="de">
+        <seg>Bewegungsrichtung der B Koordinate</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Movement direction of coordinate B</seg>
+      </tuv>
+    </tu>
+    <tu tuid="Ax5">
+      <tuv xml:lang="de">
+        <seg>Bewegungsrichtung der C Koordinate</seg>
+      </tuv>
+      <tuv xml:lang="en">
+        <seg>Movement direction of coordinate C</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>

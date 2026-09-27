@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="Choose" height="500" width="440" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:types="http://www.br-automation.com/iat2015/widgetTypes/v2">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.Table" id="Table1" top="60" left="0" width="440" height="400" zIndex="0" rowHeight="40" activeBackColor="rgba(85, 85, 85, 1)" inputCellBackColor="rgba(169, 169, 169, 1)" backColor="rgba(65, 65, 65, 1)" backColorEvenRow="rgba(192, 192, 192, 1)" backColorOddRow="rgba(169, 169, 169, 1)" borderColor="rgba(105, 105, 105, 1)" cellBorderColor="rgba(128, 128, 128, 1)" fontSize="20px" headerBackColor="rgba(128, 128, 128, 1)" headerTextColor="rgba(255, 255, 255, 1)" headerFontSize="22px" textColor="rgba(255, 255, 255, 1)">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.TableItem" id="TableItem1" zIndex="0" columnWidth="420" text="$IAT/Languages/programs" />
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.Label" id="Label6" top="0" left="0" width="440" height="60" zIndex="1" text="$IAT/Languages/MoveRobot" textColor="rgba(169, 169, 169, 1)" textAlign="center" fontSize="20px" bold="true" />
+    <Widget xsi:type="widgets.brease.FlyOut" id="FlyOut1" top="0" left="0" width="440" height="470" zIndex="2" docking="bottom" image="Media/SymbolLib/Symbols/TouchMe.svg" text="$IAT/Languages/Monitor" buttonHeight="30" buttonWidth="440" imageHeight="20" imageColor="rgba(169, 169, 169, 1)" buttonBorderColor="rgba(169, 169, 169, 1)" buttonBackColor="rgba(85, 85, 85, 1)" borderColor="rgba(65, 65, 65, 1)" backColor="rgba(65, 65, 65, 1)" textColor="rgba(169, 169, 169, 1)">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput1" top="10" left="320" zIndex="0" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" backColor="rgba(85, 85, 85, 1)" borderColor="rgba(169, 169, 169, 1)" textColor="rgba(169, 169, 169, 1)" />
+        <Widget xsi:type="widgets.brease.NumericOutput" id="NumericOutput2" top="50" left="320" zIndex="1" format="{'metric':{'decimalPlaces':0,'minimumIntegerDigits':1},'imperial':{'decimalPlaces':1,'minimumIntegerDigits':1},'imperial-us':{'decimalPlaces':1,'minimumIntegerDigits':1}}" unitWidth="2" backColor="rgba(85, 85, 85, 1)" borderColor="rgba(169, 169, 169, 1)" textColor="rgba(169, 169, 169, 1)" />
+        <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput1" top="430" left="20" width="400" zIndex="2" backColor="rgba(85, 85, 85, 1)" borderColor="rgba(169, 169, 169, 1)" borderStyle="solid" textColor="rgba(169, 169, 169, 1)" />
+        <Widget xsi:type="widgets.brease.Label" id="Label11" top="10" left="0" width="180" zIndex="3" text="$IAT/Languages/LineNum" textColor="rgba(169, 169, 169, 1)" />
+        <Widget xsi:type="widgets.brease.Label" id="Label12" top="50" left="0" width="180" zIndex="4" text="$IAT/Languages/BlockNum" textColor="rgba(169, 169, 169, 1)" />
+        <Widget xsi:type="widgets.brease.Label" id="Label13" top="110" left="0" width="180" zIndex="5" text="$IAT/Languages/SecLast" textColor="rgba(169, 169, 169, 1)" />
+        <Widget xsi:type="widgets.brease.Label" id="Label14" top="170" left="0" width="180" zIndex="6" text="$IAT/Languages/Last" textColor="rgba(169, 169, 169, 1)" />
+        <Widget xsi:type="widgets.brease.Label" id="Label16" top="230" left="0" width="180" zIndex="7" text="$IAT/Languages/Current" textColor="rgba(169, 169, 169, 1)" />
+        <Widget xsi:type="widgets.brease.Label" id="Label17" top="390" left="0" width="440" zIndex="8" text="$IAT/Languages/CurProg" textColor="rgba(169, 169, 169, 1)" textAlign="center" />
+        <Widget xsi:type="widgets.brease.Label" id="Label15" top="290" left="0" width="180" zIndex="9" text="$IAT/Languages/Next" textColor="rgba(169, 169, 169, 1)" />
+        <Widget xsi:type="widgets.brease.Label" id="Label18" top="350" left="0" width="180" zIndex="10" text="$IAT/Languages/SecNext" textColor="rgba(169, 169, 169, 1)" />
+        <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput2" top="110" left="120" width="300" zIndex="11" backColor="rgba(85, 85, 85, 1)" borderColor="rgba(169, 169, 169, 1)" borderStyle="solid" textColor="rgba(169, 169, 169, 1)" />
+        <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput3" top="170" left="120" width="300" zIndex="12" backColor="rgba(85, 85, 85, 1)" borderColor="rgba(169, 169, 169, 1)" borderStyle="solid" textColor="rgba(169, 169, 169, 1)" />
+        <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput4" top="230" left="120" width="300" zIndex="13" backColor="rgba(85, 85, 85, 1)" borderColor="rgba(169, 169, 169, 1)" borderStyle="solid" textColor="rgba(169, 169, 169, 1)" />
+        <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput5" top="290" left="120" width="300" zIndex="14" backColor="rgba(85, 85, 85, 1)" borderColor="rgba(169, 169, 169, 1)" borderStyle="solid" textColor="rgba(169, 169, 169, 1)" />
+        <Widget xsi:type="widgets.brease.TextOutput" id="TextOutput6" top="350" left="120" width="300" zIndex="15" backColor="rgba(85, 85, 85, 1)" borderColor="rgba(169, 169, 169, 1)" borderStyle="solid" textColor="rgba(169, 169, 169, 1)" />
+      </Widgets>
+    </Widget>
+  </Widgets>
+</Content>

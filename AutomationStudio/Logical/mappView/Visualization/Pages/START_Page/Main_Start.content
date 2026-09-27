@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="Main_Start" height="500" width="930" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.Label" id="Label6" top="0" left="0" width="940" height="80" zIndex="0" text="$IAT/Languages/Hallo" textColor="rgba(169, 169, 169, 1)" textAlign="center" fontSize="40px" bold="true" />
+    <Widget xsi:type="widgets.brease.Image" id="Image1" top="80" left="320" width="320" height="400" zIndex="1" image="Media/ImagesList/robot.png" />
+  </Widgets>
+</Content>

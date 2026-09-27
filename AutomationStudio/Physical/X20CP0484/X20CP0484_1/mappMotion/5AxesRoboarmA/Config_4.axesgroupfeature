@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Configuration>
+  <Element ID="Feature_Programs" Type="axesgroupfeature">
+    <Selector ID="Type" Value="Program">
+      <Selector ID="ModalDataBehaviour" Value="UseAxesGroupSettings" />
+      <Group ID="InitialSettings">
+        <Selector ID="InterpolationTypes" Value="LinearRapid" />
+        <Selector ID="PositionCoordinates" Value="Absolute" />
+        <Selector ID="CircleCoordinates" Value="Relative" />
+        <Selector ID="JACS_ACSProgramming" Value="JACS" />
+        <Selector ID="ContourConnection" Value="Inactive" />
+        <Selector ID="AccuracyHoldDelays" Value="None" />
+        <Selector ID="ProgrammingUnits" Value="UseAxesGroupSettings" />
+        <Group ID="Feedrates">
+          <Selector ID="FeedPath" Value="Standard" />
+          <Selector ID="FeedCharacteristic" Value="StandardCharacteristic" />
+          <Selector ID="FeedType" Value="Feedrate" />
+          <Selector ID="FeedReduction" Value="Inactive" />
+          <Property ID="FeedrateValue" Value="0.0" />
+          <Property ID="InverseFeedrateValue" Value="0.0" />
+          <Property ID="FeedratePerRevValue" Value="0.0" />
+        </Group>
+      </Group>
+      <Selector ID="DefaultLanguage" Value="BRGCode" />
+      <Selector ID="Location" Value="Default">
+        <Property ID="FileDevice" Value="CNC_PrgDir" />
+      </Selector>
+    </Selector>
+  </Element>
+  <Element ID="Feature_Jogging" Type="axesgroupfeature">
+    <Selector ID="Type" Value="Jogging" />
+  </Element>
+  <Element ID="Feature_Homing" Type="axesgroupfeature">
+    <Selector ID="Type" Value="HomingOrder">
+      <Group ID="TogetherGroup[1]">
+        <Property ID="AxisRef[1]" Value="gAxisQ1" />
+      </Group>
+      <Group ID="TogetherGroup[2]">
+        <Property ID="AxisRef[1]" Value="gAxisQ3" />
+        <Property ID="AxisRef[2]" Value="gAxisQ4" />
+        <Property ID="AxisRef[3]" Value="gAxisQ5" />
+        <Property ID="AxisRef[4]" Value="gAxisQ2" />
+      </Group>
+    </Selector>
+  </Element>
+  <Element ID="Feature_Workspace" Type="axesgroupfeature">
+    <Selector ID="Type" Value="WorkspaceMonitoring">
+      <Selector ID="ModalDataBehaviour" Value="UseAxesGroupSettings" />
+      <Property ID="WorkspaceRef" />
+      <Selector ID="SelfCollisionDetection" Value="Enabled" />
+      <Selector ID="FlangeWorkspace" Value="NotUsed" />
+    </Selector>
+  </Element>
+</Configuration>

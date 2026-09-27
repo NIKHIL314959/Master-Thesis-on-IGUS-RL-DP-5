@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Configuration>
+  <Element ID="TextConfig" Type="TextConfig">
+    <Group ID="Languages">
+      <Property ID="UserDefaultLanguage" Value="en" />
+      <Property ID="UserFallbackLanguage" Value="de" />
+      <Group ID="TargetLanguages">
+        <Property ID="TargetLanguage[1]" Value="de" />
+        <Property ID="TargetLanguage[2]" Value="en" />
+      </Group>
+    </Group>
+    <Group ID="TargetFiles">
+      <Property ID="TargetFile[1]" Value="mappView.Resources.Texts.TextSys.tmx" />
+      <Property ID="TargetFile[2]" Value="mappView.Resources.Texts.SnippetTextSys.tmx" />
+      <Property ID="TargetFile[3]" Value="mappView.Resources.Texts.SnippetMCSXTextSys.tmx" />
+      <Property ID="TargetFile[4]" Value="mappView.Resources.Texts.SnippetMCSYTextSys.tmx" />
+      <Property ID="TargetFile[5]" Value="mappView.Resources.Texts.SnippetMCSZTextSys.tmx" />
+      <Property ID="TargetFile[6]" Value="mappView.Resources.Texts.SnippetMCSBTextSys.tmx" />
+      <Property ID="TargetFile[7]" Value="mappView.Resources.Texts.SnippetMCSCTextSys.tmx" />
+    </Group>
+  </Element>
+</Configuration>

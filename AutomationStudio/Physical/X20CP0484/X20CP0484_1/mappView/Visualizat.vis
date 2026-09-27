@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<vdef:Visualization id="Igus4" autoUpdate="true" xmlns:vdef="http://www.br-automation.com/iat2015/visualizationDefinition/v2">
+  <StartPage pageRefId="START_Page" />
+  <Pages>
+		<Page refId="START_Page"/>
+		<Page refId="ERROR_Page"/>
+		<Page refId="AUTOMATIC_Page"/>
+		<Page refId="TIPPING_Page"/>
+		<Page refId="MANUAL_MCS_Page"/>
+		
+  </Pages>
+  <Navigations>
+
+  </Navigations>  
+  <BindingsSets>
+   <BindingsSet refId="TippingBinding" />
+   <BindingsSet refId="OutputBarBinding" />
+   <BindingsSet refId="ButtonBarBinding" />
+   <BindingsSet refId="StatusBarBinding" />
+   <BindingsSet refId="InfoBarBinding" />
+   <BindingsSet refId="AutomaticBinding" />
+   <BindingsSet refId="MoveMCSBinding" />
+   <BindingsSet refId="SnippetBinding" />
+   <BindingsSet refId="ClientInfo_Binding" />
+   
+  </BindingsSets>
+  <EventBindingsSets>
+    <EventBindingsSet refId="WorkingTable_eventbinding" />
+    <EventBindingsSet refId="Info_Bar_eventbinding" />
+    <EventBindingsSet refId="Main_Error_eventbinding" />
+    <EventBindingsSet refId="Navigation_eventbinding" />
+  </EventBindingsSets>
+  <Dialogs>
+    <Dialog refId="Dia_Login" />
+  </Dialogs>
+  <Contents>
+    <!--<Content refId="" />-->
+  </Contents>
+  <SnippetsSets>
+    <SnippetsSet refId="StateInfo"/>
+    <SnippetsSet refId="OutputChangeX"/>
+    <SnippetsSet refId="OutputChangeY"/>
+    <SnippetsSet refId="OutputChangeZ"/>
+    <SnippetsSet refId="OutputChangeB"/>
+    <SnippetsSet refId="OutputChangeC"/>
+  </SnippetsSets>
+  <ExpressionsSets>
+    <!--<ExpressionsSet refId=""/>-->
+  </ExpressionsSets>
+  <VariablesSets>
+    <!--<VariablesSet refId="" />-->
+  </VariablesSets>
+  <!--<StartTheme themeRefId="" />
+  <Themes>
+    <Theme refId=""/>
+  </Themes>-->
+  <Configurations>
+    <Configuration key="activityCount" value="false" />
+	  <Gestures>
+		  <!--<SystemGesture1 touchPoints="2" />
+		  <SystemGesture2 touchPoints="2" />
+		  <SystemGesture3 touchPoints="2" />-->
+	  </Gestures>
+    <VirtualKeyboards>
+      <!--<InputProcessing onKeyDown="true" />-->
+    </VirtualKeyboards> 
+  </Configurations>
+</vdef:Visualization>

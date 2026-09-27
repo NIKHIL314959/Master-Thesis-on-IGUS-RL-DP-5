@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package SubType="MediaPackage" PackageType="MediaPackage" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="Package" Description="B&amp;R symbol lib">SymbolLib</Object>
+    <Object Type="Package" Description="Images of the robot">ImagesList</Object>
+    <Object Type="Package" Description="Images to show the status and movements of the robot">ImageListMCS</Object>
+  </Objects>
+</Package>

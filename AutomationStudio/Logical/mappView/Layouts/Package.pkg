@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package SubType="Layouts" PackageType="Layouts" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File" Description="Main Layout for movement pages">MainMove.layout</Object>
+    <Object Type="File" Description="Default layout for no movement pages">MainLayout.layout</Object>
+    <Object Type="File" Description="Layout for jog page">MainJog.layout</Object>
+  </Objects>
+</Package>

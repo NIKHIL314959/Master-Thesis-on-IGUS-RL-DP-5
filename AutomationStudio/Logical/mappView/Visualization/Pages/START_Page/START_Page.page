@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<pdef:Page xmlns:pdef="http://www.br-automation.com/iat2015/pageDefinition/v2" id="START_Page" layoutRefId="MainJog">
+  <Assignments>
+    <Assignment type="Content" baseContentRefId="Navigation" areaRefId="Navigation" backColor="rgba(50, 50, 50, 1)" />
+    <Assignment type="Content" baseContentRefId="Black_Fill_widht1" areaRefId="Black_Bottom" backColor="rgba(50, 50, 50, 1)" />
+    <Assignment type="Content" baseContentRefId="Info_Bar" areaRefId="InfoBar" backColor="rgba(50, 50, 50, 1)" />
+    <Assignment type="Content" baseContentRefId="Status_Bar" areaRefId="Black_Top" backColor="rgba(50, 50, 50, 1)" />
+    <Assignment type="Content" baseContentRefId="Black_Fill_Height1" areaRefId="Black_Right" backColor="rgba(50, 50, 50, 1)" />
+    <Assignment type="Content" baseContentRefId="Black_Fill_Height" areaRefId="ButtonBar" backColor="rgba(50, 50, 50, 1)" />
+    <Assignment type="Content" baseContentRefId="Main_Start" areaRefId="MainContent" backColor="rgba(65, 65, 65, 1)" />
+  </Assignments>
+</pdef:Page>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package SubType="PagePackage" PackageType="PagePackage" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File" Description="Error page config">ERROR_Page.page</Object>
+    <Object Type="File" Description="Main content error page">Main_Error.content</Object>
+    <Object Type="File" Description="Fill content top">Fill_top.content</Object>
+    <Object Type="File" Description="Fill content bottom">Fill_bottom.content</Object>
+    <Object Type="File" Description="Fill content right">Fill_right.content</Object>
+    <Object Type="File" Description="Fill content left">Fill_left.content</Object>
+  </Objects>
+</Package>

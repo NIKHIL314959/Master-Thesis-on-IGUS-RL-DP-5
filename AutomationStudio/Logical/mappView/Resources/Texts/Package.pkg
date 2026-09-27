@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package SubType="TextsPackage" PackageType="TextsPackage" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File" Description="Text snippets for changing the language">TextSys.tmx</Object>
+    <Object Type="File" Description="Status text">SnippetTextSys.tmx</Object>
+    <Object Type="File" Description="Status for movements in X direction">SnippetMCSXTextSys.tmx</Object>
+    <Object Type="File" Description="Status for movements in Y direction">SnippetMCSYTextSys.tmx</Object>
+    <Object Type="File" Description="Status for movements in Z direction">SnippetMCSZTextSys.tmx</Object>
+    <Object Type="File" Description="Status for movements in B direction">SnippetMCSBTextSys.tmx</Object>
+    <Object Type="File" Description="Status for movements in C direction">SnippetMCSCTextSys.tmx</Object>
+  </Objects>
+</Package>

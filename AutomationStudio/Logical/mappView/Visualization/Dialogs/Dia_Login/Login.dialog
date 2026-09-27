@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ddef:Dialog xmlns:ddef="http://www.br-automation.com/iat2015/dialogDefinition/v2" id="Dia_Login" layoutRefId="Dialog_Login" backColor="rgba(169, 169, 169, 1)" headerBackColor="rgba(128, 128, 128, 1)" borderColor="rgba(128, 128, 128, 1)" headerBorderColor="rgba(128, 128, 128, 1)">
+  <Assignments>
+    <Assignment type="Content" baseContentRefId="Login" areaRefId="Login" />
+  </Assignments>
+</ddef:Dialog>

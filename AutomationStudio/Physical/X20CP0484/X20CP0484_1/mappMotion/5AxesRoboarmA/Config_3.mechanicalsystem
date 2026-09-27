@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Configuration>
+  <Element ID="MechSys_5AxRobA" Type="mechanicalsystem">
+    <Property ID="TypeIsReadOnly" Value="0" />
+    <Selector ID="Type" Value="5AxesRoboarm">
+      <Property ID="SubtypeIsReadOnly" Value="0" />
+      <Selector ID="Subtype" Value="5AxesRoboarmA">
+        <Property ID="DescriptionIsReadOnly" Value="0" />
+        <Selector ID="Description" Value="Standard">
+          <Group ID="Dimensions">
+            <Property ID="TranslationFromBaseToQ1IsReadOnly" Value="0" />
+            <Group ID="TranslationFromBaseToQ1">
+              <Property ID="X" Value="0.0" />
+              <Property ID="Y" Value="0.0" />
+              <Property ID="Z" Value="200" />
+            </Group>
+            <Property ID="TranslationFromQ1ToQ2IsReadOnly" Value="0" />
+            <Group ID="TranslationFromQ1ToQ2">
+              <Property ID="X" Value="0.0" />
+              <Property ID="Y" Value="0" />
+              <Property ID="Z" Value="154.5" />
+            </Group>
+            <Property ID="TranslationFromQ2ToQ3IsReadOnly" Value="0" />
+            <Group ID="TranslationFromQ2ToQ3">
+              <Property ID="X" Value="0.0" />
+              <Property ID="Y" Value="0.0" />
+              <Property ID="Z" Value="350" />
+            </Group>
+            <Property ID="TranslationFromQ3ToQ4IsReadOnly" Value="0" />
+            <Group ID="TranslationFromQ3ToQ4">
+              <Property ID="X" Value="270" />
+              <Property ID="Y" Value="0" />
+              <Property ID="Z" Value="0.0" />
+            </Group>
+            <Property ID="TranslationFromQ4ToQ5IsReadOnly" Value="0" />
+            <Group ID="TranslationFromQ4ToQ5">
+              <Property ID="X" Value="0" />
+              <Property ID="Y" Value="0" />
+              <Property ID="Z" Value="-190" />
+            </Group>
+            <Property ID="TranslationFromQ5ToFlangeIsReadOnly" Value="0" />
+            <Group ID="TranslationFromQ5ToFlange">
+              <Property ID="X" Value="0.0" />
+              <Property ID="Y" Value="0.0" />
+              <Property ID="Z" Value="0" />
+            </Group>
+          </Group>
+          <Group ID="Offsets">
+            <Property ID="JointAxisIsReadOnly" Value="0" />
+            <Property ID="JointAxis[1]" Value="0" />
+            <Property ID="JointAxis[2]" Value="-10" />
+            <Property ID="JointAxis[3]" Value="10" />
+            <Property ID="JointAxis[4]" Value="-60" />
+            <Property ID="JointAxis[5]" Value="-10" />
+          </Group>
+          <Group ID="CountDirections">
+            <Property ID="JointAxisIsReadOnly" Value="0" />
+            <Property ID="JointAxis[1]" Value="Inverse" />
+            <Property ID="JointAxis[2]" Value="Inverse" />
+            <Property ID="JointAxis[3]" Value="Inverse" />
+            <Property ID="JointAxis[4]" Value="Inverse" />
+            <Property ID="JointAxis[5]" Value="Inverse" />
+          </Group>
+        </Selector>
+        <Selector ID="CoordinatesNames" Value="Default">
+          <Property ID="XCoordinateName" Value="X" />
+          <Property ID="YCoordinateName" Value="Y" />
+          <Property ID="ZCoordinateName" Value="Z" />
+          <Property ID="BCoordinateName" Value="B" />
+          <Property ID="CCoordinateName" Value="C" />
+        </Selector>
+        <Property ID="WireFrameModelIsReadOnly" Value="0" />
+        <Selector ID="WireFrameModel" Value="Standard">
+          <Property ID="Q1ToQ2IsReadOnly" Value="0" />
+          <Selector ID="Q1ToQ2" Value="ConnectionLine">
+            <Property ID="DistanceMin" Value="-1.79769313486231E308" />
+            <Property ID="DistanceMax" Value="1.79769313486231E308" />
+            <Property ID="Distance" Value="0.0" />
+          </Selector>
+          <Property ID="Q2ToQ3IsReadOnly" Value="0" />
+          <Selector ID="Q2ToQ3" Value="ConnectionLine">
+            <Property ID="DistanceMin" Value="-1.79769313486231E308" />
+            <Property ID="DistanceMax" Value="1.79769313486231E308" />
+            <Property ID="Distance" Value="0.0" />
+          </Selector>
+          <Property ID="Q3ToQ4IsReadOnly" Value="0" />
+          <Selector ID="Q3ToQ4" Value="ConnectionLine">
+            <Property ID="DistanceMin" Value="-1.79769313486231E308" />
+            <Property ID="DistanceMax" Value="1.79769313486231E308" />
+            <Property ID="Distance" Value="0.0" />
+          </Selector>
+          <Property ID="Q4ToQ5IsReadOnly" Value="0" />
+          <Selector ID="Q4ToQ5" Value="ConnectionLine">
+            <Property ID="DistanceMin" Value="-1.79769313486231E308" />
+            <Property ID="DistanceMax" Value="1.79769313486231E308" />
+            <Property ID="Distance" Value="0.0" />
+          </Selector>
+          <Property ID="Q5ToFlangeIsReadOnly" Value="0" />
+          <Selector ID="Q5ToFlange" Value="ConnectionLine">
+            <Property ID="DistanceMin" Value="-1.79769313486231E308" />
+            <Property ID="DistanceMax" Value="1.79769313486231E308" />
+            <Property ID="Distance" Value="0.0" />
+          </Selector>
+          <Selector ID="FlangeToTcp" Value="ConnectionLine">
+            <Property ID="DistanceMin" Value="-1.79769313486231E308" />
+            <Property ID="DistanceMax" Value="1.79769313486231E308" />
+            <Property ID="Distance" Value="0.0" />
+          </Selector>
+        </Selector>
+        <Property ID="DynamicModelIsReadOnly" Value="0" />
+        <Selector ID="DynamicModel" Value="DynParTable">
+          <Property ID="TableRef" />
+        </Selector>
+        <Property ID="InternalDynamicModelIsReadOnly" Value="0" />
+        <Selector ID="InternalDynamicModel" Value="NotUsed" />
+        <Property ID="CouplingsIsInvisible" Value="0" />
+        <Group ID="JointAxesPositionLimits">
+          <Property ID="JointAxisIsReadOnly" Value="0" />
+          <Selector ID="JointAxis[1]" Value="UseAxisLimits" />
+          <Selector ID="JointAxis[2]" Value="UseAxisLimits" />
+          <Selector ID="JointAxis[3]" Value="UseAxisLimits" />
+          <Selector ID="JointAxis[4]" Value="UseAxisLimits" />
+          <Selector ID="JointAxis[5]" Value="UseAxisLimits" />
+        </Group>
+      </Selector>
+    </Selector>
+  </Element>
+</Configuration>

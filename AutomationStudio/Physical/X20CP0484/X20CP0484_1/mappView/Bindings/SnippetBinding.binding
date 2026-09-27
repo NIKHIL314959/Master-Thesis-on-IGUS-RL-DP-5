@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="SnippetBinding" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Bindings>
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::Main:MainPar.StateMachine" attribute="value"/>
+			<Target xsi:type="snippet" refId="SnippetStatus" attribute="value"/>
+		</Binding>
+		<Binding mode="oneWay">
+			<Source xsi:type="snippet" refId="SnippetStatus" attribute="value" />
+			<Target xsi:type="brease" widgetRefId="TextOutputCurrentState" contentRefId="Info_Bar" attribute="value" />
+		</Binding>
+		<!--Text X-->
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::InitRobot:Par.IndexDirectionImage[0]" attribute="value"/>
+			<Target xsi:type="snippet" refId="OutputTxtChangeX" attribute="value"/>
+		</Binding>
+		<Binding mode="oneWay">
+			<Source xsi:type="snippet" refId="OutputTxtChangeX" attribute="value" />
+			<Target xsi:type="brease" widgetRefId="TextOutputCoordX" contentRefId="Par_MCS" attribute="value" />
+		</Binding>
+		<!--Text Y-->
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::InitRobot:Par.IndexDirectionImage[1]" attribute="value"/>
+			<Target xsi:type="snippet" refId="OutputTxtChangeY" attribute="value"/>
+		</Binding>
+		<Binding mode="oneWay">
+			<Source xsi:type="snippet" refId="OutputTxtChangeY" attribute="value" />
+			<Target xsi:type="brease" widgetRefId="TextOutputCoordY" contentRefId="Par_MCS" attribute="value" />
+		</Binding>
+		<!--Text Z-->
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::InitRobot:Par.IndexDirectionImage[2]" attribute="value"/>
+			<Target xsi:type="snippet" refId="OutputTxtChangeZ" attribute="value"/>
+		</Binding>
+		<Binding mode="oneWay">
+			<Source xsi:type="snippet" refId="OutputTxtChangeZ" attribute="value" />
+			<Target xsi:type="brease" widgetRefId="TextOutputCoordZ" contentRefId="Par_MCS" attribute="value" />
+		</Binding>
+		<!--Text B-->
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::InitRobot:Par.IndexDirectionImage[3]" attribute="value"/>
+			<Target xsi:type="snippet" refId="OutputTxtChangeB" attribute="value"/>
+		</Binding>
+		<Binding mode="oneWay">
+			<Source xsi:type="snippet" refId="OutputTxtChangeB" attribute="value" />
+			<Target xsi:type="brease" widgetRefId="TextOutputCoordB" contentRefId="Par_MCS" attribute="value" />
+		</Binding>
+		<!--Text C-->
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::InitRobot:Par.IndexDirectionImage[4]" attribute="value"/>
+			<Target xsi:type="snippet" refId="OutputTxtChangeC" attribute="value"/>
+		</Binding>
+		<Binding mode="oneWay">
+			<Source xsi:type="snippet" refId="OutputTxtChangeC" attribute="value" />
+			<Target xsi:type="brease" widgetRefId="TextOutputCoordC" contentRefId="Par_MCS" attribute="value" />
+		</Binding>
+	</Bindings>
+</BindingsSet>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="OutputBarBinding" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Bindings>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::InitRobot:CurPosACS.Ax1" attribute="node" />
+			<Target xsi:type="brease" contentRefId="OutputBottomACS" widgetRefId="NumericOutputAx1" attribute="node" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::InitRobot:CurPosACS.Ax2" attribute="node" />
+			<Target xsi:type="brease" contentRefId="OutputBottomACS" widgetRefId="NumericOutputAx2" attribute="node" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::InitRobot:CurPosACS.Ax3" attribute="node" />
+			<Target xsi:type="brease" contentRefId="OutputBottomACS" widgetRefId="NumericOutputAx3" attribute="node" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::InitRobot:CurPosACS.Ax4" attribute="node" />
+			<Target xsi:type="brease" contentRefId="OutputBottomACS" widgetRefId="NumericOutputAx4" attribute="node" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::InitRobot:CurPosACS.Ax5" attribute="node" />
+			<Target xsi:type="brease" contentRefId="OutputBottomACS" widgetRefId="NumericOutputAx5" attribute="node" />
+		</Binding>
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:CurPos[4]" attribute="node" />
+			<Target xsi:type="brease" contentRefId="Black_Fill_widht1" widgetRefId="NumericOutputC" attribute="node" />
+		</Binding>
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:CurPos[3]" attribute="node" />
+			<Target xsi:type="brease" contentRefId="Black_Fill_widht1" widgetRefId="NumericOutputB" attribute="node" />
+		</Binding>
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:CurPos[2]" attribute="node" />
+			<Target xsi:type="brease" contentRefId="Black_Fill_widht1" widgetRefId="NumericOutputZ" attribute="node" />
+		</Binding>
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:CurPos[1]" attribute="node" />
+			<Target xsi:type="brease" contentRefId="Black_Fill_widht1" widgetRefId="NumericOutputY" attribute="node" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:CurPos[0]" attribute="node" />
+			<Target xsi:type="brease" contentRefId="Black_Fill_widht1" widgetRefId="NumericOutputX" attribute="node" />
+		</Binding>
+	</Bindings>
+</BindingsSet>

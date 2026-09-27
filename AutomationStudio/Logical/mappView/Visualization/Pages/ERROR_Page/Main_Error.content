@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Content id="Main_Error" height="500" width="980" xmlns="http://www.br-automation.com/iat2015/contentDefinition/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Widgets>
+    <Widget xsi:type="widgets.brease.AlarmList" id="AlarmList1" top="40" left="60" width="880" zIndex="0" borderColor="rgba(221, 221, 221, 1)" backColor="rgba(65, 65, 65, 1)" headerBackColor="rgba(128, 128, 128, 1)" headerTextColor="rgba(255, 255, 255, 1)" backColorSelectedRow="rgba(105, 105, 105, 1)" backColorEvenRow="rgba(169, 169, 169, 1)" backColorOddRow="rgba(192, 192, 192, 1)" textColorSelectedRow="rgba(211, 211, 211, 1)" textColor="rgba(255, 255, 255, 1)" sortingButtonColor="rgba(80, 80, 80, 1)" sortingButtonActiveColor="rgba(128, 128, 128, 1)" headerCellBorderColor="rgba(80, 80, 80, 1)" textAlign="left" cellBorderColor="rgba(80, 80, 80, 1)" disabledBackColorEvenRow="rgba(169, 169, 169, 1)">
+      <Widgets>
+        <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItem1" zIndex="0" columnType="name" text="Name" />
+        <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItem2" zIndex="1" text="$IAT/Languages/Message" />
+        <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItem3" zIndex="2" columnType="timestamp" text="$IAT/Languages/Timestamp" />
+        <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItem4" width="180" zIndex="3" columnType="code" text="Code" />
+        <Widget xsi:type="widgets.brease.AlarmListItem" id="AlarmListItem5" width="80" zIndex="4" columnType="state" text="$IAT/Languages/ErrState" />
+      </Widgets>
+    </Widget>
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton1" top="380" left="160" width="180" height="50" zIndex="1" text="$IAT/Languages/Acknowledge" disabledImageColor="rgba(65, 65, 65, 1)" backColor="rgba(85, 85, 85, 1)" disabledBackColor="rgba(65, 65, 65, 1)" borderColor="rgba(169, 169, 169, 1)" disabledBorderColor="rgba(65, 65, 65, 1)" textColor="rgba(169, 169, 169, 1)" disabledTextColor="rgba(65, 65, 65, 1)" mouseDownBorderColor="rgba(65, 65, 65, 1)" mouseDownBackColor="rgba(255, 255, 255, 1)" mouseDownTextColor="rgba(0, 0, 0, 1)" permissionOperate="['Administrators', 'Everyone', 'Operating', 'Worker']" />
+    <Widget xsi:type="widgets.brease.MomentaryPushButton" id="MomentaryPushButton2" top="380" left="640" width="180" height="50" zIndex="2" text="$IAT/Languages/AcknowledgeAll" disabledImageColor="rgba(65, 65, 65, 1)" backColor="rgba(85, 85, 85, 1)" disabledBackColor="rgba(65, 65, 65, 1)" borderColor="rgba(169, 169, 169, 1)" disabledBorderColor="rgba(65, 65, 65, 1)" textColor="rgba(169, 169, 169, 1)" disabledTextColor="rgba(65, 65, 65, 1)" mouseDownBorderColor="rgba(65, 65, 65, 1)" mouseDownBackColor="rgba(255, 255, 255, 1)" mouseDownTextColor="rgba(0, 0, 0, 1)" permissionOperate="['Administrators', 'Everyone', 'Operating', 'Worker']" />
+  </Widgets>
+</Content>

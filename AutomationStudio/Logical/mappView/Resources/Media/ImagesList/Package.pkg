@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="File">NoSelection.png</Object>
+    <Object Type="File">ax1.png</Object>
+    <Object Type="File">ax1pos.png</Object>
+    <Object Type="File">ax1neg.png</Object>
+    <Object Type="File">ax2.png</Object>
+    <Object Type="File">ax2pos.png</Object>
+    <Object Type="File">ax2neg.png</Object>
+    <Object Type="File">ax3.png</Object>
+    <Object Type="File">ax3pos.png</Object>
+    <Object Type="File">ax3neg.png</Object>
+    <Object Type="File">ax4.png</Object>
+    <Object Type="File">ax4pos.png</Object>
+    <Object Type="File">ax4neg.png</Object>
+    <Object Type="File">ax5.png</Object>
+    <Object Type="File">ax5pos.png</Object>
+    <Object Type="File">ax5neg.png</Object>
+    <Object Type="File">robot.png</Object>
+  </Objects>
+</Package>

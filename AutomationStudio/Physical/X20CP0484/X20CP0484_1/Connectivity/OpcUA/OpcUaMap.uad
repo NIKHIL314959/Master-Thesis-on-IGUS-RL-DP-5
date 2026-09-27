@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<OpcUaSource FileVersion="9" ArVersion="B4.93">
+  <Aliases>
+    <ACLAliases />
+    <EURangeViolationAliases />
+    <EURangesAliases />
+    <EngineeringUnitAliases />
+  </Aliases>
+  <DefaultView>
+    <Module Name="&lt;Default&gt;">
+      <GlobalVariables Name="Global Variables">
+        <Variable Name="g5AxRobA" />
+        <Variable Name="gAxisQ1" />
+        <Variable Name="gAxisQ2" />
+        <Variable Name="gAxisQ3" />
+        <Variable Name="gAxisQ4" />
+        <Variable Name="gAxisQ5" />
+        <Variable Name="gActual_C" />
+        <Variable Name="gActual_Q1" />
+        <Variable Name="gActual_Q2" />
+        <Variable Name="gActual_Q3" />
+        <Variable Name="gActual_Q4" />
+        <Variable Name="gActual_Q5" />
+        <Variable Name="gActual_X" />
+        <Variable Name="gActual_Y" />
+        <Variable Name="gActual_Z" />
+        <Variable Name="gCmd_ErrorReset" />
+        <Variable Name="gCmd_MoveLinear" />
+        <Variable Name="gCmd_Stop" />
+        <Variable Name="gEStop_Active" />
+        <Variable Name="gEStop_OK" />
+        <Variable Name="gFileManagerUI" />
+        <Variable Name="gParam_Acceleration" />
+        <Variable Name="gParam_Override" />
+        <Variable Name="gParam_Velocity" />
+        <Variable Name="gStatus_Error" />
+        <Variable Name="gStatus_ErrorID" />
+        <Variable Name="gStatus_Homed" />
+        <Variable Name="gActual_B" />
+        <Variable Name="gStatus_InPosition" />
+        <Variable Name="gStatus_Moving" />
+        <Variable Name="gStatus_PowerOn" />
+        <Variable Name="gStatus_Ready" />
+        <Variable Name="gTargetB" />
+        <Variable Name="gTargetC" />
+        <Variable Name="gTargetX" />
+        <Variable Name="gTargetY" />
+        <Variable Name="gTargetZ" />
+        <Variable Name="fbMpAxisBasic" />
+        <Variable Name="MpRoboArm5Axis_0" />
+        <Variable Name="ParAxis" />
+        <Variable Name="RoboParameters" />
+        <Variable Name="gCmd_MoveDirect" />
+        <Variable Name="gZeroedAngle_Q1" />
+        <Variable Name="gZeroedAngle_Q2" />
+        <Variable Name="gZeroedAngle_Q3" />
+        <Variable Name="gZeroedAngle_Q4" />
+        <Variable Name="gZeroedAngle_Q5" />
+        <Variable Name="SM_Module_TriggerVars" />
+        <Variable Name="gJogJointIndex" />
+        <Variable Name="gJogJointStep" />
+        <Variable Name="gCmd_JogJoint" />
+        <Variable Name="gHomeB" />
+        <Variable Name="gHomeC" />
+        <Variable Name="gHomeX" />
+        <Variable Name="gHomeY" />
+        <Variable Name="gHomeZ" />
+        <Variable Name="gPickB" />
+        <Variable Name="gPickC" />
+        <Variable Name="gPickX" />
+        <Variable Name="gPickY" />
+        <Variable Name="gPickZ" />
+        <Variable Name="gPlaceB" />
+        <Variable Name="gPlaceC" />
+        <Variable Name="gPlaceX" />
+        <Variable Name="gPlaceY" />
+        <Variable Name="gPlaceZ" />
+        <Variable Name="PP_OFFSET" />
+        <Variable Name="gStatus_Homing" />
+        <Variable Name="gCmd_Home" />
+      </GlobalVariables>
+      <Task Name="Motion_Con">
+        <Variable Name="gGripperClose" />
+        <Variable Name="gGripperOpen" />
+      </Task>
+    </Module>
+  </DefaultView>
+</OpcUaSource>

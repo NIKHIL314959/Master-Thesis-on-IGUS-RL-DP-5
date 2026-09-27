@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ldef:Layout id="MainMove" height="800" width="1280" xmlns:ldef="http://www.br-automation.com/iat2015/layoutDefinition/v2">
+  <Areas>
+		<Area id="Navigation" height="800" width="150" left="0" top="0" />
+		<Area id="Info_Bar" height="175" width="1130" left="150" top="0" />
+		<Area id="Status_Bar" height="50" width="1130" left="150" top="175" />
+		<Area id="Black_Bottom" height="75" width="1130" left="150" top="725" />
+		<Area id="Button_Bar" height="500" width="75" left="1205" top="225" />
+		<Area id="Black_Left" height="500" width="125" left="150" top="225" />
+		
+		<Area id="Right_Action" height="500" width="440" left="765" top="225" />
+		<Area id="Left_Action" height="500" width="440" left="275" top="225" />
+		<Area id="Fill_Mid" height="500" width="50" left="715" top="225" />
+  </Areas>
+</ldef:Layout>

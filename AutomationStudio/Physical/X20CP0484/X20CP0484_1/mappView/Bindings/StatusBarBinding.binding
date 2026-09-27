@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="StatusBarBinding" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Bindings>
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:fbMpRobotic5Arm.IsHomed" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Status_Bar" widgetRefId="ToggleButtonIsHomed" attribute="value" />
+		</Binding>
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:fbMpRobotic5Arm.PowerOn" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Status_Bar" widgetRefId="ToggleButtonPowered" attribute="value" />
+		</Binding>
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:fbMpRobotic5Arm.MoveActive" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Status_Bar" widgetRefId="ToggleButtonMoveActive" attribute="value" />
+		</Binding>
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:fbMpRobotic5Arm.InMotion" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Status_Bar" widgetRefId="ToggleButtonInMotion" attribute="value" />
+		</Binding>
+		<Binding mode="oneWay">
+			<Source xsi:type="opcUa" refId="::Main:MainPar.VisuPars.InError" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Status_Bar" widgetRefId="ToggleButtonError" attribute="value" />
+		</Binding>
+	</Bindings>
+</BindingsSet>

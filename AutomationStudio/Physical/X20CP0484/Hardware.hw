@@ -1,0 +1,525 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.12.2.93 FileVersion="4.9"?>
+<Hardware xmlns="http://br-automation.co.at/AS/Hardware">
+  <Module Name="X20BB52" Type="X20BB52" Version="1.2.0.0" />
+  <Module Name="X20BM11" Type="X20BM11" Version="1.1.0.0">
+    <Connection Connector="X2X1" TargetModule="X20BM31d" TargetConnector="X2X2" />
+  </Module>
+  <Module Name="X20BM11a" Type="X20BM11" Version="1.1.0.0">
+    <Connection Connector="X2X1" TargetModule="X20BM11" TargetConnector="X2X2" />
+  </Module>
+  <Module Name="X20BM11b" Type="X20BM11" Version="1.1.0.0">
+    <Connection Connector="X2X1" TargetModule="X20BM11a" TargetConnector="X2X2" />
+  </Module>
+  <Module Name="X20BM11c" Type="X20BM11" Version="1.1.0.0">
+    <Connection Connector="X2X1" TargetModule="X20BM11b" TargetConnector="X2X2" />
+  </Module>
+  <Module Name="X20BM11d" Type="X20BM11" Version="1.1.0.0">
+    <Connection Connector="X2X1" TargetModule="X20BM11c" TargetConnector="X2X2" />
+  </Module>
+  <Module Name="X20BM11e" Type="X20BM11" Version="1.1.0.0">
+    <Connection Connector="X2X1" TargetModule="X20BM11d" TargetConnector="X2X2" />
+  </Module>
+  <Module Name="X20BM31" Type="X20BM31" Version="1.1.0.0">
+    <Connection Connector="X2X1" TargetModule="X20BB52" TargetConnector="IF6" />
+  </Module>
+  <Module Name="X20BM31a" Type="X20BM31" Version="1.1.0.0">
+    <Connection Connector="X2X1" TargetModule="X20BM31" TargetConnector="X2X2" />
+  </Module>
+  <Module Name="X20BM31b" Type="X20BM31" Version="1.1.0.0">
+    <Connection Connector="X2X1" TargetModule="X20BM31a" TargetConnector="X2X2" />
+  </Module>
+  <Module Name="X20BM31c" Type="X20BM31" Version="1.1.0.0">
+    <Connection Connector="X2X1" TargetModule="X20BM31b" TargetConnector="X2X2" />
+  </Module>
+  <Module Name="X20BM31d" Type="X20BM31" Version="1.1.0.0">
+    <Connection Connector="X2X1" TargetModule="X20BM31c" TargetConnector="X2X2" />
+  </Module>
+  <Module Name="X20CP0484_1" Type="X20CP0484-1" Version="1.4.0.0">
+    <Connection Connector="SL" TargetModule="X20BB52" TargetConnector="SL1" />
+    <Connector Name="IF2">
+      <Parameter ID="ActivateDevice" Value="1" />
+      <Parameter ID="Mode" Value="Manual" />
+      <Parameter ID="InternetAddress" Value="169.254.137.11" />
+      <Parameter ID="SubnetMask" Value="255.255.255.0" />
+      <Parameter ID="InaNodeNumber" Value="1" />
+      <Parameter ID="ActivateSnmp" Value="2" />
+    </Connector>
+    <Parameter ID="ConfigurationID" Value="Nikhil_5_Axes" />
+    <Parameter ID="AutomaticTransferOfUserfiles" Value="on" />
+    <Parameter ID="MotionLoggerSize" Value="2048000" />
+    <Parameter ID="TimerDeviceType" Value="EPLX2X" />
+    <Parameter ID="TimerDevice" Value="X20BB52.IF6" />
+    <Parameter ID="TaskClassIdleTime" Value="4000" />
+    <Parameter ID="Cyclic1Duration" Value="4000" />
+    <Parameter ID="Cyclic1Tolerance" Value="0" />
+    <Parameter ID="Cyclic2Duration" Value="20000" />
+    <Parameter ID="Cyclic2Tolerance" Value="20000" />
+    <Parameter ID="Cyclic3Duration" Value="48000" />
+    <Parameter ID="Cyclic3Tolerance" Value="48000" />
+    <Parameter ID="Cyclic4Duration" Value="100000" />
+    <Parameter ID="Cyclic4Tolerance" Value="100000" />
+    <Parameter ID="Cyclic5Duration" Value="200000" />
+    <Parameter ID="Cyclic5Tolerance" Value="200000" />
+    <Parameter ID="Cyclic6Duration" Value="500000" />
+    <Parameter ID="Cyclic6Tolerance" Value="500000" />
+    <Parameter ID="Cyclic7Duration" Value="1000000" />
+    <Parameter ID="Cyclic7Tolerance" Value="1000000" />
+    <Parameter ID="Cyclic8Duration" Value="8000" />
+    <Parameter ID="Cyclic8Tolerance" Value="30000000" />
+    <Group ID="FileDevice1" />
+    <Parameter ID="FileDeviceName1" Value="Simulation" />
+    <Parameter ID="FileDevicePath1" Value="Z:\Nikhil\Project_5_Axes\Nikhil_test\Logical\CNC_PrgDir" />
+    <Group ID="FileDevice2" />
+    <Parameter ID="FileDeviceName2" Value="CNC_PrgDir" />
+    <Parameter ID="FileDevicePath2" Value="F:\" />
+    <Group ID="FileDevice3" />
+    <Parameter ID="FileDeviceName3" Value="SceneViewer" />
+    <Parameter ID="FileDevicePath3" Value="Z:\Nikhil\Project_5_Axes\Nikhil_test\Logical\SceneViewer" />
+    <Parameter ID="ActivateDns" Value="1" />
+    <Parameter ID="DnsDefaultDomain" Value="br-automation.co.at" />
+    <Group ID="FtpUser1" />
+    <Parameter ID="FtpUsername1" Value="user" />
+    <Parameter ID="FtpUserPassword1" Value="soUu8fSmbl9vOUGFZLohNxYIHTvfYbNb9FbAKhZ+648=" />
+    <Parameter ID="FtpUserSalt1" Value="plFIy1g6" />
+    <Parameter ID="FTPAccessRight1" Value="0" />
+    <Parameter ID="FTPdevice1" Value="ALL" />
+    <Parameter ID="ActivateDtmServer" Value="1" />
+    <Parameter ID="ActivateOpcUa" Value="1" />
+    <Parameter ID="OpcUaPort" Value="48400" />
+    <Parameter ID="OpcUa_AuthenticationSecurityPolicy_EnableNone" Value="1" />
+    <Parameter ID="OpcUa_AuthenticationSecurityPolicy_EnableBasic128Rsa15" Value="1" />
+    <Parameter ID="OpcUa_Security_AdminRole" Value="Administrators" />
+    <Parameter ID="OpcUa_Security_EngineerRole" Value="Everyone" />
+    <Parameter ID="OpcUa_Security_ObserverRole" Value="Everyone" />
+    <Parameter ID="OpcUaInformationModels_PV_Version" Value="2" />
+    <Parameter ID="OpcUaInformationModel_Facet" Value="0" />
+    <Parameter ID="OpcUaInformationModel_TypeInformation" Value="0" />
+    <Parameter ID="OpcUaInformationModel_BaseObjectTypeForStructures" Value="0" />
+  </Module>
+  <Module Name="X20DM9324" Type="X20DM9324" Version="1.2.0.0">
+    <Connection Connector="SS1" TargetModule="X20TB12f" TargetConnector="SS" />
+    <Connection Connector="SL" TargetModule="X20BM11" TargetConnector="SL1" />
+  </Module>
+  <Module Name="X20PS9600" Type="X20PS9600" Version="1.6.0.0">
+    <Connection Connector="PS" TargetModule="X20BB52" TargetConnector="PS1" />
+    <Connection Connector="SS1" TargetModule="X20TB12" TargetConnector="SS" />
+  </Module>
+  <Module Name="X20TB12" Type="X20TB12" Version="1.0.0.0" />
+  <Module Name="X20TB12a" Type="X20TB12" Version="1.0.0.0" />
+  <Module Name="X20TB12b" Type="X20TB12" Version="1.0.0.0" />
+  <Module Name="X20TB12c" Type="X20TB12" Version="1.0.0.0" />
+  <Module Name="X20TB12d" Type="X20TB12" Version="1.0.0.0" />
+  <Module Name="X20TB12e" Type="X20TB12" Version="1.0.0.0" />
+  <Module Name="X20TB12f" Type="X20TB12" Version="1.0.0.0" />
+  <Module Name="X20TB12g" Type="X20TB12" Version="1.0.0.0" />
+  <Module Name="X20TB12h" Type="X20TB12" Version="1.0.0.0" />
+  <Module Name="X20TB12i" Type="X20TB12" Version="1.0.0.0" />
+  <Module Name="X20TB12j" Type="X20TB12" Version="1.0.0.0" />
+  <Module Name="X20TB12k" Type="X20TB12" Version="1.0.0.0" />
+  <Module Name="axis1" Type="X20SM1444-1" Version="1.2.0.0">
+    <Connection Connector="SS1" TargetModule="X20TB12a" TargetConnector="SS" />
+    <Connection Connector="SL" TargetModule="X20BM31" TargetConnector="SL1" />
+    <Parameter ID="ActivateModuleSimulationOnPLC" Location="FunctionModel/DriveConfiguration/Module" Value="Off" />
+    <Parameter ID="ModuleParameters" Location="FunctionModel/DriveConfiguration" Value="StepperParameters" />
+    <Parameter ID="McStepperTypeID" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="X20Config" />
+    <Parameter ID="EncoderType" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="IncrementalDiff" />
+    <Parameter ID="ReferencePulse" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="yes" />
+    <Parameter ID="RatedCurrent" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="5.0" />
+    <Parameter ID="MaximumCurrent" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="10.0" />
+    <Parameter ID="AxesNumber" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="1" />
+    <Parameter ID="FullStepThreshold" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="1" />
+    <Parameter ID="StallDetection" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="2" />
+    <Parameter ID="SmartCurrentControl" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="1" />
+    <Parameter ID="BrakeOutput" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="0" />
+    <Parameter ID="NumberOfDigitalInputs" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="3" />
+    <Parameter ID="NumberOfTriggers" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="1" />
+    <Parameter ID="AxisReference" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis" Value="gAxisQ1" />
+    <Parameter ID="InputIsReadOnly" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="0" />
+    <Parameter ID="Input" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="48" />
+    <Parameter ID="OutputIsReadOnly" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="0" />
+    <Parameter ID="Output" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="1" />
+    <Parameter ID="ReferenceDistanceIsReadOnly" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/RotaryToLinearTransformation" Value="0" />
+    <Parameter ID="ReferenceDistance" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/RotaryToLinearTransformation" Value="1" />
+    <Parameter ID="SteppingAngle" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Motor" Value="1.8" />
+    <Parameter ID="EncoderLink" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis" Value="OneEncoder" />
+    <Parameter ID="PositionEncoder" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink" Value="External" />
+    <Parameter ID="LinesPerRevolution" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder" Value="2000" />
+    <Parameter ID="PositionType" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder" Value="Incremental" />
+    <Parameter ID="ChannelMapping" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder/PositionSource" Value="%ID.IF6.ST7.Encoder01" />
+    <Parameter ID="ModuleOk" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder/ValidityCheck" Value="IOChannel" />
+    <Parameter ID="ChannelMapping" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder/ValidityCheck/ModuleOk" Value="%IX.IF6.ST7.ModuleOk" />
+    <Parameter ID="StaleData" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder/ValidityCheck" Value="IOChannel" />
+    <Parameter ID="ChannelMapping" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder/ValidityCheck/StaleData" Value="%IX.IF6.ST7.StaleData" />
+    <Parameter ID="ReferencePulse" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder" Value="NotUsed" />
+    <Parameter ID="PositionFilterTimeConstant" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder/PositionFilter" Value="0.0" />
+    <Parameter ID="ExtrapolationTime" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder/PositionFilter" Value="0.0" />
+    <Parameter ID="ModeIsReadOnly" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller" Value="0" />
+    <Parameter ID="Mode" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller" Value="CurrentController" />
+    <Parameter ID="StandstillCurrent" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Current" Value="1" />
+    <Parameter ID="ConstantSpeedCurrent" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Current" Value="4" />
+    <Parameter ID="SpeedChangeCurrent" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Current" Value="4.2" />
+    <Parameter ID="FullStepThreshold" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Current" Value="0.0" />
+    <Parameter ID="MotorSettlingTime" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Current" Value="1" />
+    <Parameter ID="DelayedCurrentSwitchOff" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Current" Value="1" />
+    <Parameter ID="Mode" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing" Value="AbsoluteSwitch" />
+    <Parameter ID="Position" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="0.0" />
+    <Parameter ID="StartVelocity" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="5.0" />
+    <Parameter ID="HomingVelocity" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="2" />
+    <Parameter ID="Acceleration" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="50.0" />
+    <Parameter ID="SwitchEdge" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="Positive" />
+    <Parameter ID="HomingDirection" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="Positive" />
+    <Parameter ID="KeepDirection" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="No" />
+    <Parameter ID="ReferencePulse" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="NotUsed" />
+    <Parameter ID="RestorePositionVariable" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing" Value="" />
+    <Parameter ID="ClearPositionError" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing" Value="No" />
+    <Parameter ID="DriveError" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/StopReaction" Value="DecelerationLimit" />
+    <Parameter ID="PositionError" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MovementErrorLimits" Value="1000" />
+    <Parameter ID="StallguardConfiguration" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MovementErrorLimits" Value="NotUsed" />
+    <Parameter ID="JerkFilter" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis" Value="NotUsed" />
+    <Parameter ID="ZeroVibrationFilter" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis" Value="NotUsed" />
+    <Parameter ID="Source" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/HomingSwitch" Value="IOChannel" />
+    <Parameter ID="ChannelMapping" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/HomingSwitch/Source" Value="%IX.IF6.ST6.DigitalInput01" />
+    <Parameter ID="Level" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/HomingSwitch" Value="Low" />
+    <Parameter ID="Source" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/PositiveLimitSwitch" Value="NotUsed" />
+    <Parameter ID="Level" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/PositiveLimitSwitch" Value="High" />
+    <Parameter ID="Source" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/NegativeLimitSwitch" Value="NotUsed" />
+    <Parameter ID="Level" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/NegativeLimitSwitch" Value="High" />
+    <Parameter ID="Source" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/Trigger1" Value="NotUsed" />
+    <Parameter ID="Level" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/Trigger1" Value="High" />
+    <Parameter ID="Source" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/Trigger2" Value="NotUsed" />
+    <Parameter ID="Level" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/Trigger2" Value="High" />
+    <Parameter ID="Input" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/Quickstop" Value="NotUsed" />
+    <Parameter ID="BrakeControl" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalOutputs" Value="NotUsed" />
+    <Parameter ID="LoadSimulationMode" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Simulation" Value="NotUsed" />
+  </Module>
+  <Module Name="axis2" Type="X20SM1444-1" Version="1.2.0.0">
+    <Connection Connector="SS1" TargetModule="X20TB12b" TargetConnector="SS" />
+    <Connection Connector="SL" TargetModule="X20BM31a" TargetConnector="SL1" />
+    <Parameter ID="ActivateModuleSimulationOnPLC" Location="FunctionModel/DriveConfiguration/Module" Value="Off" />
+    <Parameter ID="ModuleParameters" Location="FunctionModel/DriveConfiguration" Value="StepperParameters" />
+    <Parameter ID="McStepperTypeID" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="X20Config" />
+    <Parameter ID="EncoderType" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="IncrementalDiff" />
+    <Parameter ID="ReferencePulse" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="yes" />
+    <Parameter ID="RatedCurrent" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="5.0" />
+    <Parameter ID="MaximumCurrent" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="10.0" />
+    <Parameter ID="AxesNumber" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="1" />
+    <Parameter ID="FullStepThreshold" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="1" />
+    <Parameter ID="StallDetection" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="2" />
+    <Parameter ID="SmartCurrentControl" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="1" />
+    <Parameter ID="BrakeOutput" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="0" />
+    <Parameter ID="NumberOfDigitalInputs" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="3" />
+    <Parameter ID="NumberOfTriggers" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="1" />
+    <Parameter ID="AxisReference" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis" Value="gAxisQ2" />
+    <Parameter ID="InputIsReadOnly" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="0" />
+    <Parameter ID="Input" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="48" />
+    <Parameter ID="OutputIsReadOnly" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="0" />
+    <Parameter ID="Output" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="1" />
+    <Parameter ID="ReferenceDistanceIsReadOnly" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/RotaryToLinearTransformation" Value="0" />
+    <Parameter ID="ReferenceDistance" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/RotaryToLinearTransformation" Value="1" />
+    <Parameter ID="SteppingAngle" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Motor" Value="1.8" />
+    <Parameter ID="EncoderLink" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis" Value="OneEncoder" />
+    <Parameter ID="PositionEncoder" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink" Value="External" />
+    <Parameter ID="LinesPerRevolution" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder" Value="2000" />
+    <Parameter ID="PositionType" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder" Value="Incremental" />
+    <Parameter ID="ChannelMapping" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder/PositionSource" Value="%ID.IF6.ST8.Encoder01" />
+    <Parameter ID="ModuleOk" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder/ValidityCheck" Value="IOChannel" />
+    <Parameter ID="ChannelMapping" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder/ValidityCheck/ModuleOk" Value="%IX.IF6.ST8.ModuleOk" />
+    <Parameter ID="StaleData" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder/ValidityCheck" Value="IOChannel" />
+    <Parameter ID="ChannelMapping" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder/ValidityCheck/StaleData" Value="%IX.IF6.ST8.StaleData" />
+    <Parameter ID="ReferencePulse" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder" Value="NotUsed" />
+    <Parameter ID="PositionFilterTimeConstant" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder/PositionFilter" Value="0.0" />
+    <Parameter ID="ExtrapolationTime" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder/PositionFilter" Value="0.0" />
+    <Parameter ID="ModeIsReadOnly" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller" Value="0" />
+    <Parameter ID="Mode" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller" Value="CurrentController" />
+    <Parameter ID="StandstillCurrent" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Current" Value="1" />
+    <Parameter ID="ConstantSpeedCurrent" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Current" Value="4.2" />
+    <Parameter ID="SpeedChangeCurrent" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Current" Value="4.2" />
+    <Parameter ID="FullStepThreshold" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Current" Value="0.0" />
+    <Parameter ID="MotorSettlingTime" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Current" Value="1" />
+    <Parameter ID="DelayedCurrentSwitchOff" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Current" Value="1" />
+    <Parameter ID="Mode" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing" Value="AbsoluteSwitch" />
+    <Parameter ID="Position" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="-10" />
+    <Parameter ID="StartVelocity" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="5.0" />
+    <Parameter ID="HomingVelocity" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="2" />
+    <Parameter ID="Acceleration" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="50.0" />
+    <Parameter ID="SwitchEdge" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="Negative" />
+    <Parameter ID="HomingDirection" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="Negative" />
+    <Parameter ID="KeepDirection" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="No" />
+    <Parameter ID="ReferencePulse" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="NotUsed" />
+    <Parameter ID="RestorePositionVariable" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing" Value="" />
+    <Parameter ID="ClearPositionError" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing" Value="No" />
+    <Parameter ID="DriveError" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/StopReaction" Value="DecelerationLimit" />
+    <Parameter ID="PositionError" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MovementErrorLimits" Value="1000" />
+    <Parameter ID="StallguardConfiguration" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MovementErrorLimits" Value="NotUsed" />
+    <Parameter ID="JerkFilter" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis" Value="NotUsed" />
+    <Parameter ID="ZeroVibrationFilter" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis" Value="NotUsed" />
+    <Parameter ID="Source" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/HomingSwitch" Value="IOChannel" />
+    <Parameter ID="ChannelMapping" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/HomingSwitch/Source" Value="%IX.IF6.ST6.DigitalInput02" />
+    <Parameter ID="Level" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/HomingSwitch" Value="Low" />
+    <Parameter ID="Source" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/PositiveLimitSwitch" Value="NotUsed" />
+    <Parameter ID="Level" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/PositiveLimitSwitch" Value="High" />
+    <Parameter ID="Source" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/NegativeLimitSwitch" Value="NotUsed" />
+    <Parameter ID="Level" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/NegativeLimitSwitch" Value="High" />
+    <Parameter ID="Source" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/Trigger1" Value="NotUsed" />
+    <Parameter ID="Level" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/Trigger1" Value="High" />
+    <Parameter ID="Source" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/Trigger2" Value="NotUsed" />
+    <Parameter ID="Level" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/Trigger2" Value="High" />
+    <Parameter ID="Input" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/Quickstop" Value="NotUsed" />
+    <Parameter ID="BrakeControl" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalOutputs" Value="NotUsed" />
+    <Parameter ID="LoadSimulationMode" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Simulation" Value="NotUsed" />
+  </Module>
+  <Module Name="axis3" Type="X20SM1444-1" Version="1.2.0.0">
+    <Connection Connector="SS1" TargetModule="X20TB12c" TargetConnector="SS" />
+    <Connection Connector="SL" TargetModule="X20BM31b" TargetConnector="SL1" />
+    <Parameter ID="ActivateModuleSimulationOnPLC" Location="FunctionModel/DriveConfiguration/Module" Value="Off" />
+    <Parameter ID="ModuleParameters" Location="FunctionModel/DriveConfiguration" Value="StepperParameters" />
+    <Parameter ID="McStepperTypeID" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="X20Config" />
+    <Parameter ID="EncoderType" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="IncrementalDiff" />
+    <Parameter ID="ReferencePulse" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="yes" />
+    <Parameter ID="RatedCurrent" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="5.0" />
+    <Parameter ID="MaximumCurrent" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="10.0" />
+    <Parameter ID="AxesNumber" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="1" />
+    <Parameter ID="FullStepThreshold" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="1" />
+    <Parameter ID="StallDetection" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="2" />
+    <Parameter ID="SmartCurrentControl" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="1" />
+    <Parameter ID="BrakeOutput" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="0" />
+    <Parameter ID="NumberOfDigitalInputs" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="3" />
+    <Parameter ID="NumberOfTriggers" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="1" />
+    <Parameter ID="AxisReference" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis" Value="gAxisQ3" />
+    <Parameter ID="InputIsReadOnly" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="0" />
+    <Parameter ID="Input" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="50" />
+    <Parameter ID="OutputIsReadOnly" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="0" />
+    <Parameter ID="Output" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="1" />
+    <Parameter ID="ReferenceDistanceIsReadOnly" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/RotaryToLinearTransformation" Value="0" />
+    <Parameter ID="ReferenceDistance" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/RotaryToLinearTransformation" Value="1" />
+    <Parameter ID="SteppingAngle" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Motor" Value="1.8" />
+    <Parameter ID="EncoderLink" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis" Value="OneEncoder" />
+    <Parameter ID="PositionEncoder" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink" Value="External" />
+    <Parameter ID="LinesPerRevolution" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder" Value="2000" />
+    <Parameter ID="PositionType" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder" Value="Incremental" />
+    <Parameter ID="ChannelMapping" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder/PositionSource" Value="%ID.IF6.ST9.Encoder01" />
+    <Parameter ID="ModuleOk" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder/ValidityCheck" Value="IOChannel" />
+    <Parameter ID="ChannelMapping" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder/ValidityCheck/ModuleOk" Value="%IX.IF6.ST9.ModuleOk" />
+    <Parameter ID="StaleData" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder/ValidityCheck" Value="IOChannel" />
+    <Parameter ID="ChannelMapping" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder/ValidityCheck/StaleData" Value="%IX.IF6.ST9.StaleData" />
+    <Parameter ID="ReferencePulse" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder" Value="NotUsed" />
+    <Parameter ID="PositionFilterTimeConstant" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder/PositionFilter" Value="0.0" />
+    <Parameter ID="ExtrapolationTime" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder/PositionFilter" Value="0.0" />
+    <Parameter ID="ModeIsReadOnly" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller" Value="0" />
+    <Parameter ID="Mode" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller" Value="CurrentController" />
+    <Parameter ID="StandstillCurrent" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Current" Value="1" />
+    <Parameter ID="ConstantSpeedCurrent" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Current" Value="4.2" />
+    <Parameter ID="SpeedChangeCurrent" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Current" Value="4.2" />
+    <Parameter ID="FullStepThreshold" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Current" Value="0.0" />
+    <Parameter ID="MotorSettlingTime" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Current" Value="1" />
+    <Parameter ID="DelayedCurrentSwitchOff" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Current" Value="1" />
+    <Parameter ID="Mode" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing" Value="AbsoluteSwitch" />
+    <Parameter ID="Position" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="10" />
+    <Parameter ID="StartVelocity" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="5.0" />
+    <Parameter ID="HomingVelocity" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="2" />
+    <Parameter ID="Acceleration" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="50.0" />
+    <Parameter ID="SwitchEdge" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="Negative" />
+    <Parameter ID="HomingDirection" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="Negative" />
+    <Parameter ID="KeepDirection" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="No" />
+    <Parameter ID="ReferencePulse" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="NotUsed" />
+    <Parameter ID="RestorePositionVariable" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing" Value="" />
+    <Parameter ID="ClearPositionError" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing" Value="No" />
+    <Parameter ID="DriveError" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/StopReaction" Value="DecelerationLimit" />
+    <Parameter ID="PositionError" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MovementErrorLimits" Value="1000" />
+    <Parameter ID="StallguardConfiguration" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MovementErrorLimits" Value="NotUsed" />
+    <Parameter ID="JerkFilter" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis" Value="NotUsed" />
+    <Parameter ID="ZeroVibrationFilter" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis" Value="NotUsed" />
+    <Parameter ID="Source" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/HomingSwitch" Value="IOChannel" />
+    <Parameter ID="ChannelMapping" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/HomingSwitch/Source" Value="%IX.IF6.ST6.DigitalInput03" />
+    <Parameter ID="Level" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/HomingSwitch" Value="Low" />
+    <Parameter ID="Source" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/PositiveLimitSwitch" Value="NotUsed" />
+    <Parameter ID="Level" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/PositiveLimitSwitch" Value="High" />
+    <Parameter ID="Source" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/NegativeLimitSwitch" Value="NotUsed" />
+    <Parameter ID="Level" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/NegativeLimitSwitch" Value="High" />
+    <Parameter ID="Source" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/Trigger1" Value="NotUsed" />
+    <Parameter ID="Level" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/Trigger1" Value="High" />
+    <Parameter ID="Source" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/Trigger2" Value="NotUsed" />
+    <Parameter ID="Level" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/Trigger2" Value="High" />
+    <Parameter ID="Input" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/Quickstop" Value="NotUsed" />
+    <Parameter ID="BrakeControl" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalOutputs" Value="NotUsed" />
+    <Parameter ID="LoadSimulationMode" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Simulation" Value="NotUsed" />
+  </Module>
+  <Module Name="axis4" Type="X20SM1444-1" Version="1.2.0.0">
+    <Connection Connector="SS1" TargetModule="X20TB12d" TargetConnector="SS" />
+    <Connection Connector="SL" TargetModule="X20BM31c" TargetConnector="SL1" />
+    <Parameter ID="ActivateModuleSimulationOnPLC" Location="FunctionModel/DriveConfiguration/Module" Value="Off" />
+    <Parameter ID="ModuleParameters" Location="FunctionModel/DriveConfiguration" Value="StepperParameters" />
+    <Parameter ID="McStepperTypeID" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="X20Config" />
+    <Parameter ID="EncoderType" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="IncrementalDiff" />
+    <Parameter ID="ReferencePulse" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="yes" />
+    <Parameter ID="RatedCurrent" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="5.0" />
+    <Parameter ID="MaximumCurrent" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="10.0" />
+    <Parameter ID="AxesNumber" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="1" />
+    <Parameter ID="FullStepThreshold" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="1" />
+    <Parameter ID="StallDetection" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="2" />
+    <Parameter ID="SmartCurrentControl" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="1" />
+    <Parameter ID="BrakeOutput" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="0" />
+    <Parameter ID="NumberOfDigitalInputs" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="3" />
+    <Parameter ID="NumberOfTriggers" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="1" />
+    <Parameter ID="AxisReference" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis" Value="gAxisQ4" />
+    <Parameter ID="InputIsReadOnly" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="0" />
+    <Parameter ID="Input" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="40" />
+    <Parameter ID="OutputIsReadOnly" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="0" />
+    <Parameter ID="Output" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="1" />
+    <Parameter ID="ReferenceDistanceIsReadOnly" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/RotaryToLinearTransformation" Value="0" />
+    <Parameter ID="ReferenceDistance" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/RotaryToLinearTransformation" Value="1" />
+    <Parameter ID="SteppingAngle" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Motor" Value="1.8" />
+    <Parameter ID="EncoderLink" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis" Value="OneEncoder" />
+    <Parameter ID="PositionEncoder" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink" Value="External" />
+    <Parameter ID="LinesPerRevolution" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder" Value="2000" />
+    <Parameter ID="PositionType" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder" Value="Incremental" />
+    <Parameter ID="ChannelMapping" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder/PositionSource" Value="%ID.IF6.ST10.Encoder01" />
+    <Parameter ID="ModuleOk" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder/ValidityCheck" Value="IOChannel" />
+    <Parameter ID="ChannelMapping" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder/ValidityCheck/ModuleOk" Value="%IX.IF6.ST10.ModuleOk" />
+    <Parameter ID="StaleData" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder/ValidityCheck" Value="IOChannel" />
+    <Parameter ID="ChannelMapping" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder/ValidityCheck/StaleData" Value="%IX.IF6.ST10.StaleData" />
+    <Parameter ID="ReferencePulse" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder" Value="NotUsed" />
+    <Parameter ID="PositionFilterTimeConstant" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder/PositionFilter" Value="0.0" />
+    <Parameter ID="ExtrapolationTime" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder/PositionFilter" Value="0.0" />
+    <Parameter ID="ModeIsReadOnly" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller" Value="0" />
+    <Parameter ID="Mode" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller" Value="CurrentController" />
+    <Parameter ID="StandstillCurrent" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Current" Value="0.6" />
+    <Parameter ID="ConstantSpeedCurrent" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Current" Value="1.8" />
+    <Parameter ID="SpeedChangeCurrent" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Current" Value="1.8" />
+    <Parameter ID="FullStepThreshold" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Current" Value="0.0" />
+    <Parameter ID="MotorSettlingTime" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Current" Value="1" />
+    <Parameter ID="DelayedCurrentSwitchOff" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Current" Value="1" />
+    <Parameter ID="Mode" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing" Value="AbsoluteSwitch" />
+    <Parameter ID="Position" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="-10" />
+    <Parameter ID="StartVelocity" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="5.0" />
+    <Parameter ID="HomingVelocity" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="2" />
+    <Parameter ID="Acceleration" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="50.0" />
+    <Parameter ID="SwitchEdge" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="Positive" />
+    <Parameter ID="HomingDirection" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="Positive" />
+    <Parameter ID="KeepDirection" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="No" />
+    <Parameter ID="ReferencePulse" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="NotUsed" />
+    <Parameter ID="RestorePositionVariable" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing" Value="" />
+    <Parameter ID="ClearPositionError" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing" Value="No" />
+    <Parameter ID="DriveError" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/StopReaction" Value="DecelerationLimit" />
+    <Parameter ID="PositionError" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MovementErrorLimits" Value="1000" />
+    <Parameter ID="StallguardConfiguration" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MovementErrorLimits" Value="NotUsed" />
+    <Parameter ID="JerkFilter" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis" Value="NotUsed" />
+    <Parameter ID="ZeroVibrationFilter" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis" Value="NotUsed" />
+    <Parameter ID="Source" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/HomingSwitch" Value="IOChannel" />
+    <Parameter ID="ChannelMapping" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/HomingSwitch/Source" Value="%IX.IF6.ST6.DigitalInput04" />
+    <Parameter ID="Level" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/HomingSwitch" Value="Low" />
+    <Parameter ID="Source" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/PositiveLimitSwitch" Value="NotUsed" />
+    <Parameter ID="Level" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/PositiveLimitSwitch" Value="High" />
+    <Parameter ID="Source" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/NegativeLimitSwitch" Value="NotUsed" />
+    <Parameter ID="Level" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/NegativeLimitSwitch" Value="High" />
+    <Parameter ID="Source" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/Trigger1" Value="NotUsed" />
+    <Parameter ID="Level" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/Trigger1" Value="High" />
+    <Parameter ID="Source" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/Trigger2" Value="NotUsed" />
+    <Parameter ID="Level" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/Trigger2" Value="High" />
+    <Parameter ID="Input" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/Quickstop" Value="NotUsed" />
+    <Parameter ID="BrakeControl" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalOutputs" Value="NotUsed" />
+    <Parameter ID="LoadSimulationMode" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Simulation" Value="NotUsed" />
+  </Module>
+  <Module Name="axis5" Type="X20SM1444-1" Version="1.2.0.0">
+    <Connection Connector="SS1" TargetModule="X20TB12e" TargetConnector="SS" />
+    <Connection Connector="SL" TargetModule="X20BM31d" TargetConnector="SL1" />
+    <Parameter ID="ActivateModuleSimulationOnPLC" Location="FunctionModel/DriveConfiguration/Module" Value="Off" />
+    <Parameter ID="ModuleParameters" Location="FunctionModel/DriveConfiguration" Value="StepperParameters" />
+    <Parameter ID="McStepperTypeID" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="X20Config" />
+    <Parameter ID="EncoderType" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="IncrementalDiff" />
+    <Parameter ID="ReferencePulse" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="yes" />
+    <Parameter ID="RatedCurrent" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="5.0" />
+    <Parameter ID="MaximumCurrent" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="10.0" />
+    <Parameter ID="AxesNumber" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="1" />
+    <Parameter ID="FullStepThreshold" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="1" />
+    <Parameter ID="StallDetection" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="2" />
+    <Parameter ID="SmartCurrentControl" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="1" />
+    <Parameter ID="BrakeOutput" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="0" />
+    <Parameter ID="NumberOfDigitalInputs" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="3" />
+    <Parameter ID="NumberOfTriggers" Location="FunctionModel/DriveConfiguration/ModuleParameters" Value="1" />
+    <Parameter ID="AxisReference" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis" Value="gAxisQ5" />
+    <Parameter ID="InputIsReadOnly" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="0" />
+    <Parameter ID="Input" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="28" />
+    <Parameter ID="OutputIsReadOnly" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="0" />
+    <Parameter ID="Output" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/Gearbox" Value="1" />
+    <Parameter ID="ReferenceDistanceIsReadOnly" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/RotaryToLinearTransformation" Value="0" />
+    <Parameter ID="ReferenceDistance" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MechanicalElements/RotaryToLinearTransformation" Value="1" />
+    <Parameter ID="SteppingAngle" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Motor" Value="1.8" />
+    <Parameter ID="EncoderLink" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis" Value="OneEncoder" />
+    <Parameter ID="PositionEncoder" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink" Value="External" />
+    <Parameter ID="LinesPerRevolution" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder" Value="2000" />
+    <Parameter ID="PositionType" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder" Value="Incremental" />
+    <Parameter ID="ChannelMapping" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder/PositionSource" Value="%ID.IF6.ST11.Encoder01" />
+    <Parameter ID="ModuleOk" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder/ValidityCheck" Value="IOChannel" />
+    <Parameter ID="ChannelMapping" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder/ValidityCheck/ModuleOk" Value="%IX.IF6.ST11.ModuleOk" />
+    <Parameter ID="StaleData" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder/ValidityCheck" Value="IOChannel" />
+    <Parameter ID="ChannelMapping" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder/ValidityCheck/StaleData" Value="%IX.IF6.ST11.StaleData" />
+    <Parameter ID="ReferencePulse" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder" Value="NotUsed" />
+    <Parameter ID="PositionFilterTimeConstant" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder/PositionFilter" Value="0.0" />
+    <Parameter ID="ExtrapolationTime" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/EncoderLink/PositionEncoder/PositionFilter" Value="0.0" />
+    <Parameter ID="ModeIsReadOnly" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller" Value="0" />
+    <Parameter ID="Mode" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller" Value="CurrentController" />
+    <Parameter ID="StandstillCurrent" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Current" Value="0.2" />
+    <Parameter ID="ConstantSpeedCurrent" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Current" Value="1.8" />
+    <Parameter ID="SpeedChangeCurrent" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Current" Value="1.8" />
+    <Parameter ID="FullStepThreshold" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Current" Value="0.0" />
+    <Parameter ID="MotorSettlingTime" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Current" Value="1" />
+    <Parameter ID="DelayedCurrentSwitchOff" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Controller/Mode/Current" Value="1" />
+    <Parameter ID="Mode" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing" Value="AbsoluteSwitch" />
+    <Parameter ID="Position" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="-10" />
+    <Parameter ID="StartVelocity" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="5.0" />
+    <Parameter ID="HomingVelocity" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="2" />
+    <Parameter ID="Acceleration" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="50.0" />
+    <Parameter ID="SwitchEdge" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="Positive" />
+    <Parameter ID="HomingDirection" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="Negative" />
+    <Parameter ID="KeepDirection" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="No" />
+    <Parameter ID="ReferencePulse" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing/Mode" Value="NotUsed" />
+    <Parameter ID="RestorePositionVariable" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing" Value="" />
+    <Parameter ID="ClearPositionError" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Homing" Value="No" />
+    <Parameter ID="DriveError" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/StopReaction" Value="DecelerationLimit" />
+    <Parameter ID="PositionError" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MovementErrorLimits" Value="1000" />
+    <Parameter ID="StallguardConfiguration" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/MovementErrorLimits" Value="NotUsed" />
+    <Parameter ID="JerkFilter" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis" Value="NotUsed" />
+    <Parameter ID="ZeroVibrationFilter" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis" Value="NotUsed" />
+    <Parameter ID="Source" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/HomingSwitch" Value="IOChannel" />
+    <Parameter ID="ChannelMapping" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/HomingSwitch/Source" Value="%IX.IF6.ST6.DigitalInput05" />
+    <Parameter ID="Level" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/HomingSwitch" Value="Low" />
+    <Parameter ID="Source" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/PositiveLimitSwitch" Value="NotUsed" />
+    <Parameter ID="Level" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/PositiveLimitSwitch" Value="High" />
+    <Parameter ID="Source" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/NegativeLimitSwitch" Value="NotUsed" />
+    <Parameter ID="Level" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/NegativeLimitSwitch" Value="High" />
+    <Parameter ID="Source" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/Trigger1" Value="NotUsed" />
+    <Parameter ID="Level" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/Trigger1" Value="High" />
+    <Parameter ID="Source" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/Trigger2" Value="NotUsed" />
+    <Parameter ID="Level" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/Trigger2" Value="High" />
+    <Parameter ID="Input" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalInputs/Quickstop" Value="NotUsed" />
+    <Parameter ID="BrakeControl" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/DigitalOutputs" Value="NotUsed" />
+    <Parameter ID="LoadSimulationMode" Location="FunctionModel/DriveConfiguration/Channel[1]/RealAxis/Simulation" Value="NotUsed" />
+  </Module>
+  <Module Name="encoder1" Type="X20DC1196" Version="1.4.0.0">
+    <Connection Connector="SS1" TargetModule="X20TB12g" TargetConnector="SS" />
+    <Connection Connector="SL" TargetModule="X20BM11a" TargetConnector="SL1" />
+    <Parameter ID="FunctionModel" Value="FunctionModel001" />
+  </Module>
+  <Module Name="encoder2" Type="X20DC1196" Version="1.4.0.0">
+    <Connection Connector="SS1" TargetModule="X20TB12h" TargetConnector="SS" />
+    <Connection Connector="SL" TargetModule="X20BM11b" TargetConnector="SL1" />
+    <Parameter ID="FunctionModel" Value="FunctionModel001" />
+  </Module>
+  <Module Name="encoder3" Type="X20DC1196" Version="1.4.0.0">
+    <Connection Connector="SS1" TargetModule="X20TB12i" TargetConnector="SS" />
+    <Connection Connector="SL" TargetModule="X20BM11c" TargetConnector="SL1" />
+    <Parameter ID="FunctionModel" Value="FunctionModel001" />
+  </Module>
+  <Module Name="encoder4" Type="X20DC1196" Version="1.4.0.0">
+    <Connection Connector="SS1" TargetModule="X20TB12j" TargetConnector="SS" />
+    <Connection Connector="SL" TargetModule="X20BM11d" TargetConnector="SL1" />
+    <Parameter ID="FunctionModel" Value="FunctionModel001" />
+  </Module>
+  <Module Name="encoder5" Type="X20DC1196" Version="1.4.0.0">
+    <Connection Connector="SS1" TargetModule="X20TB12k" TargetConnector="SS" />
+    <Connection Connector="SL" TargetModule="X20BM11e" TargetConnector="SL1" />
+    <Parameter ID="FunctionModel" Value="FunctionModel001" />
+  </Module>
+</Hardware>

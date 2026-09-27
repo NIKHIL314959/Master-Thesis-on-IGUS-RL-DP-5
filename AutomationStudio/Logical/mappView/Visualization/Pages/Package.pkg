@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package SubType="PagesPackage" PackageType="PagesPackage" xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="Package" Description="AreaContents">AreaContents</Object>
+    <Object Type="Package" Description="Starting page">START_Page</Object>
+    <Object Type="Package" Description="Error page">ERROR_Page</Object>
+    <Object Type="Package" Description="Automatic movements page">AUTOMATIC_PAGE</Object>
+    <Object Type="Package" Description="Manual movements MCS page">MANUAL_MCS_Page</Object>
+    <Object Type="Package" Description="Tipping/ jog page">TIPPING_Page</Object>
+  </Objects>
+</Package>

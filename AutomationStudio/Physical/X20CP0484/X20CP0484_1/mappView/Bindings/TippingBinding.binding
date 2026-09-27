@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="TippingBinding" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Bindings>
+  
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::VisuCtrl:ChangeAxTo.Ax1" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Tipping" widgetRefId="Ax1MomButton" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::VisuCtrl:ChangeAxTo.Ax2" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Tipping" widgetRefId="Ax2MomButton" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::VisuCtrl:ChangeAxTo.Ax3" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Tipping" widgetRefId="Ax3MomButton" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::VisuCtrl:ChangeAxTo.Ax4" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Tipping" widgetRefId="Ax4MomButton" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::VisuCtrl:ChangeAxTo.Ax5" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Tipping" widgetRefId="Ax5MomButton" attribute="value" />
+		</Binding>
+		
+
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:ImageIndex" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Tipping" widgetRefId="ImageList1" attribute="selectedIndex" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::Main:JogVelocity" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Tipping" widgetRefId="NumericInputJogVelocity" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::Main:MainPar.Cmd.ErrorReset" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Main_Error" widgetRefId="MomentaryPushButton1" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::Main:MainPar.Cmd.ErrorReset" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Main_Error" widgetRefId="MomentaryPushButton2" attribute="value" />
+		</Binding>
+
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::Main:MainPar.Cmd.MoveIndex" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Move_MCS" widgetRefId="DropDownBox1" attribute="selectedIndex" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="mapp" refId="gAlarmXCore" attribute="link" />
+			<Target xsi:type="brease" contentRefId="Main_Error" widgetRefId="AlarmList1" attribute="mpLink" />
+		</Binding>
+
+
+
+
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:JogDirection.Negative" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Tipping" widgetRefId="MomentaryPushButtonPositive" attribute="value" />
+		</Binding>
+		<Binding mode="twoWay">
+			<Source xsi:type="opcUa" refId="::AsGlobalPV:JogDirection.Positive" attribute="value" />
+			<Target xsi:type="brease" contentRefId="Tipping" widgetRefId="MomentaryPushButtonNegative" attribute="value" />
+		</Binding>
+	</Bindings>
+</BindingsSet>

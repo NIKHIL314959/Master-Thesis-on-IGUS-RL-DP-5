@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingsSet id="ClientInfo_Binding" xmlns="http://www.br-automation.com/iat2015/binding/engineering/v2" xmlns:bt="http://www.br-automation.com/iat2015/bindingListTypes/engineering/v2" xmlns:be="http://www.br-automation.com/iat2015/bindingListEmbedded/engineering/v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Bindings>
+		<Binding mode="oneWayToSource">
+			<Source xsi:type="listElement" >
+				<Selector xsi:type="session" refId="::SYSTEM:clientInfo.slotId" attribute="value" />
+				<be:List xsi:type="be:opcUa" attribute="value" samplingRate="fast">
+					<bt:Element index="0" refId="::AsGlobalPV:ClientInfo[0].isValid" />
+					<bt:Element index="1" refId="::AsGlobalPV:ClientInfo[1].isValid" />
+					<bt:Element index="2" refId="::AsGlobalPV:ClientInfo[2].isValid" />
+				</be:List>
+			</Source>
+			<Target xsi:type="session" refId="::SYSTEM:clientInfo.isValid" attribute="value" />
+		</Binding>
+        
+		<Binding mode="oneWayToSource">
+			<Source xsi:type="listElement">
+				<Selector xsi:type="session" refId="::SYSTEM:clientInfo.slotId" attribute="value" />
+				<be:List xsi:type="be:opcUa" attribute="value" >
+					<bt:Element index="0" refId="::AsGlobalPV:ClientInfo[0].userId" />
+					<bt:Element index="1" refId="::AsGlobalPV:ClientInfo[1].userId" />
+					<bt:Element index="2" refId="::AsGlobalPV:ClientInfo[2].userId" />
+				</be:List>
+			</Source>
+			<Target xsi:type="session" refId="::SYSTEM:clientInfo.userId" attribute="value" />
+		</Binding>
+        
+		<Binding mode="oneWayToSource">
+			<Source xsi:type="listElement">
+				<Selector xsi:type="session" refId="::SYSTEM:clientInfo.slotId" attribute="value" />
+				<be:List xsi:type="be:opcUa" attribute="value" >
+					<bt:Element index="0" refId="::AsGlobalPV:ClientInfo[0].ipAddress" />
+					<bt:Element index="1" refId="::AsGlobalPV:ClientInfo[1].ipAddress" />
+					<bt:Element index="2" refId="::AsGlobalPV:ClientInfo[2].ipAddress" />
+				</be:List>
+			</Source>
+			<Target xsi:type="session" refId="::SYSTEM:clientInfo.ipAddress" attribute="value" />
+		</Binding>
+        
+		<Binding mode="oneWayToSource">
+			<Source xsi:type="listElement">
+				<Selector xsi:type="session" refId="::SYSTEM:clientInfo.slotId" attribute="value" />
+				<be:List xsi:type="be:opcUa" attribute="value" >
+					<bt:Element index="0" refId="::AsGlobalPV:ClientInfo[0].languageId" />
+					<bt:Element index="1" refId="::AsGlobalPV:ClientInfo[1].languageId" />
+					<bt:Element index="2" refId="::AsGlobalPV:ClientInfo[2].languageId" />
+				</be:List>
+			</Source>
+			<Target xsi:type="session" refId="::SYSTEM:clientInfo.languageId" attribute="value" />
+		</Binding>
+        
+		<Binding mode="oneWayToSource">
+			<Source xsi:type="listElement">
+				<Selector xsi:type="session" refId="::SYSTEM:clientInfo.slotId" attribute="value" />
+				<be:List xsi:type="be:opcUa" attribute="value" >
+					<bt:Element index="0" refId="::AsGlobalPV:ClientInfo[0].screenResolution" />
+					<bt:Element index="1" refId="::AsGlobalPV:ClientInfo[1].screenResolution" />
+					<bt:Element index="2" refId="::AsGlobalPV:ClientInfo[2].screenResolution" />
+				</be:List>
+			</Source>
+			<Target xsi:type="session" refId="::SYSTEM:clientInfo.screenResolution" attribute="value" />
+		</Binding>
+        
+		<Binding mode="oneWayToSource">
+			<Source xsi:type="listElement">
+				<Selector xsi:type="session" refId="::SYSTEM:clientInfo.slotId" attribute="value" />
+				<be:List xsi:type="be:opcUa" attribute="value" >
+					<bt:Element index="0" refId="::AsGlobalPV:ClientInfo[0].slotId" />
+					<bt:Element index="1" refId="::AsGlobalPV:ClientInfo[1].slotId" />
+					<bt:Element index="2" refId="::AsGlobalPV:ClientInfo[2].slotId" />
+				</be:List>
+			</Source>
+			<Target xsi:type="session" refId="::SYSTEM:clientInfo.slotId" attribute="value" />
+		</Binding>
+
+	</Bindings>
+</BindingsSet>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio FileVersion="4.9"?>
+<Package xmlns="http://br-automation.co.at/AS/Package">
+  <Objects>
+    <Object Type="Package">Parts</Object>
+    <Object Type="File">igusSmall_RL-D-RBT-3322S-BF.scn</Object>
+    <Object Type="File">igusBig_RL-D-RBT-5532S-BF.scn</Object>
+    <Object Type="File">IGUS_RL_DP_5_Robot_Arm.scn</Object>
+  </Objects>
+</Package>

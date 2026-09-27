@@ -1,0 +1,46 @@
+>> % Get current TCP first to plan a safe small move
+tcp = plc.getActualTCP();
+fprintf('Current TCP: X=%.1f Y=%.1f Z=%.1f\n', tcp(1), tcp(2), tcp(3));
+
+% Plan a small, safe relative move — 30 mm in +Z (lift) or whatever is safe
+% Adjust target as needed for your current robot pose
+[ok, log] = logMove(plc, 'abs', tcp(1), tcp(2), tcp(3) + 30, tcp(4), tcp(5));
+Current TCP: X=416.0 Y=-0.4 Z=581.2
+[PLCController] Target TCP: X=416.04 Y=-0.41 Z=611.18 B=-49.88 C=0.02
+[PLCController] MoveLinear triggered
+[logMove] Logging at 50 Hz...
+[logMove] Saved move_log_2026-05-06_16-49-48.csv and move_log_2026-05-06_16-49-48.mat
+[logMove] Move complete: 37 samples, max error 30.00 mm, final error 0.00 mm
+>> analyzeLog(log)
+
+══════════════ Log Analysis ══════════════
+  Samples           : 37
+  Duration          : 3.83 s
+  Tracking error    :
+     max            : 30.000 mm
+     mean           : 11.972 mm
+     RMS            : 15.598 mm
+     final          : 0.000 mm
+  Settling time     : 3.07 s (to ±2.0 mm)
+  Peak  TCP speed   : 12.05 mm/s
+  Mean  TCP speed   : 9.44 mm/s
+  Joint travel [deg]: Q1=0.00 Q2=0.26 Q3=6.63 Q4=6.37 Q5=0.00
+═════════════════════════════════════════
+
+
+ans = 
+
+  struct with fields:
+
+           numSamples: 37
+           duration_s: 3.8291
+          maxError_mm: 30
+         meanError_mm: 11.9715
+          rmsError_mm: 15.5984
+        finalError_mm: 6.4635e-10
+       settlingTime_s: 3.0748
+    peakVelocity_mm_s: 12.0526
+    meanVelocity_mm_s: 9.4440
+      jointTravel_deg: [0 0.2579 6.6308 6.3716 0]
+
+>> 
