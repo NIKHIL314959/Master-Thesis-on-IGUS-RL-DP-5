@@ -75,8 +75,8 @@ This project connects an IGUS RL-DP-5 five-axis robot arm to a B&R X20 PLC and m
 
 **Robot mesh for `plotOperatingBox.m`**
 The file `igus_asm.stp.STL` is larger than GitHub's 100 MB limit. Download it from
-[Google Drive](LINK-TO-BE-ADDED) and place it in the `MATLAB/` folder.
+[Google Drive](https://drive.google.com/drive/folders/1mc1Cap0dU_PIzkZHZ0gvXS2IruG12XJs) and place it in the `MATLAB/` folder.
 
 ## Demonstration media
 
-Videos and photos: [Google Drive](LINK-TO-BE-ADDED)
+Videos and photos: [Google Drive](https://drive.google.com/drive/folders/1mc1Cap0dU_PIzkZHZ0gvXS2IruG12XJs)
